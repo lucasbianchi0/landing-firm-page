@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+.stock-ticker {
+  font-size: 15px;
+  padding-block: 8px;
+  overflow: hidden;
+  user-select: none;
+  --gap: 20px;
+  display: flex;
+  gap: var(--gap);
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.gradient {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6, #60a5fa);
+}
+
+.stock-ticker .list {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+  animation: scroll 20s linear infinite;
+}
+
+.stock-ticker:hover .list {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.gradient-line {
+  width: 10%;
+  height: 2px;
+  background-color: #ccc; /* Línea gris */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilo para el efecto de rayo */
+.gradient-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Abarca toda la línea */
+  height: 2px;
+  background: linear-gradient(to right, #4d3287, #00c1fc);
+  transform: translateX(-100%);
+  opacity: 0; /* Inicialmente invisible */
+}
+
+/* Animación en ciclo */
+@keyframes cycle {
+  0%,
+  20%,
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  25%,
+  45% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50%,
+  70% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Control de la animación para cada paso */
+.step-0::before {
+  animation: cycle 2s infinite;
+  animation-delay: 0s;
+}
+
+.step-1::before {
+  animation: cycle 2s infinite;
+  animation-delay: 2s; /* Cambia a 2s para que inicie en el momento correcto */
+}
+
+.step-2::before {
+  animation: cycle 2s infinite;
+  animation-delay: 4s; /* Cambia a 4s para que inicie en el momento correcto */
+}
+
+/* Ocultar las líneas que no están activas */
+.gradient-line:not(.step-0)::before,
+.gradient-line:not(.step-1)::before,
+.gradient-line:not(.step-2)::before {
+  opacity: 0; /* Asegúrate de que las líneas no activas estén invisibles */
+}
