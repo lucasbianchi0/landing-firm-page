@@ -4,9 +4,9 @@ import Button from "./Button";
 import Metric from "./Metric";
 import CompanyList from "./CompanyList";
 import Navbar from "./Navbar";
+import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import animationData from "../lottie/header1.json";
-import dynamic from "next/dynamic";
 
 const Header = () => {
   const companyLogos = [
