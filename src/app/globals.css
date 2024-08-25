@@ -5,6 +5,15 @@
 body {
   margin: 0;
 }
+
+.montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.henderson {
+  font-family: var(--font-henderson);
+}
+
 .stock-ticker {
   font-size: 15px;
   padding-block: 8px;
@@ -101,12 +110,32 @@ body {
 
 .step-2::before {
   animation: cycle 2s infinite;
-  animation-delay: 4s; /* Cambia a 4s para que inicie en el momento correcto */
+  animation-delay: 4s;
 }
 
-/* Ocultar las líneas que no están activas */
 .gradient-line:not(.step-0)::before,
 .gradient-line:not(.step-1)::before,
 .gradient-line:not(.step-2)::before {
-  opacity: 0; /* Asegúrate de que las líneas no activas estén invisibles */
+  opacity: 0;
+}
+
+@layer components {
+  .container {
+    @apply w-[92%] sm:w-[85%] mx-auto;
+  }
+  .subtitle {
+    @apply text-[hsl(215,76%,73%)] font-bold text-xl;
+  }
+
+  .title {
+    @apply font-bold text-left leading-none;
+  }
+
+  .sectionStyle {
+    @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[70px] w-full;
+  }
+
+  .bottomSection {
+    @apply pb-[170px] md:pb-[200px];
+  }
 }

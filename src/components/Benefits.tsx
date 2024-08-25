@@ -39,8 +39,8 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="relative bg-[#E4EDF7] z-10 mt-[-100px] rounded-t-[70px] w-full min-h-[100vh] pt-16 pb-[200px]">
-      <div className="bg-[#F0F7FF] w-[90%] mx-auto py-10 shadow-xl border rounded-2xl ">
+    <section className="relative bg-[#E4EDF7] z-10 min-h-[100vh] sectionStyle bottomSection">
+      <div className="bg-[#F0F7FF] py-10 shadow-xl border rounded-2xl container">
         <p className="text-center text-[hsl(215,76%,73%)] font-bold">
           Lorem ipsum
         </p>
@@ -55,17 +55,19 @@ const Benefits = () => {
           Beneficios
         </h2>
 
-        <div className="relative grid grid-cols-3 gap-8 w-[85%] py-10 mx-auto">
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 w-[90%] md:w-[85%] py-10 mx-auto">
           {benefits.map((benefit, index) => (
             <article
               key={index}
-              className="relative rounded-lg py-6 px-3 border border-white text-center flex flex-col justify-center gap-2 bg-white bg-opacity-30 backdrop-blur-lg shadow-lg"
+              className="relative rounded-lg py-6 mx:py-4 px-2 md:px-3 border border-white text-center flex flex-col justify-center gap-2 bg-white bg-opacity-30 backdrop-blur-lg shadow-lg"
             >
               <figure className="relative h-[90px] w-[90px] mx-auto">
                 <Image src={benefit.icon} alt="" fill />
               </figure>
-              <h3 className="font-semibold text-[#2A5189]">{benefit.title}</h3>
-              <p>{benefit.description}</p>
+              <h3 className="font-semibold text-[#2A5189] ">{benefit.title}</h3>
+              <p className="text-md leading-tight text-pretty">
+                {benefit.description}
+              </p>
             </article>
           ))}
           <div className="absolute gradient top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[250px] w-[250px] blur-[10rem]"></div>

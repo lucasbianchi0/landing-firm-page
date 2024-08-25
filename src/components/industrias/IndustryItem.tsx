@@ -8,8 +8,8 @@ interface IIndustry {
 
 const IndustryItem = ({ title, icon }: IIndustry) => {
   return (
-    <div className="flex items-center gap-2 w-full h-full">
-      <figure className="relative bg-[#C0DAFF] rounded-lg p-1 h-[50px] w-[50px] flex items-center justify-center overflow-hidden">
+    <div className="space-y-5 w-full h-full">
+      <figure className="relative bg-gray-50 p-3 rounded-lg  h-[50px] w-[50px] flex items-center justify-center overflow-hidden">
         <Image
           src={icon}
           alt=""
@@ -18,7 +18,7 @@ const IndustryItem = ({ title, icon }: IIndustry) => {
           className="object-contain"
         />
       </figure>
-      <p>{title}</p>
+      <p className="font-semibold">{title}</p>
     </div>
   );
 };

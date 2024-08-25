@@ -6,6 +6,7 @@ import animationData1 from "../../lottie/paso1.json";
 import animationData2 from "../../lottie/paso2.json";
 import animationData3 from "../../lottie/paso3.json";
 import animationData4 from "../../lottie/paso4.json";
+import Button from "../Button";
 
 const Steps = () => {
   const stepData = [
@@ -44,11 +45,11 @@ const Steps = () => {
   }, [stepData.length]);
 
   return (
-    <section className="relative bg-[#F5F6F7] z-10 mt-[-100px] rounded-t-[70px] w-full min-h-[100vh] pt-16">
-      <div className="max-w-[80%] mx-auto">
-        <p className="text-center text-[#85B0EE] font-bold">Como funciona</p>
+    <section className="relative bg-[#F5F6F7] z-10 w-full min-h-[100vh] sectionStyle bottomSection md:pb-0">
+      <div className="container">
+        <p className="text-center subtitle">Como funciona</p>
         <h2
-          className="text-center text-[48px] font-semibold"
+          className="text-center text-[48px] title"
           style={{
             background: "linear-gradient(to top, #000000, #4C96FF)",
             WebkitBackgroundClip: "text",
@@ -58,19 +59,43 @@ const Steps = () => {
           Con Accedra es simple
         </h2>
 
-        <div className="flex mt-10 items-stretch h-full">
+        <div className="space-y-3 md:space-y-0 mx-auto md:flex mt-10 md:items-stretch h-full justify-center">
           {stepData.map((card, index) => (
-            <div key={index} className="flex items-center flex-1">
+            <div
+              key={index}
+              className="flex justify-center md:justify-normal items-center mx-auto  md:flex-1 "
+            >
               <StepCard
                 title={card.title}
                 description={card.description}
                 animationData={card.animationData}
               />
               {index < stepData.length - 1 && (
-                <div className={`gradient-line step-${currentStep}`}></div>
+                <div
+                  className={`md:gradient-line md:step-${currentStep}`}
+                ></div>
               )}
             </div>
           ))}
+        </div>
+
+        <div className="pt-10 flex flex-col items-center md:flex-row md:justify-center gap-2 w-full">
+          <div className=" ">
+            <Button
+              backgroundColor={"transparent"}
+              textColor={"#2A5189"}
+              content={"Prueba gratis"}
+              borderColor="#2A5189"
+            />
+          </div>
+          <div className="">
+            <Button
+              backgroundColor={"#2A5189"}
+              textColor={"white"}
+              content={"Hablar con especialista"}
+              borderColor="#2A5189"
+            />
+          </div>
         </div>
       </div>
     </section>

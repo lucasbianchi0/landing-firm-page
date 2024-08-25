@@ -26,13 +26,11 @@ const Faqs = () => {
   ];
 
   return (
-    <section className="relative bg-white z-10 mt-[-100px] rounded-t-[70px] w-full min-h-[100vh] pt-16 pb-[200px]">
-      <div>
-        <p className="text-center text-[hsl(215,76%,73%)] font-bold">
-          Alguna duda?
-        </p>
+    <section className="relative bg-white z-10 min-h-[100vh] h-full bottomSection sectionStyle overflow-hidden">
+      <div className="container">
+        <p className="text-center subtitle">Alguna duda?</p>
         <h2
-          className="text-center text-[48px] font-semibold"
+          className="text-center text-[48px] title"
           style={{
             background: "linear-gradient(to top, #000000, #4C96FF)",
             WebkitBackgroundClip: "text",
@@ -42,7 +40,7 @@ const Faqs = () => {
           Preguntas frequentes
         </h2>
 
-        <div className="py-10 w-[60%] mx-auto space-y-6">
+        <div className="py-10 w-full md:w-[60%] mx-auto space-y-6">
           {faqs.map((faq, index) => (
             <Accordion
               key={index}
@@ -52,6 +50,7 @@ const Faqs = () => {
           ))}{" "}
         </div>
       </div>
+      <div className="absolute gradient top-1/2 right-1/3 transform translate-x-[500px] -translate-y-1/2 h-[400px] w-[500px] blur-[20rem] z-10"></div>
     </section>
   );
 };

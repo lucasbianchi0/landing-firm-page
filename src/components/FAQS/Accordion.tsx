@@ -9,11 +9,11 @@ const Accordion = ({ summary, description }: IAccordion) => {
   return (
     <div className="">
       <details
-        className="group [&_summary::-webkit-details-marker]:hidden "
+        className="group [&_summary::-webkit-details-marker]:hidden shadow-lg border !border-blue-700/30 shadow-blue-700/30 rounded-xl"
         open
       >
-        <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-[#C0DAFF] p-4 text-gray-900">
-          <h2 className="font-medium">{summary} </h2>
+        <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-3 text-gray-900 font-semibold">
+          <h2 className="font-medium text-xl">{summary} </h2>
 
           <svg
             className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
@@ -31,7 +31,9 @@ const Accordion = ({ summary, description }: IAccordion) => {
           </svg>
         </summary>
 
-        <p className="mt-4 px-4 leading-relaxed text-gray-700">{description}</p>
+        <p className="mt-1 px-4 leading-relaxed text-gray-800 text-xl pb-4">
+          {description}
+        </p>
       </details>
     </div>
   );

@@ -5,8 +5,6 @@ import Metric from "./Metric";
 import CompanyList from "./CompanyList";
 import Navbar from "./Navbar";
 import Lottie from "lottie-react";
-// import animationData from "../lottie/HeaderIcon.json";
-// import animationData from "../lottie/header3.json";
 import animationData from "../lottie/header1.json";
 
 const Header = () => {
@@ -17,11 +15,11 @@ const Header = () => {
   return (
     <section className="relative bg-[#E4EDF7] w-full min-h-[100vh] py-6 overflow-hidden pb-[170px]">
       <Navbar />
-      <div className="w-[85%] h-full mx-auto">
-        <div className="h-full flex justify-between">
-          <article className="w-[50%] flex flex-col gap-6 pt-16 relative z-10">
-            <h2 className="text-[60px] font-bold leading-none">
-              <span className="text-[#172B4D]">Firma Biometrica </span>
+      <div className="h-full container">
+        <div className="h-full flex flex-col lg:flex-row lg:justify-between">
+          <article className=" w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative z-10 ">
+            <h2 className="montserrat text-[56px] md:text-[60px] font-bold leading-none">
+              <span className="text-[#172B4D]">Firma Biométrica </span>
               <br />
               <span
                 style={{
@@ -39,7 +37,7 @@ const Header = () => {
               rem libero id quod repudiandae nemo nam. Perferendis quibusdam
               ducimus, natus laboriosam libero recusandae culpa doloremque.
             </p>
-            <div className="flex gap-3 mt-10">
+            <div className="flex gap-2 mt-4 text-md md:mt-6 md:text-lg ">
               <Button
                 backgroundColor={"transparent"}
                 textColor={"#2A5189"}
@@ -54,7 +52,7 @@ const Header = () => {
               />
             </div>
           </article>
-          <figure className="flex-1 w-auto max-h-[460px] ml-auto ">
+          <figure className="flex-1 hidden md:flex w-auto max-h-[460px] mx-auto lg:ml-auto ">
             <Lottie
               animationData={animationData}
               className="h-full w-full"
@@ -63,7 +61,8 @@ const Header = () => {
           </figure>
         </div>
 
-        <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative z-20">
+        {/* <div className="w-full md:w-[80%] mx-auto grid  grid-cols-3  gap-4 mt-16 relative z-20"> */}
+        <div className="montserrat w-full md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3  gap-4 mt-16 relative z-20">
           <Metric content="1500 firmas" target={1500} />
           <Metric content="200 clientes contentos" target={200} />
           <Metric content="Más de 10 años de experiencia" target={10} />

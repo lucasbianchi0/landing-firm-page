@@ -3,15 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      {/*
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-*/}
-
-      <footer className="relative bg-[#000F2D] z-10 mt-[-50px] rounded-t-[70px] w-full  pt-16">
-        <div className="mx-auto max-w-screen-xl pb-6  px-4 sm:px-6 lg:px-8 ">
-          <div className="flex justify-between ">
+      <footer className="relative bg-[#000F2D] z-10 sectionStyle">
+        <div className="mx-auto max-w-screen-xl pb-6 px-4 sm:px-6 lg:px-8 ">
+          <div className="md:flex md:justify-between ">
             <div>
               <div className="flex justify-center text-white text-2xl font-medium sm:justify-start">
                 Accedra
@@ -136,7 +130,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="text-center sm:text-left">
+            <div className="mt-10 md:mt-0 inline-block w-[50%] align-top text-left  md:w-auto md:text-center ">
               <p className="text-lg font-medium text-[#62A2FF]">Our Services</p>
 
               <ul className="mt-8 space-y-4 text-sm">
@@ -181,7 +175,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="text-center sm:text-left text-[#62A2FF]">
+            <div className="mt-10 md:mt-0  inline-block align-top w-[50%] text-left md:w-auto md:text-center  text-[#62A2FF]">
               <p className="text-lg font-medium ">Contact Us</p>
 
               <ul className="mt-8 space-y-4 text-sm">

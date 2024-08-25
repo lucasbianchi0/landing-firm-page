@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,6 +15,31 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+const HendersonSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/HendersonSans/HendersonSansLight.otf",
+      weight: "300",
+    },
+    {
+      path: "../../public/fonts/HendersonSans/HendersonSansBasicRegular.otf",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/HendersonSans/HendersonSansSemiBold.otf",
+      weight: "600",
+    },
+    {
+      path: "../../public/fonts/HendersonSans/HendersonSansBasicSemiBold.otf",
+      weight: "600",
+    },
+    {
+      path: "../../public/fonts/HendersonSans/HendersonSansBasicBold.otf",
+      weight: "800",
+    },
+  ],
+  variable: "--font-henderson",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={`${HendersonSans.variable} ${montserrat.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -46,7 +46,7 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="pb-[300px] relative bg-[#E4EDF7] z-40 mt-[-100px] rounded-t-[70px] w-full pt-16">
+    <section className=" hidden pb-[300px] relative bg-[#E4EDF7] z-40 mt-[-100px] rounded-t-[70px] w-full pt-16">
       <div className=" w-[90%] mx-auto flex justify-between gap-2">
         <div className="flex-1 space-y-4 ">
           <p className="text-left text-[hsl(215,76%,73%)]  font-bold">
