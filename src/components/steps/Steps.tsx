@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import StepCard from "./StepCard";
+
 import animationData1 from "../../lottie/paso1.json";
 import animationData2 from "../../lottie/paso2.json";
 import animationData3 from "../../lottie/paso3.json";
