@@ -132,10 +132,25 @@ body {
   }
 
   .sectionStyle {
-    @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[70px] w-full;
+    @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
   }
 
   .bottomSection {
     @apply pb-[170px] md:pb-[200px];
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }

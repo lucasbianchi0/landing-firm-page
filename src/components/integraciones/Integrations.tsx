@@ -1,79 +1,77 @@
 import React from "react";
-import IndustryItem from "../industrias/IndustryItem";
+import IntegrationItem from "./IntegrationItem";
+import Button from "../Button";
 
 const Integrations = () => {
-  const industries = [
+  const integrations = [
     {
-      title: "Logística",
-      icon: "/industrias/logistica.png",
+      image: "/integraciones/sharepoint.png",
     },
     {
-      title: "Retail",
-      icon: "/industrias/retail.png",
+      image: "/integraciones/dynamics.png",
     },
     {
-      title: "Educación",
-      icon: "/industrias/educacion.png",
+      image: "/integraciones/salesforce.webp",
     },
     {
-      title: "Automotriz",
-      icon: "/industrias/automotriz.png",
+      image: "/integraciones/sap.png",
     },
     {
-      title: "Farmacéutica",
-      icon: "/industrias/farmaceutica.png",
+      style: "col-span-2",
+      image: "/integraciones/gg2.png",
     },
     {
-      title: "Banca",
-      icon: "/industrias/banca.png",
+      style: "col-span-2 row-start-3",
+      image: "/integraciones/servicenow.png",
     },
     {
-      title: "Fintech",
-      icon: "/industrias/fintech.png",
-    },
-    {
-      title: "Seguros",
-      icon: "/industrias/seguros.png",
-    },
-    {
-      title: "Medicina",
-      icon: "/industrias/medicina.png",
-    },
-    {
-      title: "Telecomunicaciones",
-      icon: "/industrias/telecomunicaciones.png",
+      style: "col-start-3 row-start-3",
+      image: "/integraciones/aws.png",
     },
   ];
 
   return (
-    <section className=" hidden pb-[300px] relative bg-[#E4EDF7] z-40 mt-[-100px] rounded-t-[70px] w-full pt-16">
-      <div className=" w-[90%] mx-auto flex justify-between gap-2">
-        <div className="flex-1 space-y-4 ">
-          <p className="text-left text-[hsl(215,76%,73%)]  font-bold">
-            Especialistas
-          </p>
-          <h2
-            className="text-left text-[48px] font-medium"
-            style={{
-              background: "linear-gradient(to top, #000000, #4C96FF)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Nuestras integraciones
+    <section className="relative bg-[#E4EDF7] z-40  w-full sectionStyle bottomSection">
+      <div className="container flex justify-between gap-2">
+        <div className="flex-1 grid grid-cols-3 grid-rows-3 gap-4">
+          {integrations.map((integration, index) => (
+            <IntegrationItem
+              key={index}
+              image={integration.image}
+              style={integration.style}
+              delay={index * 0.2}
+            />
+          ))}
+        </div>
+        <div className="flex-1 space-y-4 flex flex-col items-end">
+          <p className="text-right subtitle">Especialistas</p>
+          <h2 className="text-[44px] text-right md:text-[44px] title ">
+            <span className="text-[#172B4D] w-full">
+              Integra la Firma Electrónica
+            </span>
+            <span
+              style={{
+                background: "linear-gradient(to top, #000000, #4C96FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              con tus Aplicaciones y CRMs
+            </span>
           </h2>
-          <p className="text-left">
+          <p className="text-right">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
             veniam sed doloremque minus dolore aliquid temporibus quaerat, quam
             perspiciatis porro itaque eveniet hic natus magnam.
           </p>
-        </div>
-        <div className="grid grid-cols-2 gap-6 flex-1">
-          {industries.map((industry, index) => (
-            <div key={index} className="h-full flex items-center">
-              <IndustryItem title={industry.title} icon={industry.icon} />
-            </div>
-          ))}
+          <div className="pt-2">
+            <Button
+              backgroundColor={"#2A5189"}
+              textColor={"white"}
+              content={"Hablar con especialista"}
+              borderColor="#2A5189"
+            />
+          </div>
         </div>
       </div>
     </section>
