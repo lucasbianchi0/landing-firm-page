@@ -1,7 +1,8 @@
+import { SvgIconProps } from "@mui/material";
 import React from "react";
 
 interface ITimelineData {
-  icon: string;
+  icon: React.ComponentType<SvgIconProps>;
   title: string;
   description: any;
 }

@@ -1,14 +1,15 @@
+import { SvgIconProps } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import { IconType } from "react-icons";
 
-interface IIndustry {
-  icon: IconType;
+type IndustryItemProps = {
   title: string;
+  icon: React.ComponentType<SvgIconProps>;
   color: string;
-}
+};
 
-const IndustryItem = ({ title, icon: Icon, color }: IIndustry) => {
+const IndustryItem = ({ title, icon: Icon, color }: IndustryItemProps) => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full space-y-2">
       <div className="relative flex flex-col items-center justify-center w-full ">
