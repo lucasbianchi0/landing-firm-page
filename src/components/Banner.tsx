@@ -3,9 +3,9 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="relative z-40 -translate-y-[60px] rounded-t-[50px] md:rounded-t-[100px] bg-white">
+    <div className="hidden relative z-40 -translate-y-[60px] rounded-t-[50px] md:rounded-t-[100px] bg-white">
       <section className="relative -translate-y-[60px] md:-translate-y-[90px] z-20 selection:border border-white h-[200px] md:h-[300px] rounded-2xl overflow-hidden container">
-        <figure className="relative w-full h-full rounded-2xl overflow-hidden group">
+        <figure className="relative w-full h-full overflow-hidden rounded-2xl group">
           <Image
             alt="min-h-screen"
             src="/banner.png"
@@ -24,7 +24,7 @@ const Banner = () => {
           </span>
           <input
             type="email"
-            className="mt-3 md:mt-4 w-full rounded-2xl border-gray-200 p-3 md:p-4 text-sm shadow-sm"
+            className="w-full p-3 mt-3 text-sm border-gray-200 shadow-sm md:mt-4 rounded-2xl md:p-4"
             placeholder="Enter email"
           />
         </article>

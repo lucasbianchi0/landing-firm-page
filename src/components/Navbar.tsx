@@ -22,26 +22,27 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-2 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
+    // <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-2 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
+    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5">
       <h1
-        className="text-lg font-bold uppercase"
-        style={{
-          background: "linear-gradient(to top, #000000, #4C96FF)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
+        className="text-lg font-bold text-white uppercase"
+        // style={{
+        //   background: "linear-gradient(to top, #000000, #4C96FF)",
+        //   WebkitBackgroundClip: "text",
+        //   WebkitTextFillColor: "transparent",
+        // }}
       >
         Accedra
       </h1>
 
-      <ul className="hidden md:flex gap-4 font-light">
+      <ul className="hidden gap-4 font-light text-white md:flex">
         <li>Servicios</li>
         <li>Sobre Accedra</li>
         <li>Partners</li>
         <li>Soluciones</li>
       </ul>
 
-      <div className="hidden md:flex gap-3">
+      {/* <div className="hidden gap-3 md:flex">
         <Button
           backgroundColor={"transparent"}
           textColor={"#2A5189"}
@@ -54,10 +55,10 @@ const Navbar = () => {
           content={"Contacto"}
           borderColor="#2A5189"
         />
-      </div>
+      </div> */}
 
       {/* Botón para abrir/cerrar el menú */}
-      <div onClick={toggleMenu} className="md:hidden cursor-pointer">
+      <div onClick={toggleMenu} className="cursor-pointer md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -92,7 +93,7 @@ const Navbar = () => {
 
       {/* Menú en pantalla completa */}
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-blue-400 z-999 flex flex-col items-center justify-center">
+        <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-blue-400 z-999">
           <ul className="flex flex-col items-center justify-center gap-4 font-light">
             <li>Servicios</li>
             <li>Sobre Accedra</li>

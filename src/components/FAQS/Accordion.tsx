@@ -8,10 +8,7 @@ interface IAccordion {
 const Accordion = ({ summary, description }: IAccordion) => {
   return (
     <div className="">
-      <details
-        className="group [&_summary::-webkit-details-marker]:hidden shadow-lg border !border-blue-700/30 shadow-blue-700/30 rounded-xl"
-        open
-      >
+      <details className="group [&_summary::-webkit-details-marker]:hidden shadow-lg border !border-blue-700/30 shadow-blue-700/30 rounded-xl">
         <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg p-3 text-gray-900 font-semibold">
           <h2 className="font-medium text-xl">{summary} </h2>
 

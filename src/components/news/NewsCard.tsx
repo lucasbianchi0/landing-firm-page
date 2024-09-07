@@ -8,11 +8,11 @@ const NewsCard = () => {
       <figure className=" relative w-full h-[400px]">
         <Image src="/new1.png" alt="" fill />
       </figure>
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-600/70 to-transparent rounded-lg"></div>
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-blue-600/70 to-transparent"></div>
 
-      <div className="p-5 absolute bottom-0 left-0 text-white">
+      <div className="absolute bottom-0 left-0 p-5 text-white">
         <a href="#">
-          <h5 className="mb-2 text-lg md:text-2xl font-bold tracking-tight ">
+          <h5 className="mb-2 text-lg font-bold tracking-tight md:text-2xl ">
             Noteworthy technology acquisitions 2021
           </h5>
         </a>
@@ -20,7 +20,7 @@ const NewsCard = () => {
           Here are the biggest enterprise technology acquisitions of 2021 so
           far, in reverse chronological order.
         </p>
-        <Link href="/" className="underline text-md">
+        <Link href="/" className="text-sm underline">
           Ver mas
         </Link>
       </div>

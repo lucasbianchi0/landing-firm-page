@@ -128,12 +128,22 @@ body {
   }
 
   .title {
-    @apply font-bold text-left leading-none;
+    @apply font-bold leading-tight;
   }
 
-  .sectionStyle {
-    @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
+  .text-description {
+    @apply mt-16 md:mt-[30px] text-lg space-y-7 text-slate-500 leading-relaxed;
   }
+
+  /* .sectionStyle {
+    @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
+  } */
+  .sectionStyle {
+    @apply w-full min-h-screen py-10 md:py-16;
+  }
+  /* .sectionStyleTranslate {
+    @apply pt-10 md:pt-16 -translate-y-[100px] rounded-t-[30px] w-full;
+  } */
 
   .bottomSection {
     @apply pb-[170px] md:pb-[200px];
@@ -153,4 +163,60 @@ body {
 
 .fade-in {
   animation: fadeIn 0.5s ease-out forwards;
+}
+/* styles.css */
+
+/* Sombra para estado normal */
+/* .industry-item {
+  transition: box-shadow 0.3s ease;
+} */
+
+/* Sombra fuerte en hover */
+.industry-item-hover-blue-soft:hover {
+  box-shadow: 0 4px 12px rgba(163, 198, 255, 0.7); /* Azul suave con opacidad fuerte */
+}
+
+.industry-item-hover-orange-soft:hover {
+  box-shadow: 0 4px 12px rgba(255, 209, 163, 0.7); /* Naranja suave con opacidad fuerte */
+}
+
+.industry-item-hover-green-soft:hover {
+  box-shadow: 0 4px 12px rgba(163, 255, 209, 0.7); /* Verde suave con opacidad fuerte */
+}
+
+.industry-item-hover-pink-soft:hover {
+  box-shadow: 0 4px 12px rgba(255, 198, 163, 0.7); /* Rosa suave con opacidad fuerte */
+}
+
+.industry-item-hover-purple-soft:hover {
+  box-shadow: 0 4px 12px rgba(209, 163, 255, 0.7); /* Púrpura suave con opacidad fuerte */
+}
+
+.industry-item-hover-pale-pink:hover {
+  box-shadow: 0 4px 12px rgba(255, 209, 209, 0.7); /* Rosa pálido con opacidad fuerte */
+}
+
+.industry-item-hover-light-blue:hover {
+  box-shadow: 0 4px 12px rgba(163, 209, 255, 0.7); /* Azul claro con opacidad fuerte */
+}
+
+.industry-item-hover-yellow-soft:hover {
+  box-shadow: 0 4px 12px rgba(255, 230, 163, 0.7); /* Amarillo suave con opacidad fuerte */
+}
+
+.industry-item-hover-red-soft:hover {
+  box-shadow: 0 4px 12px rgba(255, 163, 163, 0.7); /* Rojo suave con opacidad fuerte */
+}
+
+.industry-item-hover-teal:hover {
+  box-shadow: 0 4px 12px rgba(163, 255, 230, 0.7); /* Verde agua con opacidad fuerte */
+}
+
+.text-relieve {
+  font-size: 3rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  font-weight: bold; /* Hace que el texto sea más grueso para mejorar el efecto de relieve */
+  color: #c0c0c0; /* Color plateado */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8),
+    /* Efecto de brillo ligero alrededor del texto */ -1px -1px 2px
+      rgba(0, 0, 0, 0.5); /* Efecto de profundidad para crear el relieve */
 }

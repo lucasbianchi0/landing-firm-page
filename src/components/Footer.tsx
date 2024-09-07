@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <div>
       <footer className="relative bg-[#000F2D] z-10 sectionStyle">
-        <div className="mx-auto max-w-screen-xl pb-6 px-4 sm:px-6 lg:px-8 ">
+        <div className="max-w-screen-xl px-4 pb-6 mx-auto sm:px-6 lg:px-8 ">
           <div className="md:flex md:justify-between ">
             <div>
-              <div className="flex justify-center text-white text-2xl font-medium sm:justify-start">
+              <div className="flex justify-center text-2xl font-medium text-white sm:justify-start">
                 Accedra
               </div>
 
@@ -16,7 +16,7 @@ const Footer = () => {
                 Incidunt consequuntur amet culpa cum itaque neque.
               </p>
 
-              <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+              <ul className="flex justify-center gap-6 mt-8 sm:justify-start md:gap-8">
                 <li>
                   <a
                     href="#"
@@ -256,8 +256,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-12 border-t border-gray-100 pt-6">
-            <div className="text-center sm:flex gap-2 sm:justify-center sm:text-left">
+          <div className="pt-6 mt-12 border-t border-gray-100">
+            <div className="gap-2 text-center sm:flex sm:justify-center sm:text-left">
               <p className="text-sm text-gray-500">
                 <span className="block sm:inline">
                   Todos los derechos reservados.

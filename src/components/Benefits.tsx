@@ -59,13 +59,13 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <article
               key={index}
-              className="relative rounded-lg py-6 mx:py-4 px-2 md:px-3 border border-white text-center flex flex-col justify-center gap-2 bg-white bg-opacity-30 backdrop-blur-lg shadow-lg"
+              className="relative flex flex-col justify-center gap-2 px-2 py-6 text-center bg-white border border-white rounded-lg shadow-lg mx:py-4 md:px-3 bg-opacity-30 backdrop-blur-lg"
             >
               <figure className="relative h-[90px] w-[90px] mx-auto">
                 <Image src={benefit.icon} alt="" fill />
               </figure>
               <h3 className="font-semibold text-[#2A5189] ">{benefit.title}</h3>
-              <p className="text-md leading-tight text-pretty">
+              <p className="leading-tight text-md text-pretty">
                 {benefit.description}
               </p>
             </article>
