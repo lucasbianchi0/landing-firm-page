@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Timeline from "./Timeline";
 import DomainVerificationTwoToneIcon from "@mui/icons-material/DomainVerificationTwoTone";
 import DriveFileRenameOutlineTwoToneIcon from "@mui/icons-material/DriveFileRenameOutlineTwoTone";
@@ -30,6 +31,18 @@ const TimelineList = () => {
         "Verifica la claridad y ubicación de la firma. Guarda y envía el documento firmado electrónicamente.",
     },
   ];
+
+  const [highlightedIndex, setHighlightedIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHighlightedIndex((prevIndex) =>
+        prevIndex === dataTest.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // 3 segundos encendido + 2 segundos apagado = 5 segundos total
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <article className="w-full md:w-[40%]">
       {dataTest.map((step, index) => (
@@ -38,6 +51,7 @@ const TimelineList = () => {
           icon={step.icon}
           title={step.title}
           description={step.description}
+          isHighlighted={index === highlightedIndex}
         />
       ))}
     </article>

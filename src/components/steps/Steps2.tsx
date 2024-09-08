@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Steps2 = () => {
   return (
-    <section className="container py-20  bg-[#FFFFFF] sectionStyle">
+    <section className="container bg-[#FFFFFF] sectionStyle">
       <div className="w-full md:w-[60%]">
         <div className="flex items-center gap-3">
           <Image src="/tituloPasos.png" alt="tit" height={60} width={60} />
@@ -27,7 +27,7 @@ const Steps2 = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col gap-10 py-10 md:flex-row md:justify-between">
+      <div className="flex flex-col gap-10 md:py-10 md:flex-row md:justify-between">
         <div className="flex-1">
           <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[16px] rounded-xl h-[172px] max-w-[301px] md:h-[394px] md:max-w-[612px]">
             <div className="rounded-xl overflow-hidden h-[140px] md:h-[262px]">

@@ -121,25 +121,25 @@ body {
 
 @layer components {
   .container {
-    @apply w-[92%] sm:w-[85%] mx-auto;
+    @apply !w-[92%] sm:!w-[85%] !mx-auto;
   }
   .subtitle {
     @apply text-[hsl(215,76%,73%)] font-bold text-xl;
   }
 
   .title {
-    @apply font-bold leading-tight;
+    @apply font-bold leading-none md:leading-tight;
   }
 
   .text-description {
-    @apply mt-16 md:mt-[30px] text-lg space-y-7 text-slate-500 leading-relaxed;
+    @apply mt-4 text-base leading-relaxed md:text-lg md:mt-16 space-y-7 text-slate-500;
   }
 
   /* .sectionStyle {
     @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
   } */
   .sectionStyle {
-    @apply w-full min-h-screen py-10 md:py-16;
+    @apply w-full py-8 md:py-16;
   }
   /* .sectionStyleTranslate {
     @apply pt-10 md:pt-16 -translate-y-[100px] rounded-t-[30px] w-full;

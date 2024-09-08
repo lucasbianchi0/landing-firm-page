@@ -59,7 +59,7 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <article
               key={index}
-              className="relative flex flex-col justify-center gap-2 px-2 py-6 text-center bg-white border border-white rounded-lg shadow-lg mx:py-4 md:px-3 bg-opacity-30 backdrop-blur-lg"
+              className="relative flex flex-col justify-center gap-2 px-2 py-6 text-center bg-white !bg-red-300 border border-white rounded-lg shadow-lg mx:py-4 md:px-3 bg-opacity-30 backdrop-blur-lg"
             >
               <figure className="relative h-[90px] w-[90px] mx-auto">
                 <Image src={benefit.icon} alt="" fill />

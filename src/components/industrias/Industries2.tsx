@@ -89,7 +89,7 @@ const Industries2 = () => {
         <source src="/background.mp4" type="video/mp4" />
         Tu navegador no soporta el elemento de video.
       </video> */}
-      <div className=" absolute gradient bottom-0 right-40 h-[450px] rounded-full w-[400px] blur-[7rem] z-1"></div>
+      {/* <div className=" absolute gradient bottom-0 right-40 h-[450px] rounded-full w-[400px] blur-[7rem] z-1"></div> */}
 
       <div className="container flex flex-col-reverse gap-2 md:flex-row md:justify-between">
         <div className="grid flex-1 grid-cols-2 gap-6 mt-10 md:mt-0 md:grid-cols-3 md:p-10">
@@ -103,6 +103,7 @@ const Industries2 = () => {
                 title={industry.title}
                 icon={industry.icon}
                 color={industry.color}
+                delay={index * 0.2}
               />
             </div>
           ))}

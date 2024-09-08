@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { BiMessageRoundedDetail } from "react-icons/bi";
@@ -8,6 +9,7 @@ import {
   MdOutlineIntegrationInstructions,
 } from "react-icons/md";
 import { VscLaw } from "react-icons/vsc";
+import { motion, useInView } from "framer-motion";
 
 const Benefits4 = () => {
   const benefits = [
@@ -49,32 +51,44 @@ const Benefits4 = () => {
     },
   ];
 
+  // const ref = React.useRef<HTMLDivElement>(null);
+  // const isInView = useInView(ref, { once: true, amount: 0.1 });
+
   return (
-    <section className="relative w-full pt-20 bg-[#FEFEFE] sectionStyle">
-      <div className="container flex flex-col-reverse items-start  md:h-[900px] gap-20 md:flex-row md:justify-between">
+    <section className="relative w-full bg-[#FEFEFE] sectionStyle">
+      <div className="container flex flex-col-reverse items-start md:h-[900px] gap-20 md:flex-row md:justify-between">
         <div className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
-          {benefits.map((benefit, index) => (
-            <article
-              key={index}
-              className="flex flex-col justify-center w-full gap-2 p-8 text-left bg-white border rounded-lg shadow-lg hover:shadow-xl border-zinc-100 hover:border-blue-700/20 hover:shadow-blue-700/20"
-            >
-              <benefit.icon
-                style={{ fontSize: "2.8rem" }}
-                className="text-[#006BFC]  "
-              />
-              <h3 className="py-0 text-lg font-semibold text-black">
-                {benefit.title}
-              </h3>
-              <p className="leading-tight text-md text-pretty text-zinc-400">
-                {benefit.description}
-              </p>
-            </article>
-          ))}
+          {benefits.map((benefit, index) => {
+            const ref = React.useRef<HTMLDivElement>(null);
+            const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+            return (
+              <motion.article
+                ref={ref}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                key={index}
+                className="flex flex-col justify-center w-full gap-2 p-6 text-left bg-white border rounded-lg shadow-lg md:p-8 shadow-blue-700/20 border-blue-700/20 md:border-zinc-100 md:border-2 md:hover:border-blue-700/20 md:hover:shadow-xl md:hover:shadow-blue-700/20"
+              >
+                <benefit.icon
+                  style={{ fontSize: "2.8rem" }}
+                  className="text-[#006BFC]"
+                />
+                <h3 className="py-0 text-lg font-semibold text-black md:text-lg">
+                  {benefit.title}
+                </h3>
+                <p className="text-base leading-tight text-pretty text-zinc-400">
+                  {benefit.description}
+                </p>
+              </motion.article>
+            );
+          })}
         </div>
-        <div className="relative h-full md:w-[40%] ">
+        <div className="relative h-full w-full md:w-[40%] ">
           <article className="md:sticky md:top-0 md:left-0 md:w-full ">
             <div className="flex items-center gap-3 md:flex-row-reverse md:justify-start">
-              <Image src="/tituloPasos.png" alt="tit" height={60} width={60} />{" "}
+              <Image src="/tituloPasos.png" alt="tit" height={60} width={60} />
               <p className="text-right text-[hsl(215,76%,73%)] font-bold">
                 Lorem ipsum
               </p>

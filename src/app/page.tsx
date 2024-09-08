@@ -6,8 +6,10 @@ import Header3 from "@/components/Header3";
 import Industries2 from "@/components/industrias/Industries2";
 import Integrations from "@/components/integraciones/Integrations";
 import News from "@/components/news/News";
+import News2 from "@/components/news/News2";
 import Steps2 from "@/components/steps/Steps2";
 import Testing from "@/components/Testing";
+import Faqs3 from "../components/FAQS/Faqs3";
 
 export default function Home() {
   return (
@@ -33,8 +35,10 @@ export default function Home() {
       <Integrations />
       {/* <Industries /> */}
       <Industries2 />
-      <News />
-      <Faqs2 />
+      {/* <News /> */}
+      <News2 />
+      {/* <Faqs2 /> */}
+      <Faqs3 />
       <Footer />
       <Testing />
     </main>
