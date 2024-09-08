@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { GrMoney } from "react-icons/gr";
 import { IoAccessibility, IoDocumentsOutline } from "react-icons/io5";
@@ -51,20 +51,22 @@ const Benefits4 = () => {
     },
   ];
 
-  // const ref = React.useRef<HTMLDivElement>(null);
-  // const isInView = useInView(ref, { once: true, amount: 0.1 });
+  // Crear referencias y estados de visibilidad para cada beneficio
+  const refs = benefits.map(() => React.useRef(null));
+  const isInViewArray = refs.map((ref) =>
+    useInView(ref, { once: true, amount: 0.1 })
+  );
 
   return (
     <section className="relative w-full bg-[#FEFEFE] sectionStyle">
       <div className="container flex flex-col-reverse items-start md:h-[900px] gap-20 md:flex-row md:justify-between">
         <div className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
           {benefits.map((benefit, index) => {
-            const ref = React.useRef<HTMLDivElement>(null);
-            const isInView = useInView(ref, { once: true, amount: 0.1 });
+            const isInView = isInViewArray[index];
 
             return (
               <motion.article
-                ref={ref}
+                ref={refs[index]}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
@@ -132,6 +134,7 @@ const Benefits4 = () => {
 };
 
 export default Benefits4;
+
 {
   /* Sección de texto con sticky */
 }
