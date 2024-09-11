@@ -1,35 +1,29 @@
+import { ArticleAttributes } from "@/types/news";
+import Image from "next/image";
 import React from "react";
 
-const BlogCard = () => {
+const BlogCard = ({
+  title,
+  descriptionPreview,
+  Image: image,
+}: ArticleAttributes) => {
+  const baseUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+  const imageUrl = `${baseUrl}${image.data[0]?.attributes?.url}`;
+  const imageAlt = image?.data[0]?.attributes?.alternativeText || "Image";
+
+  console.log(imageUrl);
+
   return (
     <article className="!m-0 overflow-hidden bg-[#B8B8B8]/10  border-2 border-white rounded-2xl shadow-md ">
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-        className="object-cover w-full h-56"
-      />
-      {/* <figure className="relative w-full h-56 ">
-        <Image
-          alt=""
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          className="object-cover "
-          fill
-        />
+      {/* <figure className="relative h-[250px] w-auto">
+        <Image className="object-cover" src={imageUrl} alt={imageAlt} fill />
       </figure> */}
 
       <div className="p-4 sm:p-6">
-        <a href="#">
-          <h3 className="text-lg font-medium text-gray-900">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h3>
-        </a>
+        <h3 className="text-lg font-medium text-gray-900">{title}</h3>
 
         <p className="mt-2 text-gray-500 line-clamp-3 text-sm/relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-          dolores, possimus pariatur animi temporibus nesciunt praesentium
-          dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
-          soluta, voluptates neque explicabo tempora nisi culpa eius atque
-          dignissimos. Molestias explicabo corporis voluptatem?
+          {descriptionPreview}
         </p>
 
         <a

@@ -65,7 +65,7 @@ const Benefits = () => {
                 <Image src={benefit.icon} alt="" fill />
               </figure>
               <h3 className="font-semibold text-[#2A5189] ">{benefit.title}</h3>
-              <p className="leading-tight text-md text-pretty">
+              <p className="leading-relaxed text-md text-pretty">
                 {benefit.description}
               </p>
             </article>

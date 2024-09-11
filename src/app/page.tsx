@@ -1,14 +1,11 @@
 import Banner from "@/components/Banner";
 import Benefits4 from "@/components/benefits/Benefits4";
-import Faqs2 from "@/components/FAQS/Faqs2";
 import Footer from "@/components/Footer";
 import Header3 from "@/components/Header3";
 import Industries2 from "@/components/industrias/Industries2";
 import Integrations from "@/components/integraciones/Integrations";
-import News from "@/components/news/News";
 import News2 from "@/components/news/News2";
 import Steps2 from "@/components/steps/Steps2";
-import Testing from "@/components/Testing";
 import Faqs3 from "../components/FAQS/Faqs3";
 
 export default function Home() {
@@ -36,11 +33,10 @@ export default function Home() {
       {/* <Industries /> */}
       <Industries2 />
       {/* <News /> */}
-      <News2 />
+      {/* <News2 /> */}
       {/* <Faqs2 /> */}
       <Faqs3 />
       <Footer />
-      <Testing />
     </main>
   );
 }

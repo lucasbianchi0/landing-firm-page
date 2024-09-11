@@ -1,4 +1,6 @@
 import React from "react";
+import TextContent from "../reusable/TextContent";
+import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
 
 const Faqs3 = () => {
   const faqs = [
@@ -27,24 +29,18 @@ const Faqs3 = () => {
   return (
     <div className="container sectionStyle !min-h-0">
       <div className="flex flex-col items-start md:w-[70%] space-y-2 md:items-start">
-        <p className="text-left md:text-left subtitle">Especialistas</p>
-        <h2 className="text-[44px] text-left md:text-[56px] md:text-left title ">
-          <span
-            style={{
-              background: "linear-gradient(to top, #000000, #4C96FF)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Preguntas frecuentes
-          </span>
-        </h2>
+        <TextContent
+          title={"Preguntas frecuentes "}
+          subtitle="Especialistas"
+          icon={IntegrationInstructionsTwoToneIcon}
+          position={"left"}
+        />
       </div>
       <div className="grid grid-cols-1 mt-6 md:mt-10 space-y-7 md:gap-20 md:space-y-0 md:grid-cols-2 md:gap-y-16">
         {faqs.map((fq, index) => (
           <article className="space-y-1 md:space-y-3" key={index}>
             <h4 className="text-xl font-semibold">{fq.summary}</h4>
-            <p className="text-zinc-500">{fq.description}</p>
+            <p className="text-zinc-500 md:leading-relaxed">{fq.description}</p>
           </article>
         ))}
       </div>

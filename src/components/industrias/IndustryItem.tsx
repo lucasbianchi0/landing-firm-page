@@ -21,25 +21,26 @@ const IndustryItem = ({
   const ref = React.useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
   return (
-    <motion.article
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-      transition={{ duration: 0.5, delay }}
-      className="flex flex-col items-center justify-center w-full h-full space-y-2"
+    <div
+      className="flex items-center h-full p-4 transition border-none shadow-lg bg-zinc-900 rounded-xl hover:shadow-xl hover:border-blue-700/20 hover:shadow-blue-700/20 group"
+      //   style={{ border: `2px solid ${industry.color}` }}
     >
-      <div className="relative flex flex-col items-center justify-center w-full ">
-        {/* <figure className="relative flex items-center justify-center overflow-hidden rounded-lg bg-black-700 "> */}
-        <Icon className="text-[3rem]  z-10 !text-relieve text-zinc-400  hover:text-blue-600" />
-        {/* </figure> */}
-        {/* <div
-          className="absolute  top-1/2 right-1/2  h-[30px] w-[30px] blur-[1rem] z-5"
-          style={{ backgroundColor: color }}
-        ></div> */}
-      </div>
-      <p className="mt-4 font-semibold !text-relieve text-white  ">{title}</p>
-      <p className="text-[#006BFC] text-sm">Ver más</p>
-    </motion.article>
+      <motion.article
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+        transition={{ duration: 0.5, delay }}
+        className="flex flex-col items-center justify-center w-full h-full space-y-2 hover:text-blue-600 "
+      >
+        <div className="relative flex flex-col items-center justify-center w-full">
+          <Icon className="text-[3rem] z-10 text-zinc-400 group-hover:text-blue-600 " />
+        </div>
+        <p className="mt-4 font-semibold text-white group-hover:text-blue-600">
+          {title}
+        </p>
+        <p className="text-[#006BFC] text-sm group-hover:text-white">Ver más</p>
+      </motion.article>
+    </div>
   );
 };
 

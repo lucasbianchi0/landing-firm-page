@@ -22,8 +22,8 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    // <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-2 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
-    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5">
+    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-2 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
+      {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
       <h1
         className="text-lg font-bold text-white uppercase"
         // style={{
@@ -64,7 +64,7 @@ const Navbar = () => {
           viewBox="0 0 24 24"
           width={24}
           height={24}
-          color={"#2a5189"}
+          color={"white"}
           fill={"none"}
         >
           <path

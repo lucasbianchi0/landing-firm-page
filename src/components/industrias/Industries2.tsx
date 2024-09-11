@@ -1,52 +1,55 @@
 import React from "react";
 import IndustryItem from "./IndustryItem";
 import Button from "../Button";
-import AccountBalanceTwoToneIcon from "@mui/icons-material/AccountBalanceTwoTone";
+import AccountBalanceRoundedIcon from "@mui/icons-material/AccountBalanceRounded";
+import PaymentRoundedIcon from "@mui/icons-material/PaymentRounded";
+import HealthAndSafetyRoundedIcon from "@mui/icons-material/HealthAndSafetyRounded";
+import LocalHospitalRoundedIcon from "@mui/icons-material/LocalHospitalRounded";
+import WifiRoundedIcon from "@mui/icons-material/WifiRounded";
+import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
+import EditRoundedIcon from "@mui/icons-material/EditRounded";
+import DirectionsCarFilledRoundedIcon from "@mui/icons-material/DirectionsCarFilledRounded";
+import MedicalServicesRoundedIcon from "@mui/icons-material/MedicalServicesRounded";
+import StoreRoundedIcon from "@mui/icons-material/StoreRounded";
 import PaymentTwoToneIcon from "@mui/icons-material/PaymentTwoTone";
-import HealthAndSafetyTwoToneIcon from "@mui/icons-material/HealthAndSafetyTwoTone";
-import LocalHospitalTwoToneIcon from "@mui/icons-material/LocalHospitalTwoTone";
-import WifiTwoToneIcon from "@mui/icons-material/WifiTwoTone";
-import LocalShippingTwoToneIcon from "@mui/icons-material/LocalShippingTwoTone";
-import EditTwoToneIcon from "@mui/icons-material/EditTwoTone";
-import DirectionsCarFilledTwoToneIcon from "@mui/icons-material/DirectionsCarFilledTwoTone";
-import MedicalServicesTwoToneIcon from "@mui/icons-material/MedicalServicesTwoTone";
-import StoreTwoToneIcon from "@mui/icons-material/StoreTwoTone";
+import TextContent from "../reusable/TextContent";
+import IntegrationInstructionsRoundedIcon from "@mui/icons-material/IntegrationInstructionsRounded";
 
 const Industries2 = () => {
   const industries = [
     {
       title: "Logística",
-      icon: LocalShippingTwoToneIcon,
+      icon: LocalShippingRoundedIcon,
       color: "#A3C6FF",
       hoverClass: "industry-item-hover-blue-soft",
     },
     {
       title: "Retail",
-      icon: StoreTwoToneIcon,
+      icon: StoreRoundedIcon,
       color: "#FFD1A3",
       hoverClass: "industry-item-hover-orange-soft",
     },
     {
       title: "Educación",
-      icon: EditTwoToneIcon,
+      icon: EditRoundedIcon,
       color: "#A3FFD1",
       hoverClass: "industry-item-hover-green-soft",
     },
     {
       title: "Automotriz",
-      icon: DirectionsCarFilledTwoToneIcon,
+      icon: DirectionsCarFilledRoundedIcon,
       color: "#FFC6A3",
       hoverClass: "industry-item-hover-pink-soft",
     },
     {
       title: "Farmacéutica",
-      icon: MedicalServicesTwoToneIcon,
+      icon: MedicalServicesRoundedIcon,
       color: "#D1A3FF",
       hoverClass: "industry-item-hover-purple-soft",
     },
     {
       title: "Banca",
-      icon: AccountBalanceTwoToneIcon,
+      icon: AccountBalanceRoundedIcon,
       color: "#FFD1D1",
       hoverClass: "industry-item-hover-pale-pink",
     },
@@ -58,21 +61,21 @@ const Industries2 = () => {
     },
     {
       title: "Seguros",
-      icon: HealthAndSafetyTwoToneIcon,
+      icon: HealthAndSafetyRoundedIcon,
       color: "#FFE6A3",
       hoverClass: "industry-item-hover-yellow-soft",
     },
 
     {
       title: "Telecomunicaciones",
-      icon: WifiTwoToneIcon,
+      icon: WifiRoundedIcon,
       color: "#A3FFE6",
       hoverClass: "industry-item-hover-teal",
     },
   ];
 
   return (
-    <section className="py-10 relative z-50 bg-[#1D293B] overflow-hidden ">
+    <section className="relative z-50 bg-[#1D293B] overflow-hidden sectionStyle">
       {/* <div className="absolute inset-0 bg-black/60 " style={{ zIndex: -5 }} />
       <video
         className="absolute top-0 left-0 object-cover w-full h-full -z-10"
@@ -91,48 +94,29 @@ const Industries2 = () => {
       </video> */}
       {/* <div className=" absolute gradient bottom-0 right-40 h-[450px] rounded-full w-[400px] blur-[7rem] z-1"></div> */}
 
-      <div className="container flex flex-col-reverse gap-2 md:flex-row md:justify-between">
-        <div className="grid flex-1 grid-cols-2 gap-6 mt-10 md:mt-0 md:grid-cols-3 md:p-10">
+      <div className="container flex flex-col-reverse gap-5 md:gap-10 md:flex-row md:justify-between">
+        <div className="grid flex-1 grid-cols-2 gap-4 mt-10 md:mt-0 md:grid-cols-3">
           {industries.map((industry, index) => (
-            <div
+            <IndustryItem
               key={index}
-              className="flex items-center h-full p-4 transition border-none shadow-lg bg-zinc-900 rounded-xl hover:shadow-xl hover:border-blue-700/20 hover:shadow-blue-700/20"
-              //   style={{ border: `2px solid ${industry.color}` }}
-            >
-              <IndustryItem
-                title={industry.title}
-                icon={industry.icon}
-                color={industry.color}
-                delay={index * 0.2}
-              />
-            </div>
+              title={industry.title}
+              icon={industry.icon}
+              color={industry.color}
+              delay={index * 0.2}
+            />
           ))}
         </div>
-        <div className="z-10 flex flex-col flex-1 space-y-4 md:items-end">
-          <p className="md:text-right subtitle">Especialistas</p>
-          <h2 className="text-[42px] md:text-[60px] title md:text-right">
-            <span className="text-white">Especialistas</span>
-
-            <br />
-            <span className="text-white">en estas</span>
-            <br />
-            <span
-              className="text-white"
-              //   style={{
-              //     background: "linear-gradient(to top, #000000, #4C96FF)",
-              //     WebkitBackgroundClip: "text",
-              //     WebkitTextFillColor: "transparent",
-              //   }}
-            >
-              industrias
-            </span>
-          </h2>
-
-          <p className="!text-white md:text-right text-description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-            veniam sed doloremque minus dolore aliquid temporibus quaerat, quam
-            perspiciatis porro itaque eveniet hic natus magnam.
-          </p>
+        <div className="z-10 flex flex-col w-full md:w-[40%] space-y-4 md:items-end">
+          <TextContent
+            title={"Especialistas en estas industrias"}
+            description={
+              "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas, como la huella dactilar o la forma de la firma, se reduce significativamente el riesgo de fraude o suplantación de identidad. "
+            }
+            subtitle={"Technology"}
+            icon={IntegrationInstructionsRoundedIcon}
+            position="right"
+            color={"white"}
+          />
           {/* <div className="pt-2">
             <Button
               backgroundColor={"#2A5189"}

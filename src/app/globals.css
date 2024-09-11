@@ -22,18 +22,26 @@ body {
   --gap: 20px;
   display: flex;
   gap: var(--gap);
-  mask-image: linear-gradient(
+  /* mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 1) 20%,
     rgba(0, 0, 0, 1) 80%,
     rgba(0, 0, 0, 0)
-  );
+  ); */
 }
 
 .gradient {
   background: linear-gradient(to right, #1e3a8a, #3b82f6, #60a5fa);
 }
+
+/* .icon-shadow {
+  box-shadow: 7px 7px 10px rgba(36, 131, 255, 0.5);
+}
+
+.text-shadow-blue {
+  text-shadow: 2px 2px 4px rgba(42, 111, 250, 0.5); 
+} */
 
 .stock-ticker .list {
   list-style: none;
@@ -46,9 +54,9 @@ body {
   animation: scroll 20s linear infinite;
 }
 
-.stock-ticker:hover .list {
+/* .stock-ticker:hover .list {
   animation-play-state: paused;
-}
+} */
 
 @keyframes scroll {
   to {
@@ -132,14 +140,14 @@ body {
   }
 
   .text-description {
-    @apply mt-4 text-base leading-relaxed md:text-lg md:mt-16 space-y-7 text-slate-500;
+    @apply mt-4 text-base leading-relaxed md:text-lg space-y-7 text-slate-500;
   }
 
   /* .sectionStyle {
     @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
   } */
   .sectionStyle {
-    @apply w-full py-8 md:py-16;
+    @apply w-full py-8 md:py-20;
   }
   /* .sectionStyleTranslate {
     @apply pt-10 md:pt-16 -translate-y-[100px] rounded-t-[30px] w-full;

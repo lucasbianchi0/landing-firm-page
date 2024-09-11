@@ -24,7 +24,7 @@ const Header3 = () => {
                 <span>Segura y Eficiente</span>
               </h2>
 
-              <p>
+              <p className="md:text-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Debitis rem libero id quod repudiandae nemo nam. Perferendis
                 quibusdam ducimus, natus laboriosam libero recusandae culpa
@@ -45,7 +45,7 @@ const Header3 = () => {
               />
             </div> */}
             </article>
-            <div className="montserrat w-full md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3  gap-4 mt-16 relative z-20">
+            <div className="montserrat w-full md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-3  gap-4 mt-16 relative z-20">
               <Metric content="1500 firmas" target={1500} />
               <Metric content="200 clientes contentos" target={200} />
               <Metric content="Más de 10 años de experiencia" target={10} />

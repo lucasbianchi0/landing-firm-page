@@ -1,31 +1,31 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Timeline from "./Timeline";
-import DomainVerificationTwoToneIcon from "@mui/icons-material/DomainVerificationTwoTone";
-import DriveFileRenameOutlineTwoToneIcon from "@mui/icons-material/DriveFileRenameOutlineTwoTone";
-import FileOpenTwoToneIcon from "@mui/icons-material/FileOpenTwoTone";
-import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone";
+import DomainVerificationRoundedIcon from "@mui/icons-material/DomainVerificationRounded";
+import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRenameOutlineRounded";
+import FileOpenRoundedIcon from "@mui/icons-material/FileOpenRounded";
+import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 
 const TimelineList = () => {
   const dataTest = [
     {
-      icon: FileOpenTwoToneIcon,
+      icon: FileOpenRoundedIcon,
       title: "Prepara el documento y el dispositivo",
       description:
-        "Abre el documento que quieres firmar.Conecta y ajusta la tableta Wacom.",
+        "Abre el documento que quieres firmar. Conecta y ajusta la tableta Wacom.",
     },
     {
-      icon: SettingsTwoToneIcon,
+      icon: SettingsRoundedIcon,
       title: "Configurar el software de firma",
       description: "Abre el software de firma ESignAnywhere.",
     },
     {
-      icon: DriveFileRenameOutlineTwoToneIcon,
+      icon: DriveFileRenameOutlineRoundedIcon,
       title: "Firmar el documento",
       description: "Firma con el lápiz de la tableta Wacom.",
     },
     {
-      icon: SettingsTwoToneIcon,
+      icon: DomainVerificationRoundedIcon,
       title: "Finalizar y Enviar",
       description:
         "Verifica la claridad y ubicación de la firma. Guarda y envía el documento firmado electrónicamente.",
