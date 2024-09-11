@@ -69,7 +69,7 @@ const Note = () => {
           </p>
         </div>
 
-        <div className="hidden md:flex w-[90%] mx-auto gap-5 justify-center py-10">
+        {/* <div className="hidden md:flex w-[90%] mx-auto gap-5 justify-center py-10">
           {Array.from({ length: 4 }).map((_, index) => (
             <BlogCard key={index} />
           ))}
@@ -81,7 +81,7 @@ const Note = () => {
               <BlogCard />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>

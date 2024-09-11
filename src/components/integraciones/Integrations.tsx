@@ -1,8 +1,7 @@
 import React from "react";
 import IntegrationItem from "./IntegrationItem";
-import Button from "../Button";
-import TestingContent from "../Testing";
 import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
+import TextContent from "../reusable/TextContent";
 
 const Integrations = () => {
   const integrations = [
@@ -62,7 +61,7 @@ const Integrations = () => {
           </div>
         </div> */}
         <div className="w-full md:w-[40%]">
-          <TestingContent
+          <TextContent
             title={"Integra la firma electronica"}
             description={
               "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones"

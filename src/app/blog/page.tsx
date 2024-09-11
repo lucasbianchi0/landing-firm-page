@@ -29,9 +29,9 @@ const Blog = () => {
       </div>
 
       <div className="container grid flex-col gap-5 mt-10 space-y-2 sm:grid-cols-2 md:space-y-5 lg:grid-cols-3 xl:grid-cols-4 md:gap-3 ">
-        {Array.from({ length: 7 }).map((_, index) => (
+        {/* {Array.from({ length: 7 }).map((_, index) => (
           <BlogCard key={index} />
-        ))}
+        ))} */}
       </div>
       <Footer />
     </div>
