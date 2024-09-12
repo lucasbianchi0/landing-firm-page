@@ -88,7 +88,7 @@ const Industries2 = () => {
           WebkitAnimation: "slowVideo 60s linear infinite",
         }}
       >
-        <source src="/ACCED.mp4" type="video/mp4" />
+        <source src="/background1.mp4" type="video/mp4" />
         Tu navegador no soporta el elemento de video.
       </video>
       {/* <div className=" absolute gradient bottom-0 right-40 h-[450px] rounded-full w-[400px] blur-[7rem] z-1"></div> */}
