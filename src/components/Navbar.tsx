@@ -25,8 +25,8 @@ const Navbar = () => {
   return (
     <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
       {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
-      <h1
-        className="text-lg font-bold text-white uppercase"
+      <figure
+        className="   "
         // style={{
         //   background: "linear-gradient(to top, #000000, #4C96FF)",
         //   WebkitBackgroundClip: "text",
@@ -34,7 +34,7 @@ const Navbar = () => {
         // }}
       >
         <Image src="/LOGO.PNG" height={80} width={100} alt="logo" />
-      </h1>
+      </figure>
 
       <ul className="hidden gap-4 font-light text-white md:flex">
         <li>Servicios</li>
