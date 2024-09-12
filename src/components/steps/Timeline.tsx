@@ -30,8 +30,8 @@ const Timeline = ({
           <div
             className={`${
               isHighlighted
-                ? "text-white bg-[#0E74FF] shadow-2xl shadow-blue-700/20 border border-blue-700/20"
-                : "text-[#0E74FF] bg-white"
+                ? "text-white !bg-[#0E74FF]  bg-[#396FBD] shadow-2xl shadow-blue-700/20 border border-blue-700/20"
+                : "!text-[#0E74FF] text-[#396FBD] bg-white"
             } flex items-center justify-center border-2 drop-shadow-2xl shadow-xl w-14 h-14 rounded-xl`}
           >
             <Icon className="w-8 h-8 " />
@@ -41,7 +41,7 @@ const Timeline = ({
           <h3
             className={`flex items-center mb-1 text-lg font-bold ${
               isHighlighted
-                ? "text-[#0E74FF] text-shadow-blue"
+                ? "!text-[#0E74FF] text-[#396FBD] text-shadow-blue"
                 : "text-[#172B4D]  "
             } `}
           >

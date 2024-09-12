@@ -7,12 +7,14 @@ import Integrations from "@/components/integraciones/Integrations";
 import News2 from "@/components/news/News2";
 import Steps2 from "@/components/steps/Steps2";
 import Faqs3 from "../components/FAQS/Faqs3";
+import Header4 from "@/Header4";
 
 export default function Home() {
   return (
     <main className="relative h-full">
       {/* <Header /> */}
-      <Header3 />
+      {/* <Header3 /> */}
+      <Header4 />
       {/* <div className=" relative bg-[#E4EDF7] ">
         <Header2 />
         <Metrics2 />

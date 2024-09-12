@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-2 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
+    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
       {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
       <h1
         className="text-lg font-bold text-white uppercase"
@@ -32,7 +33,7 @@ const Navbar = () => {
         //   WebkitTextFillColor: "transparent",
         // }}
       >
-        Accedra
+        <Image src="/ACCEDRALOGO.PNG" height={80} width={100} alt="logo" />
       </h1>
 
       <ul className="hidden gap-4 font-light text-white md:flex">

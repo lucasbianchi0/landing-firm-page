@@ -9,34 +9,16 @@ import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationI
 const Steps2 = () => {
   return (
     <section className="container bg-[#FFFFFF] sectionStyle">
-      <div className="w-full md:w-[60%]">
+      <div className="w-full ">
         <TextContent
           title={"Paso a paso"}
           subtitle="Especialistas"
           icon={IntegrationInstructionsTwoToneIcon}
-          position={"left"}
+          position={"center"}
         />
       </div>
 
-      <div className="flex flex-col gap-10 md:py-10 md:flex-row md:justify-between">
-        {/* <div className="flex-1">
-          <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[16px] rounded-xl h-[172px] max-w-[301px] md:h-[394px] md:max-w-[612px]">
-            <div className="rounded-xl overflow-hidden h-[140px] md:h-[262px]">
-              <img
-                src="https://flowbite.s3.amazonaws.com/docs/device-mockups/screen-image-imac.png"
-                className="dark:hidden h-[140px] md:h-[262px] w-full rounded-xl"
-                alt=""
-              />
-              <img
-                src="https://flowbite.s3.amazonaws.com/docs/device-mockups/screen-image-imac-dark.png"
-                className="hidden dark:block h-[140px] md:h-[462px] w-full rounded-xl"
-                alt=""
-              />
-            </div>
-          </div>
-         
-        </div> */}
-
+      <div className="flex flex-col gap-10 md:flex-row md:justify-between sectionStyle">
         <div className="relative flex-1 mt-5 md:mt-0">
           <div className="relative h-auto border-8 rounded-xl border-gray-800">
             <Image

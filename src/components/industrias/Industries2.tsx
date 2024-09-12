@@ -67,7 +67,7 @@ const Industries2 = () => {
     },
 
     {
-      title: "Telecomunicaciones",
+      title: "Telecoms",
       icon: WifiRoundedIcon,
       color: "#A3FFE6",
       hoverClass: "industry-item-hover-teal",
@@ -76,35 +76,36 @@ const Industries2 = () => {
 
   return (
     <section className="relative z-50 bg-[#1D293B] overflow-hidden sectionStyle">
-      {/* <div className="absolute inset-0 bg-black/60 " style={{ zIndex: -5 }} />
+      <div className="absolute inset-0 bg-black/60 " style={{ zIndex: -5 }} />
       <video
-        className="absolute top-0 left-0 object-cover w-full h-full -z-10"
+        className="hidden md:block absolute top-0 left-0 object-cover w-full h-full -z-10"
         autoPlay
         loop
         muted
-        playsinline
         preload="auto"
         style={{
           animation: "slowVideo 60s linear infinite",
           WebkitAnimation: "slowVideo 60s linear infinite",
         }}
       >
-        <source src="/background.mp4" type="video/mp4" />
+        <source src="/ACCED.mp4" type="video/mp4" />
         Tu navegador no soporta el elemento de video.
-      </video> */}
+      </video>
       {/* <div className=" absolute gradient bottom-0 right-40 h-[450px] rounded-full w-[400px] blur-[7rem] z-1"></div> */}
 
       <div className="container flex flex-col-reverse gap-5 md:gap-10 md:flex-row md:justify-between">
-        <div className="grid flex-1 grid-cols-2 gap-4 mt-10 md:mt-0 md:grid-cols-3">
-          {industries.map((industry, index) => (
-            <IndustryItem
-              key={index}
-              title={industry.title}
-              icon={industry.icon}
-              color={industry.color}
-              delay={index * 0.2}
-            />
-          ))}
+        <div className="flex-1 ">
+          <div className="md:w-[70%] mx-auto grid grid-cols-2 gap-4 mt-10 md:mt-0 md:grid-cols-3">
+            {industries.map((industry, index) => (
+              <IndustryItem
+                key={index}
+                title={industry.title}
+                icon={industry.icon}
+                color={industry.color}
+                delay={index * 0.2}
+              />
+            ))}
+          </div>
         </div>
         <div className="z-10 flex flex-col w-full md:w-[40%] space-y-4 md:items-end">
           <TextContent

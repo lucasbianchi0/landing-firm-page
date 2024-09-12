@@ -28,18 +28,20 @@ const Faqs3 = () => {
 
   return (
     <div className="container sectionStyle !min-h-0">
-      <div className="flex flex-col items-start md:w-[70%] space-y-2 md:items-start">
+      <div className="flex flex-col space-y-2 ">
         <TextContent
           title={"Preguntas frecuentes "}
           subtitle="Especialistas"
           icon={IntegrationInstructionsTwoToneIcon}
-          position={"left"}
+          position={"center"}
         />
       </div>
       <div className="grid grid-cols-1 mt-6 md:mt-10 space-y-7 md:gap-20 md:space-y-0 md:grid-cols-2 md:gap-y-16">
         {faqs.map((fq, index) => (
           <article className="space-y-1 md:space-y-3" key={index}>
-            <h4 className="text-xl font-semibold">{fq.summary}</h4>
+            <h4 className="text-xl font-semibold text-[#2A5189]">
+              {fq.summary}
+            </h4>
             <p className="text-zinc-500 md:leading-relaxed">{fq.description}</p>
           </article>
         ))}

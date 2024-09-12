@@ -60,7 +60,7 @@ const Benefits4 = () => {
 
   return (
     <section className="relative w-full bg-[#FEFEFE] sectionStyle">
-      <div className="container flex flex-col-reverse items-start md:h-[900px] gap-20 md:flex-row md:justify-between">
+      <div className="container flex flex-col-reverse items-start md:h-[900px] gap-10 md:flex-row md:justify-between">
         <div className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
           {benefits.map((benefit, index) => (
             <BenefitItem
@@ -79,7 +79,7 @@ const Benefits4 = () => {
                 "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas, como la huella dactilar o la forma de la firma, se reduce significativamente el riesgo de fraude o suplantación de identidad. "
               }
               subtitle={"Technology"}
-              icon={IntegrationInstructionsRoundedIcon} // Aquí debes pasar un componente de ícono
+              icon={IntegrationInstructionsRoundedIcon}
               position="right"
             />
           </article>
@@ -108,11 +108,18 @@ const BenefitItem = ({ icon: Icon, title, description }: benefitProps) => {
       transition={{ duration: 0.5, delay: 0.5 }}
       className="flex flex-col justify-center w-full gap-2 p-6 text-left bg-white border rounded-[18px] shadow-lg md:p-8 shadow-blue-700/20 border-blue-700/20 md:border-zinc-100 md:border-2 md:hover:border-blue-700/20 md:hover:shadow-xl md:hover:shadow-blue-700/20"
     >
-      <Icon style={{ fontSize: "2.8rem" }} className="text-[#006BFC]" />
+      <Icon
+        style={{ fontSize: "2.8rem" }}
+        className="!text-[#006BFC] text-[#396FBD]"
+      />
       <h3 className="py-0 text-lg font-semibold text-black md:text-lg">
         {title}
       </h3>
-      <p className="text-base  text-pretty text-zinc-400">{description}</p>
+      <p className="text-base  text-pretty text-zinc-400  md:text-base !text-[#59677E]">
+        {/* <p className="text-base  text-pretty text-zinc-400 !text-[#425466] #59677E"> */}
+
+        {description}
+      </p>
     </motion.article>
   );
 };

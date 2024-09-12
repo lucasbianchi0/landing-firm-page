@@ -22,7 +22,7 @@ const IndustryItem = ({
   const isInView = useInView(ref, { once: true, amount: 0.1 });
   return (
     <div
-      className="flex items-center h-full p-4 transition border-none shadow-lg bg-zinc-900 rounded-xl hover:shadow-xl hover:border-blue-700/20 hover:shadow-blue-700/20 group"
+      className="flex items-center h-full p-4 transition border-none shadow-lg bg-zinc-900/80 rounded-3xl hover:shadow-xl hover:border-blue-700/20 hover:shadow-blue-700/20 group"
       //   style={{ border: `2px solid ${industry.color}` }}
     >
       <motion.article

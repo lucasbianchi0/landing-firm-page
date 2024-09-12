@@ -2,22 +2,32 @@ import { ArticleAttributes } from "@/types/news";
 import Image from "next/image";
 import React from "react";
 
+interface BlogCardProps {
+  title: string;
+  descriptionPreview?: string;
+  imageUrl: string;
+  tags?: string[];
+}
+
 const BlogCard = ({
   title,
   descriptionPreview,
-  Image: image,
-}: ArticleAttributes) => {
+  imageUrl: image,
+  tags,
+}: BlogCardProps) => {
   const baseUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  const imageUrl = `${baseUrl}${image.data[0]?.attributes?.url}`;
-  const imageAlt = image?.data[0]?.attributes?.alternativeText || "Image";
 
-  console.log(imageUrl);
-
+  console.log(image);
   return (
     <article className="!m-0 overflow-hidden bg-[#B8B8B8]/10  border-2 border-white rounded-2xl shadow-md ">
-      {/* <figure className="relative h-[250px] w-auto">
-        <Image className="object-cover" src={imageUrl} alt={imageAlt} fill />
-      </figure> */}
+      <figure className="relative h-[250px] w-auto">
+        <Image
+          className="object-cover"
+          src={`${image}`}
+          alt={`${image}`}
+          fill
+        />
+      </figure>
 
       <div className="p-4 sm:p-6">
         <h3 className="text-lg font-medium text-gray-900">{title}</h3>

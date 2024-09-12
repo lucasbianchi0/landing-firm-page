@@ -48,6 +48,7 @@ export interface ArticleAttributes {
   Image: {
     data: Image[];
   };
+  tags?: string[];
 }
 
 // Define la interfaz para un artículo

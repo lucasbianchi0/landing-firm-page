@@ -46,7 +46,7 @@ const Benefits2 = () => {
     },
   ];
   return (
-    <section className="relative z-0 pt-20 overflow-hidden bg-white bottomSection">
+    <section className="relative z-0 pt-20 overflow-hidden bg-white bottomSection sectionStyle">
       <div className="container relative z-10 ">
         <div className="max-w-[50%]">
           <p className="text-left text-[hsl(215,76%,73%)] font-bold ">

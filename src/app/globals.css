@@ -35,6 +35,14 @@ body {
   background: linear-gradient(to right, #1e3a8a, #3b82f6, #60a5fa);
 }
 
+.text-gradient {
+  background: linear-gradient(to top, #000000, #4c96ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 /* .icon-shadow {
   box-shadow: 7px 7px 10px rgba(36, 131, 255, 0.5);
 }
@@ -129,10 +137,10 @@ body {
 
 @layer components {
   .container {
-    @apply !w-[92%] sm:!w-[85%] !mx-auto;
+    @apply !w-[90%] sm:!w-[85%] !mx-auto;
   }
   .subtitle {
-    @apply text-[hsl(215,76%,73%)] font-bold text-xl;
+    @apply text-[hsl(215,76%,73%)] font-bold text-base mb-6;
   }
 
   .title {
@@ -140,14 +148,14 @@ body {
   }
 
   .text-description {
-    @apply mt-4 text-base leading-relaxed md:text-lg space-y-7 text-slate-500;
+    @apply mt-4 text-lg leading-relaxed md:text-lg space-y-7 text-slate-500 !text-[#425466];
   }
 
   /* .sectionStyle {
     @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
   } */
   .sectionStyle {
-    @apply w-full py-8 md:py-20;
+    @apply w-full py-8 md:py-16;
   }
   /* .sectionStyleTranslate {
     @apply pt-10 md:pt-16 -translate-y-[100px] rounded-t-[30px] w-full;
