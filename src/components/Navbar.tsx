@@ -33,7 +33,7 @@ const Navbar = () => {
         //   WebkitTextFillColor: "transparent",
         // }}
       >
-        <Image src="/LOGO.PNG" height={80} width={100} alt="logo" />
+        <Image src="/LOGO.png" height={80} width={100} alt="logo" />
       </figure>
 
       <ul className="hidden gap-4 font-light text-white md:flex">
