@@ -11,12 +11,14 @@ const Header4 = () => {
     "/logos/bcoprovinciaLOGO.png",
   ];
 
-  // Arreglo de imágenes para el fondo
   const backgroundImages = [
     "/header.jpg",
     "/FONDO01.jpg",
     "/FONDO02.jpg",
     "/FONDO03.jpg",
+    "/FONDO04.jpg",
+    "/FONDO05.jpg",
+    "/FONDO06.jpg",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
