@@ -52,8 +52,10 @@ const TextContent = ({
 
       <h2
         style={{
+          lineHeight: "1.2",
           whiteSpace: "pre-line",
-          background: "linear-gradient(to top, #000000, #4C96FF)",
+          background:
+            "repeating-linear-gradient(to top, #000000 0, #4C96FF 1.2em)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}
