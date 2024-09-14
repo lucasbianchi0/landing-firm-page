@@ -8,6 +8,7 @@ import News2 from "@/components/news/News2";
 import Steps2 from "@/components/steps/Steps2";
 import Faqs3 from "../components/FAQS/Faqs3";
 import Header4 from "@/Header4";
+import Steps3 from "@/components/steps/Steps3";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       <CompanyList /> */}
       {/* <Steps /> */}
       <Steps2 />
+      <Steps3 />
+
       {/* <Benefits /> */}
       {/* <div className="relative z-10 overflow-x-clip"> */}
       {/* <Benefits /> */}

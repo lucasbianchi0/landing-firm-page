@@ -7,7 +7,7 @@ import TextContent from "../reusable/TextContent";
 import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
 import Blog from "@/app/blog/page";
 
-const Steps2 = () => {
+const Steps3 = () => {
   return (
     <section className=" bg-[#FFFFFF] sectionStyle overflow-hidden">
       <div className="container">
@@ -22,33 +22,21 @@ const Steps2 = () => {
           position={"left"}
         />
       </div> */}
-        <div className="md:hidden mb-8">
+        <div className=" mb-8">
           <TextContent
             title={"Como funciona"}
             subtitle="Especialistas"
             icon={IntegrationInstructionsTwoToneIcon}
-            position={"left"}
+            position={"center"}
           />
         </div>
         <div className="flex flex-col-reverse gap-2 md:gap-10 md:flex-row md:justify-between  ">
-          <div className=" w-full md:w-[50%]">
-            <div className="hidden md:flex">
-              <TextContent
-                title={"Como funciona"}
-                subtitle="Especialistas"
-                icon={IntegrationInstructionsTwoToneIcon}
-                position={"left"}
-              />
-            </div>
-            <TimelineList />
-          </div>
-
-          <div className="relative md:flex-1 md:mt-0">
+          <div className="relative md:flex-1 md:mt-0 flex flex-col justify-center">
             <div
               style={{
-                boxShadow: "10px 10px 20px 6px rgba(14, 116, 255, 0.5)",
+                boxShadow: "1px 10px 20px 4px rgba(14, 116, 255, 0.5)", // Sombra azul con opacidad
               }}
-              className="drop-shadow-lg overflow-hidden w-auto  relative  md:w-[170%] h-auto aspect-[16/9] bg-red border-2 rounded-xl border-gray-800 !border-[#0E74FF] "
+              className="drop-shadow-lg overflow-hidden w-auto  relative  md:w-[100%] h-auto aspect-[16/9] bg-red border-2 rounded-xl border-gray-800 !border-[#0E74FF] "
             >
               {/* Gradiente detrás de la imagen */}
               {/* <div className="absolute bottom-0 right-300 h-[510px] w-[630px] rounded-xl blur-[5rem] z-[-1] bg-gradient-to-r from-blue-200 to-blue-200"></div> */}
@@ -61,13 +49,24 @@ const Steps2 = () => {
               />
             </div>
           </div>
+          <div className=" w-full md:w-[40%]">
+            {/* <div className="hidden md:flex">
+              <TextContent
+                title={"Como funciona"}
+                subtitle="Especialistas"
+                icon={IntegrationInstructionsTwoToneIcon}
+                position={"left"}
+              />
+            </div> */}
+            <TimelineList />
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Steps2;
+export default Steps3;
 
 {
   /* <figure className="relative h-[500px] w-full rounded-xl"> */
