@@ -22,7 +22,7 @@ const Steps2 = () => {
           position={"left"}
         />
       </div> */}
-        <div className="md:hidden mb-8">
+        <div className="md:hidden mb-8 ">
           <TextContent
             title={"Como funciona"}
             subtitle="Especialistas"
@@ -30,7 +30,7 @@ const Steps2 = () => {
             position={"left"}
           />
         </div>
-        <div className="flex flex-col-reverse gap-2 md:gap-10 md:flex-row md:justify-between  ">
+        <div className="flex flex-col-reverse gap-2 md:gap-10 md:flex-row md:justify-between flex flex-col justify-center ">
           <div className=" w-full md:w-[50%]">
             <div className="hidden md:flex">
               <TextContent

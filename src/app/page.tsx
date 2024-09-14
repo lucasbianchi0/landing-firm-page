@@ -23,7 +23,7 @@ export default function Home() {
       <CompanyList /> */}
       {/* <Steps /> */}
       <Steps2 />
-      <Steps3 />
+      {/* <Steps3 /> */}
 
       {/* <Benefits /> */}
       {/* <div className="relative z-10 overflow-x-clip"> */}

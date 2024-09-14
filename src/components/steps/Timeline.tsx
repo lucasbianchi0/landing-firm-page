@@ -32,8 +32,8 @@ const Timeline = ({
             className={`${
               isHighlighted
                 ? "bg-[#FFFFFF] !bg-[#0E74FF]  text-white shadow-blue-700/20 border border-blue-700/20"
-                : "!text-[#0E74FF] text-[#396FBD] bg-[#FFFFFF]"
-            } flex items-center justify-center border-2 drop-shadow-2xl  w-12 h-12 rounded-xl`}
+                : "!text-[#0E74FF] text-[#396FBD] bg-[#FFFFFF] shadow-inner"
+            } flex items-center justify-center  drop-shadow-2xl  w-12 h-12 rounded-xl `}
           >
             <Icon className="w-8 h-8 " />
           </div>
@@ -48,7 +48,7 @@ const Timeline = ({
           >
             {title}
           </h3>
-          <p className="text-base md:leading-relaxed text-md font-medium text-[#757575]">
+          <p className="text-base md:leading-relaxed   text-[#757575] !text-[#59677E]">
             {description}
           </p>
         </div>
