@@ -44,10 +44,10 @@ const Steps2 = () => {
 
           <div className="relative md:flex-1 md:mt-0">
             <div
-              style={{
-                boxShadow: "10px 10px 20px 6px rgba(14, 116, 255, 0.5)",
-              }}
-              className="drop-shadow-lg overflow-hidden w-auto  relative  md:w-[170%] h-auto aspect-[16/9] bg-red border-2 rounded-xl border-gray-800 !border-[#0E74FF] "
+              // style={{
+              //   boxShadow: "10px 10px 20px 6px rgba(14, 116, 255, 0.5)",
+              // }}
+              className="drop-shadow-lg image-shadow overflow-hidden w-auto relative md:w-[170%] h-auto aspect-[16/9] bg-red border-4 rounded-[24px]  !border-[#1f2937] "
             >
               {/* Gradiente detrás de la imagen */}
               {/* <div className="absolute bottom-0 right-300 h-[510px] w-[630px] rounded-xl blur-[5rem] z-[-1] bg-gradient-to-r from-blue-200 to-blue-200"></div> */}

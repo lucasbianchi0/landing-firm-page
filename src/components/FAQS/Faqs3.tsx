@@ -8,6 +8,7 @@ import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlin
 interface IqaProps {
   summary: string;
   description: string;
+  delay: number;
 }
 
 const Faqs3 = () => {
@@ -59,7 +60,12 @@ const Faqs3 = () => {
           //   </h4>
           //   <p className="text-zinc-500 md:leading-relaxed">{fq.description}</p>
           // </motion.article>
-          <QA key={index} summary={fq.summary} description={fq.description} />
+          <QA
+            key={index}
+            summary={fq.summary}
+            description={fq.description}
+            delay={index * 0.2}
+          />
         ))}
       </div>
     </div>
@@ -68,7 +74,7 @@ const Faqs3 = () => {
 
 export default Faqs3;
 
-const QA = ({ summary, description }: IqaProps) => {
+const QA = ({ summary, description, delay }: IqaProps) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
   return (
@@ -76,7 +82,7 @@ const QA = ({ summary, description }: IqaProps) => {
       ref={ref}
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 0.5, delay: delay }}
       className="space-y-1 md:space-y-3"
     >
       <h4 className="text-xl font-semibold text-[#2A5189]">{summary}</h4>

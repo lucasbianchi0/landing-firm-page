@@ -43,7 +43,7 @@ const Header4 = () => {
               <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-bold leading-none">
                 <span>Firma Biométrica</span>
                 <br />
-                <span>Segura y Eficiente</span>
+                <span className="title-shadow">Segura y Eficiente</span>
               </h2>
               <p className="md:text-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.

@@ -201,6 +201,14 @@ body {
 .fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
+
+.title-shadow {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.45);
+}
+
+.image-shadow {
+  box-shadow: 0 0 70px 10px rgba(0, 108, 255, 0.4);
+}
 /* styles.css */
 
 /* Sombra para estado normal */

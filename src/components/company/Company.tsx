@@ -7,7 +7,7 @@ interface ICompany {
 
 const Company = ({ companyLogo }: ICompany) => {
   return (
-    <article className="bg-[#F1F4F7] flex justify-center items-center h-[3.75rem] w-[8.75rem] p-3 rounded-xl shadow-md border-2 border-white">
+    <article className="bg-[#F1F4F7] flex justify-center items-center h-[60px] md:h-[70px] w-[145px] md:w-[160px] p-2 rounded-xl shadow-md border-2 border-white">
       <Image src={companyLogo} height={60} width={80} alt="company logo" />
     </article>
   );
