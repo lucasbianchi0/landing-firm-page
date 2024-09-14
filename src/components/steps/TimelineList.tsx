@@ -11,23 +11,38 @@ const TimelineList = () => {
     {
       icon: FileOpenRoundedIcon,
       title: "Prepara el documento y el dispositivo",
-      description:
-        "Abre el documento que quieres firmar. Conecta y ajusta la tableta Wacom.",
+      description: [
+        { text: "Abre el documento que quieres firmar. Conecta y ajusta " },
+        { text: "la tableta Wacom", highlight: true },
+        { text: "." },
+      ],
     },
     {
       icon: SettingsRoundedIcon,
       title: "Configurar el software de firma",
-      description: "Abre el software de firma ESignAnywhere.",
+      description: [
+        { text: "Abre el software " },
+        { text: "ESignAnywhere", highlight: true },
+        { text: "." },
+      ],
     },
     {
       icon: DriveFileRenameOutlineRoundedIcon,
       title: "Firmar el documento",
-      description: "Firma con el lápiz de la tableta Wacom.",
+      description: [
+        { text: "Firma con " },
+        { text: "el lápiz de la tableta Wacom", highlight: true },
+        { text: "." },
+      ],
     },
     {
       icon: DomainVerificationRoundedIcon,
       title: "Finalizar y Enviar",
-      description: "Guarda y envía el documento firmado electrónicamente.",
+      description: [
+        { text: "Guarda y envía " },
+        { text: "el documento firmado electrónicamente", highlight: true },
+        { text: "." },
+      ],
     },
   ];
 

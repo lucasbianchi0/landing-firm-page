@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Metric from "./components/Metric";
-import CompanyList from "./components/CompanyList";
+import Navbar from "./Navbar";
+import Metric from "./Metric";
+import CompanyList from "./CompanyList";
 import Image from "next/image";
 
 const Header4 = () => {
@@ -34,12 +34,12 @@ const Header4 = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[70vh] md:min-h-[95vh] py-6 overflow-hidden z-0">
+    <section className="relative w-full py-6 md:pb-12 min-h-[70vh] md:min-h-[90vh] ">
       <Navbar />
       <div className="h-full">
         <div className="flex flex-col h-full">
           <div className="container flex flex-col h-full">
-            <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative z-10">
+            <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative ">
               <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-bold leading-none">
                 <span>Firma Biométrica</span>
                 <br />
@@ -52,13 +52,13 @@ const Header4 = () => {
                 doloremque.
               </p>
             </article>
-            <div className="montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative z-20">
+            <div className="montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative ">
               <Metric content="1500 firmas" target={1500} />
               <Metric content="200 clientes contentos" target={200} />
               <Metric content="Más de 10 años de experiencia" target={10} />
             </div>
           </div>
-          <div className="relative z-20">
+          <div className="relative ">
             <CompanyList />
           </div>
         </div>
@@ -72,6 +72,8 @@ const Header4 = () => {
           sizes="100vw"
           loading="eager"
           style={{
+            zIndex: -5,
+
             objectFit: "cover",
             backgroundAttachment: "fixed",
             backgroundPosition: "center",
@@ -79,7 +81,7 @@ const Header4 = () => {
         />
         <div
           className="absolute inset-0 bg-[#2A5189]/50"
-          style={{ zIndex: 1 }}
+          style={{ zIndex: -4 }}
         />
       </div>
     </section>

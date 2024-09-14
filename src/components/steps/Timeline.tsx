@@ -1,13 +1,18 @@
 "use client";
 import { SvgIconProps } from "@mui/material";
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { color, motion, useInView } from "framer-motion";
 
 interface ITimelineData {
   icon: React.ComponentType<SvgIconProps>;
   title: string;
-  description: any;
+  description: IDescriptionPart[];
   isHighlighted: boolean;
+}
+
+interface IDescriptionPart {
+  text: string;
+  highlight?: boolean;
 }
 
 const Timeline = ({
@@ -24,10 +29,12 @@ const Timeline = ({
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="ml-5 relative border-s-gray-[#EBEBEB] border-s-4 pb-7 last:border-none max-w-[90%] h-[160px] md:h-[100px]"
+      className={`ml-5 relative border-s-[5px] !border-s-gray-[#006BFC] last:border-transparent 
+       ${isHighlighted ? "border-s-[#006BFC]" : "border-s-[#EBEBEB]"}    
+        pb-7  w-full h-[160px] md:h-[100px]`}
     >
       <div className=" ms-6">
-        <div className="absolute p-2 bg-[#FFFFFF] w-18 h-18 -start-8">
+        <div className="absolute px-2 py-3 bg-[#FFFFFF]  w-18 h-218 -start-8">
           <div
             className={`${
               isHighlighted
@@ -48,8 +55,21 @@ const Timeline = ({
           >
             {title}
           </h3>
-          <p className="text-base md:leading-relaxed   text-[#757575] !text-[#59677E]">
+          {/* <p className="text-base md:leading-relaxed   text-[#757575] !text-[#59677E]">
             {description}
+          </p> */}
+          <p>
+            {description.map((part, index) => (
+              <span
+                key={index}
+                className={`text-base md:leading-relaxed text-[#59677E] `}
+                // ${part.highlight && "!text-[#2A5189]"}
+
+                // style={{ color: part.highlight ? "red" : "inherit" }}
+              >
+                {part.text}
+              </span>
+            ))}
           </p>
         </div>
       </div>

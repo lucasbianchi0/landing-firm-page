@@ -70,6 +70,7 @@ const Integrations = () => {
             icon={TollOutlinedIcon}
             position="left"
           />
+          <p className="text-[#006BFC] mt-5 ">+ 150 integraciones nativas</p>
         </div>
 
         <div className="grid flex-1 grid-cols-3 grid-rows-3 gap-2 md:gap-4">

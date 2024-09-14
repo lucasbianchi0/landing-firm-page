@@ -29,7 +29,7 @@ const Steps2 = () => {
             position={"left"}
           />
         </div>
-        <div className="flex flex-col-reverse gap-2 md:gap-10 md:flex-row md:justify-between flex flex-col justify-center ">
+        <div className="flex flex-col-reverse gap-2 md:gap-10 md:flex-row md:justify-between justify-center ">
           <div className=" w-full md:w-[50%]">
             <div className="hidden md:flex">
               <TextContent
@@ -47,7 +47,7 @@ const Steps2 = () => {
               // style={{
               //   boxShadow: "10px 10px 20px 6px rgba(14, 116, 255, 0.5)",
               // }}
-              className="drop-shadow-lg image-shadow overflow-hidden w-auto relative md:w-[170%] h-auto aspect-[16/9] bg-red border-4 rounded-[24px]  !border-[#1f2937] "
+              className="drop-shadow-lg image-shadow-mobile md:image-shadow-desktop overflow-hidden w-auto relative md:w-[170%] h-auto aspect-[16/9] bg-red border-4 rounded-[12px] md:rounded-[24px]  !border-[#1f2937] "
             >
               {/* Gradiente detrás de la imagen */}
               {/* <div className="absolute bottom-0 right-300 h-[510px] w-[630px] rounded-xl blur-[5rem] z-[-1] bg-gradient-to-r from-blue-200 to-blue-200"></div> */}

@@ -112,7 +112,7 @@ const Industries2 = () => {
           <TextContent
             title={"Especialistas en estas industrias"}
             description={
-              "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas, como la huella dactilar o la forma de la firma, se reduce significativamente el riesgo de fraude o suplantación de identidad. "
+              "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas"
             }
             subtitle={"Technology"}
             icon={InventoryOutlinedIcon}

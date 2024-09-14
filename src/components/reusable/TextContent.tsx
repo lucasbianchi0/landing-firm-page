@@ -43,7 +43,7 @@ const TextContent = ({
       >
         <Icon
           style={{ fontSize: "1.8rem" }}
-          className="text-[#006BFC] bg-transparent !text-[hsl(215,76%,73%)] text-[#396FBD]"
+          className="text-[#006BFC] bg-transparent !text-[hsl(215,76%,73%)] text-[#396FBD] subtitle-icon-shadow bg-white "
         />
         <p className="!text-[hsl(215,76%,73%)] font-bold text-[#396FBD]">
           {subtitle}
