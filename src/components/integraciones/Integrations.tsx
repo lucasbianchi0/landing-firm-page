@@ -62,7 +62,7 @@ const Integrations = () => {
         </div> */}
         <div className="w-full md:w-[40%]">
           <TextContent
-            title={"Integra la firma electronica"}
+            title={"Integra la firma biométrica"}
             description={
               "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones"
             }

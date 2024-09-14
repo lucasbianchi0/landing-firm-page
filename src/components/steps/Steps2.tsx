@@ -5,34 +5,58 @@ import TimelineList from "./TimelineList";
 import Image from "next/image";
 import TextContent from "../reusable/TextContent";
 import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
+import Blog from "@/app/blog/page";
 
 const Steps2 = () => {
   return (
-    <section className="container bg-[#FFFFFF] sectionStyle">
-      <div className="w-full ">
+    <section className=" bg-[#FFFFFF] sectionStyle overflow-hidden">
+      <div className="container">
+        {/* <div className="w-full ">
         <TextContent
-          title={"Paso a paso"}
+          title={"Como funciona"}
           subtitle="Especialistas"
+          description={
+            "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones.  "
+          }
           icon={IntegrationInstructionsTwoToneIcon}
-          position={"center"}
+          position={"left"}
         />
-      </div>
+      </div> */}
+        <div className="md:hidden mb-8">
+          <TextContent
+            title={"Como funciona"}
+            subtitle="Especialistas"
+            icon={IntegrationInstructionsTwoToneIcon}
+            position={"left"}
+          />
+        </div>
+        <div className="flex flex-col-reverse gap-2 md:gap-10 md:flex-row md:justify-between  ">
+          <div className=" w-full md:w-[50%]">
+            <div className="hidden md:flex">
+              <TextContent
+                title={"Como funciona"}
+                subtitle="Especialistas"
+                icon={IntegrationInstructionsTwoToneIcon}
+                position={"left"}
+              />
+            </div>
+            <TimelineList />
+          </div>
 
-      <div className="flex flex-col gap-10 md:flex-row md:justify-between sectionStyle">
-        <div className="relative flex-1 mt-5 md:mt-0">
-          <div className="relative h-auto border-8 rounded-xl border-gray-800">
-            <Image
-              src="/step1.jpg"
-              alt="Descripción"
-              layout="responsive"
-              width={1000}
-              height={600}
-              className="w-full h-auto rounded-xl"
-            />
+          <div className="relative md:flex-1 md:mt-0">
+            <div className="overflow-hidden w-auto  relative  md:w-[170%] h-auto aspect-[16/9] bg-red border-2 rounded-xl border-gray-800 !border-[#0E74FF] md:absolute md:top-[50%] md:left-[50%]  md:translate-x-[-35%] md:translate-y-[-50%]">
+              {/* Gradiente detrás de la imagen */}
+              {/* <div className="absolute bottom-0 right-300 h-[510px] w-[330px] rounded-xl blur-[5rem] z-[-1] bg-gradient-to-r from-blue-200 to-blue-200"></div> */}
+
+              <Image
+                src="/step1.jpg"
+                alt="Descripción"
+                className="w-full md:h-auto  md:object-contain"
+                fill
+              />
+            </div>
           </div>
         </div>
-
-        <TimelineList />
       </div>
     </section>
   );
@@ -73,3 +97,14 @@ export default Steps2;
 {
   /* </figure> */
 }
+
+// estoy haciendo una pagina de firma biometrica y las secciones son:
+
+// 1- paso a paso como funciona la solucion
+// 2- beneficios
+// 3- integraciones
+// 4- industrias
+// 5- preguntas frecuentes
+// 6 - un preview de noticias del Blog
+
+// dime titulos cortos pero especificos y que llamen la atencion para poner en la pagina de firma biometrica

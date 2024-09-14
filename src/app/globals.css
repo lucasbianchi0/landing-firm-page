@@ -10,9 +10,13 @@ body {
   font-family: var(--font-montserrat);
 }
 
-.henderson {
+/* .inter {
+  font-family: var(--font-montserrat);
+} */
+
+/* .henderson {
   font-family: var(--font-henderson);
-}
+} */
 
 .stock-ticker {
   font-size: 15px;
@@ -140,7 +144,7 @@ body {
     @apply !w-[90%] sm:!w-[85%] !mx-auto;
   }
   .subtitle {
-    @apply text-[hsl(215,76%,73%)] font-bold text-base mb-6;
+    @apply text-[hsl(215,76%,73%)] font-bold text-base mb-4 md:mb-2;
   }
 
   .title {

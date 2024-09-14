@@ -15,11 +15,13 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-const inter = Inter({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"] });
+
+// const inter = Inter({
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+// });
 
 export default function RootLayout({
   children,
@@ -28,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} font-inter`}>
+      <body className={`${inter.className} ${montserrat.variable} `}>
         {children}
       </body>
     </html>

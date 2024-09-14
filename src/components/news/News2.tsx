@@ -41,7 +41,7 @@ const News2 = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Conecta con las ultimas noticias
+            Lo Último en firma Biométrica
           </span>
         </h2>
       </div>

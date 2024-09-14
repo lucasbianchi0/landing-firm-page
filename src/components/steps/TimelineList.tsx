@@ -27,8 +27,7 @@ const TimelineList = () => {
     {
       icon: DomainVerificationRoundedIcon,
       title: "Finalizar y Enviar",
-      description:
-        "Verifica la claridad y ubicación de la firma. Guarda y envía el documento firmado electrónicamente.",
+      description: "Guarda y envía el documento firmado electrónicamente.",
     },
   ];
 
@@ -44,7 +43,7 @@ const TimelineList = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <article className="w-full md:w-[40%]">
+    <article className="w-full mt-10">
       {dataTest.map((step, index) => (
         <Timeline
           key={index}

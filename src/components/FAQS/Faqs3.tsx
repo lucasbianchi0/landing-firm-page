@@ -1,6 +1,13 @@
+"use client";
 import React from "react";
 import TextContent from "../reusable/TextContent";
 import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
+import { useInView, motion } from "framer-motion";
+
+interface IqaProps {
+  summary: string;
+  description: string;
+}
 
 const Faqs3 = () => {
   const faqs = [
@@ -36,14 +43,22 @@ const Faqs3 = () => {
           position={"center"}
         />
       </div>
-      <div className="grid grid-cols-1 mt-6 md:mt-10 space-y-7 md:gap-20 md:space-y-0 md:grid-cols-2 md:gap-y-16">
+      <div className="grid grid-cols-1 mt-6 md:mt-14 space-y-7 md:gap-20 md:space-y-0 md:grid-cols-2 md:gap-y-16">
         {faqs.map((fq, index) => (
-          <article className="space-y-1 md:space-y-3" key={index}>
-            <h4 className="text-xl font-semibold text-[#2A5189]">
-              {fq.summary}
-            </h4>
-            <p className="text-zinc-500 md:leading-relaxed">{fq.description}</p>
-          </article>
+          // <motion.article
+          //   ref={ref}
+          //   initial={{ opacity: 0, y: 15 }}
+          //   animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
+          //   transition={{ duration: 0.5, delay: 0.5 }}
+          //   className="space-y-1 md:space-y-3"
+          //   key={index}
+          // >
+          //   <h4 className="text-xl font-semibold text-[#2A5189]">
+          //     {fq.summary}
+          //   </h4>
+          //   <p className="text-zinc-500 md:leading-relaxed">{fq.description}</p>
+          // </motion.article>
+          <QA key={index} summary={fq.summary} description={fq.description} />
         ))}
       </div>
     </div>
@@ -51,3 +66,20 @@ const Faqs3 = () => {
 };
 
 export default Faqs3;
+
+const QA = ({ summary, description }: IqaProps) => {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  return (
+    <motion.article
+      ref={ref}
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="space-y-1 md:space-y-3"
+    >
+      <h4 className="text-xl font-semibold text-[#2A5189]">{summary}</h4>
+      <p className="text-zinc-500 md:leading-relaxed">{description}</p>
+    </motion.article>
+  );
+};

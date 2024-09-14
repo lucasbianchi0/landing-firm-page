@@ -103,8 +103,8 @@ const BenefitItem = ({ icon: Icon, title, description }: benefitProps) => {
   return (
     <motion.article
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       className="flex flex-col justify-center w-full gap-2 p-6 text-left bg-white border rounded-[18px] shadow-lg md:p-8 shadow-blue-700/20 border-blue-700/20 md:border-zinc-100 md:border-2 md:hover:border-blue-700/20 md:hover:shadow-xl md:hover:shadow-blue-700/20"
     >
