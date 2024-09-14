@@ -4,8 +4,7 @@ import Timeline from "./Timeline";
 import TimelineList from "./TimelineList";
 import Image from "next/image";
 import TextContent from "../reusable/TextContent";
-import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
-import Blog from "@/app/blog/page";
+import StairsOutlinedIcon from "@mui/icons-material/StairsOutlined";
 
 const Steps2 = () => {
   return (
@@ -26,7 +25,7 @@ const Steps2 = () => {
           <TextContent
             title={"Como funciona"}
             subtitle="Especialistas"
-            icon={IntegrationInstructionsTwoToneIcon}
+            icon={StairsOutlinedIcon}
             position={"left"}
           />
         </div>
@@ -36,7 +35,7 @@ const Steps2 = () => {
               <TextContent
                 title={"Como funciona"}
                 subtitle="Especialistas"
-                icon={IntegrationInstructionsTwoToneIcon}
+                icon={StairsOutlinedIcon}
                 position={"left"}
               />
             </div>

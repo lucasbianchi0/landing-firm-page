@@ -3,6 +3,7 @@ import React from "react";
 import TextContent from "../reusable/TextContent";
 import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
 import { useInView, motion } from "framer-motion";
+import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined";
 
 interface IqaProps {
   summary: string;
@@ -39,7 +40,7 @@ const Faqs3 = () => {
         <TextContent
           title={"Preguntas frecuentes "}
           subtitle="Especialistas"
-          icon={IntegrationInstructionsTwoToneIcon}
+          icon={QuestionAnswerOutlinedIcon}
           position={"center"}
         />
       </div>

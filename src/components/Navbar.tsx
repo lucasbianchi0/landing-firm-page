@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
+    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-4 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
       {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
       <figure
         className="   "
@@ -36,7 +36,7 @@ const Navbar = () => {
         <Image src="/LOGO.png" height={80} width={100} alt="logo" />
       </figure>
 
-      <ul className="hidden gap-4 font-light text-white md:flex">
+      <ul className="hidden gap-8 font-light text-white md:flex">
         <li>Servicios</li>
         <li>Sobre Accedra</li>
         <li>Partners</li>

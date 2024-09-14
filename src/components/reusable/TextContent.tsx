@@ -31,7 +31,7 @@ const TextContent = ({
       } `}
     >
       <div
-        className={` subtitle flex items-center ${
+        className={`subtitle flex items-center ${
           position === "left"
             ? ""
             : position === "right"
@@ -43,9 +43,9 @@ const TextContent = ({
       >
         <Icon
           style={{ fontSize: "1.8rem" }}
-          className="!text-[#006BFC] text-[#396FBD]"
+          className="text-[#006BFC] bg-transparent !text-[hsl(215,76%,73%)] text-[#396FBD]"
         />
-        <p className="text-[hsl(215,76%,73%)] font-bold !text-[#396FBD]">
+        <p className="!text-[hsl(215,76%,73%)] font-bold text-[#396FBD]">
           {subtitle}
         </p>
       </div>

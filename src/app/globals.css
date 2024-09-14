@@ -18,6 +18,23 @@ body {
   font-family: var(--font-henderson);
 } */
 
+.subtitle-icon-shadow {
+  box-shadow: 0 0 18px rgba(0, 105, 255, 0.65);
+  background-color: transparent;
+}
+
+.timeline-blue-shadow {
+  box-shadow: 0 5px 22px rgba(0, 105, 255, 0.5);
+}
+
+.timeline-black-shadow {
+  box-shadow: 0 5px 44px rgba(0, 0, 0, 0.1); /* Sombra negra */
+}
+
+.timeline-inner-shadow {
+  box-shadow: inset 0 0 10px rgba(232, 232, 232, 1); /* Sombra interna gris */
+}
+
 .stock-ticker {
   font-size: 15px;
   padding-block: 8px;
@@ -159,7 +176,7 @@ body {
     @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
   } */
   .sectionStyle {
-    @apply w-full py-8 md:py-16;
+    @apply w-full py-10 md:py-24;
   }
   /* .sectionStyleTranslate {
     @apply pt-10 md:pt-16 -translate-y-[100px] rounded-t-[30px] w-full;

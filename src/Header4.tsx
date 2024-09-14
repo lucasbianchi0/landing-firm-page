@@ -40,7 +40,7 @@ const Header4 = () => {
         <div className="flex flex-col h-full">
           <div className="container flex flex-col h-full">
             <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative z-10">
-              <h2 className="montserrat text-[56px] text-white md:text-[60px] font-bold leading-none">
+              <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-bold leading-none">
                 <span>Firma Biométrica</span>
                 <br />
                 <span>Segura y Eficiente</span>
@@ -52,7 +52,7 @@ const Header4 = () => {
                 doloremque.
               </p>
             </article>
-            <div className="montserrat w-full md:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative z-20">
+            <div className="montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative z-20">
               <Metric content="1500 firmas" target={1500} />
               <Metric content="200 clientes contentos" target={200} />
               <Metric content="Más de 10 años de experiencia" target={10} />

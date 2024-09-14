@@ -10,11 +10,12 @@ import AccessibilityNewRoundedIcon from "@mui/icons-material/AccessibilityNewRou
 import DocumentScannerRoundedIcon from "@mui/icons-material/DocumentScannerRounded";
 import IntegrationInstructionsRoundedIcon from "@mui/icons-material/IntegrationInstructionsRounded";
 import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
-
+import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import { SvgIconProps } from "@mui/material";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import TextContent from "../reusable/TextContent";
-
+import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
+import FeedbackOutlinedIcon from "@mui/icons-material/FeedbackOutlined";
 const Benefits4 = () => {
   const benefits = [
     {
@@ -59,7 +60,7 @@ const Benefits4 = () => {
   // const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="relative w-full bg-[#FEFEFE] sectionStyle">
+    <section className="relative w-full bg-[#FEFEFE] sectionStyle md:!py-10">
       <div className="container flex flex-col-reverse items-start md:h-[900px] gap-10 md:flex-row md:justify-between">
         <div className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
           {benefits.map((benefit, index) => (
@@ -79,7 +80,7 @@ const Benefits4 = () => {
                 "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas, como la huella dactilar o la forma de la firma, se reduce significativamente el riesgo de fraude o suplantación de identidad. "
               }
               subtitle={"Technology"}
-              icon={IntegrationInstructionsRoundedIcon}
+              icon={VerifiedOutlinedIcon}
               position="right"
             />
           </article>

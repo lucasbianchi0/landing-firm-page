@@ -14,6 +14,7 @@ import StoreRoundedIcon from "@mui/icons-material/StoreRounded";
 import PaymentTwoToneIcon from "@mui/icons-material/PaymentTwoTone";
 import TextContent from "../reusable/TextContent";
 import IntegrationInstructionsRoundedIcon from "@mui/icons-material/IntegrationInstructionsRounded";
+import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
 
 const Industries2 = () => {
   const industries = [
@@ -114,7 +115,7 @@ const Industries2 = () => {
               "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas, como la huella dactilar o la forma de la firma, se reduce significativamente el riesgo de fraude o suplantación de identidad. "
             }
             subtitle={"Technology"}
-            icon={IntegrationInstructionsRoundedIcon}
+            icon={InventoryOutlinedIcon}
             position="right"
             color={"white"}
           />

@@ -31,9 +31,9 @@ const Timeline = ({
           <div
             className={`${
               isHighlighted
-                ? "bg-[#FFFFFF] !bg-[#0E74FF]  text-white shadow-blue-700/20 border border-blue-700/20"
-                : "!text-[#0E74FF] text-[#396FBD] bg-[#FFFFFF] shadow-inner"
-            } flex items-center justify-center  drop-shadow-2xl  w-12 h-12 rounded-xl `}
+                ? "bg-[#FFFFFF] !bg-[#0E74FF]  text-white timeline-blue-shadow border border-blue-700/20"
+                : "!text-[#0E74FF] text-[#396FBD] bg-[#FEFEFE] timeline-black-shadow timeline-inner-shadow "
+            } flex items-center justify-center  drop-shadow-xl  w-12 h-12 rounded-xl `}
           >
             <Icon className="w-8 h-8 " />
           </div>

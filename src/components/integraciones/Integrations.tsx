@@ -2,7 +2,7 @@ import React from "react";
 import IntegrationItem from "./IntegrationItem";
 import IntegrationInstructionsTwoToneIcon from "@mui/icons-material/IntegrationInstructionsTwoTone";
 import TextContent from "../reusable/TextContent";
-
+import TollOutlinedIcon from "@mui/icons-material/TollOutlined";
 const Integrations = () => {
   const integrations = [
     {
@@ -32,7 +32,7 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="relative bg-[#FEFEFE] z-10 w-full sectionStyle">
+    <section className="relative bg-[#FEFEFE] z-10 w-full sectionStyle ">
       <div className="container flex flex-col gap-5 md:flex-row md:justify-between md:gap-10">
         {/* <div className="flex flex-col items-start md:w-[40%] space-y-4 md:items-start">
           <p className="text-left md:text-left subtitle">Especialistas</p>
@@ -67,7 +67,7 @@ const Integrations = () => {
               "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones"
             }
             subtitle={"Technology"}
-            icon={IntegrationInstructionsTwoToneIcon} // Aquí debes pasar un componente de ícono
+            icon={TollOutlinedIcon}
             position="left"
           />
         </div>
