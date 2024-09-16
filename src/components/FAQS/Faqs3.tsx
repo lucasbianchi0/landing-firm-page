@@ -43,7 +43,7 @@ const Faqs3 = () => {
   ];
 
   return (
-    <div className="container sectionStyle !min-h-0">
+    <div className="container sectionStyle !min-h-0 !pt-0">
       <div className="flex flex-col space-y-2 ">
         <TextContent
           title={"Preguntas frecuentes "}

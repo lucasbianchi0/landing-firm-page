@@ -116,7 +116,7 @@ const Industries2 = () => {
             }
             subtitle={"Technology"}
             icon={InventoryOutlinedIcon}
-            position="right"
+            position="left"
             color={"white"}
           />
           {/* <div className="pt-2">

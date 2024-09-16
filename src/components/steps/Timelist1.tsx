@@ -7,7 +7,7 @@ import FileOpenRoundedIcon from "@mui/icons-material/FileOpenRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import Timeline1 from "./Timeline1";
 
-const TimelineList = () => {
+const TimelineList1 = () => {
   const dataTest = [
     {
       icon: FileOpenRoundedIcon,
@@ -61,7 +61,7 @@ const TimelineList = () => {
   return (
     <article className="w-full mt-10">
       {dataTest.map((step, index) => (
-        <Timeline
+        <Timeline1
           key={index}
           icon={step.icon}
           title={step.title}
@@ -73,4 +73,4 @@ const TimelineList = () => {
   );
 };
 
-export default TimelineList;
+export default TimelineList1;
