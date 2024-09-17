@@ -8,7 +8,6 @@ import News2 from "@/components/news/News2";
 import Steps2 from "@/components/steps/Steps2";
 import Faqs3 from "../components/FAQS/Faqs3";
 import Header4 from "@/components/Header4";
-import Steps3 from "@/components/steps/Steps3hidden";
 import Solutions from "@/components/solutions/Solutions";
 import Steps4 from "@/components/steps/Steps4";
 import Solutions2 from "@/components/solutions/Solutions2";
