@@ -3,7 +3,7 @@ import React from "react";
 import TextContent from "../reusable/TextContent";
 import TollOutlinedIcon from "@mui/icons-material/TollOutlined";
 
-const Solutions = () => {
+const Solutions2 = () => {
   return (
     <section className="container sectionStyle">
       <div className="w-full md:w-full">
@@ -19,22 +19,21 @@ const Solutions = () => {
           {
             title: "Firma Remota",
             description:
-              "Simplifica la firma de documentos de forma segura y rápida desde cualquier lugar.",
-
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ad libero veritatis ea sed ",
             image: "/AccedraProceso04.jpg",
             alt: "Descripción 1",
           },
           {
-            title: "Firma Biometrica",
+            title: "Firma Remota para corporaciones",
             description:
-              "Garantiza la autenticidad de tus documentos con una firma única y segura basada en datos biométricos.",
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ad libero veritatis ea sed ",
             image: "/WACOM2.png",
             alt: "Descripción 2",
           },
         ].map((item, index) => (
           <article
             key={index}
-            className="w-full relative flex  h-[280px]  border-2 shadow-xl overflow-hidden rounded-2xl group transition-all duration-300 ease-in-out transform hover:scale-105 hover:filter hover:border-2 md:hover:border-blue-700/20 md:hover:shadow-2xl md:hover:shadow-blue-700/40"
+            className="w-full relative  border-2 shadow-xl overflow-hidden rounded-2xl h-[400px] group transition-all  duration-300 ease-in-out transform hover:scale-105 hover:filter hover:border-2 md:hover:border-blue-700/20 md:hover:shadow-2xl md:hover:shadow-blue-700/40"
           >
             {/* v1 */}
             {/* <div className="p-3 relative flex flex-col justify-center w-[55%] gap-3 transition-all duration-300 ease-in-out transform translate-y-5 group-hover:-translate-y-[3%] overflow-hidden">
@@ -61,20 +60,40 @@ const Solutions = () => {
 
             {/* v3 */}
 
-            <div className="p-3 relative flex flex-col justify-center  w-[55%] gap-3 transition-all duration-300 ease-in-out transform   overflow-hidden">
+            {/* <div className="p-3 relative flex flex-col justify-center w-[55%] gap-3 transition-all duration-300 ease-in-out transform translate-y-5 group-hover:-translate-y-[3%] overflow-hidden">
               <h3 className="text-3xl font-semibold text-pretty">
                 {item.title}
               </h3>
               <p className="text-[#425466]">{item.description}</p>
-              <p className="mt-4 text-specialist text-sm text-blue-500 ">
+              <p className="text-specialist text-sm text-blue-500 ]">
                 Hablar con un especialista +
               </p>
             </div>
             <div className="relative flex-1 flex items-end ">
-              <div className=" w-full h-auto  rotate-6  translate-y-6 transition-all duration-300 ease-in-out group-hover:rotate-0 group-hover:-translate-y-0 ">
-                <figure className=" relative aspect-[16/9] h-auto w-[190%]  max-h-[200px] ">
-                  <Image src={item.image} alt={item.alt} fill />
+              <div className=" w-full h-auto translate-y-5 rotate-6 transition-all duration-300 ease-in-out group-hover:rotate-0 group-hover:-translate-y-0 ">
+                <figure className="relative aspect-[16/9] h-auto w-[150%]   ">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                  />
                 </figure>
+              </div>
+            </div> */}
+            <div className=" w-full h-auto translate-y-5 transition-all duration-300 ease-in-out group-hover:rotate-0 group-hover:-translate-y-0 ">
+              <figure className="relative aspect-[16/9] h-auto w-[100%] ml-auto translate-x-20 rotate-6 ">
+                <Image src={item.image} alt={item.alt} fill />
+              </figure>
+            </div>
+            <div className="absolute bottom-0  left-0 px-4 pt-2 bg-white bg-opacity-95">
+              <div className="z-10 flex flex-col gap-2">
+                <h3 className="text-3xl font-semibold text-pretty">
+                  {item.title}
+                </h3>
+                <p className="text-[#425466]">{item.description}</p>
+                <p className="text-specialist text-sm text-blue-500 ]">
+                  Hablar con un especialista +
+                </p>
               </div>
             </div>
 
@@ -86,4 +105,4 @@ const Solutions = () => {
   );
 };
 
-export default Solutions;
+export default Solutions2;

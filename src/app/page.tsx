@@ -11,19 +11,22 @@ import Header4 from "@/components/Header4";
 import Steps3 from "@/components/steps/Steps3hidden";
 import Solutions from "@/components/solutions/Solutions";
 import Steps4 from "@/components/steps/Steps4";
+import Solutions2 from "@/components/solutions/Solutions2";
 
 export default function Home() {
   return (
     <main className="relative h-full">
       <Header4 />
       <Solutions />
+      <Solutions2 />
+
       <Steps2 />
       {/* <Steps4 /> */}
       <Benefits4 />
       <Banner />
       <Integrations />
       <Industries2 />
-      <News2 />
+      {/* <News2 /> */}
       <Faqs3 />
       <Footer />
     </main>

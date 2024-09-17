@@ -5,9 +5,12 @@ import DomainVerificationRoundedIcon from "@mui/icons-material/DomainVerificatio
 import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRenameOutlineRounded";
 import FileOpenRoundedIcon from "@mui/icons-material/FileOpenRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
-import Timeline1 from "./Timeline1";
 
-const TimelineList = () => {
+interface ITimelineListProps {
+  highlightedIndex: number;
+}
+
+const TimelineList = ({ highlightedIndex }: ITimelineListProps) => {
   const dataTest = [
     {
       icon: FileOpenRoundedIcon,
@@ -47,17 +50,6 @@ const TimelineList = () => {
     },
   ];
 
-  const [highlightedIndex, setHighlightedIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHighlightedIndex((prevIndex) =>
-        prevIndex === dataTest.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000); // 3 segundos encendido + 2 segundos apagado = 5 segundos total
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <article className="w-full mt-10">
       {dataTest.map((step, index) => (
