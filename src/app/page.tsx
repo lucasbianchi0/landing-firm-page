@@ -17,7 +17,7 @@ export default function Home() {
     <main className="relative h-full">
       <Header4 />
       <Solutions />
-      <Solutions2 />
+      {/* <Solutions2 /> */}
 
       <Steps2 />
       {/* <Steps4 /> */}
