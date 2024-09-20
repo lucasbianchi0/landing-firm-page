@@ -12,13 +12,14 @@ const News2 = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get<ArticlesResponse>(
-        `${process.env.NEXT_PUBLIC_RENDER_API_URL}/api/blogs?sort[0]=createdAt:desc&pagination[page]=1&pagination[pageSize]=3&populate=Image`,
+        `${process.env.NEXT_PUBLIC_RENDER_API_URL}/api/blogs?sort[0]=createdAt:desc&pagination[page]=1&pagination[pageSize]=3&populate=Image&populate=Tags`,
         {
           headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
           },
         }
       );
+      console.log(response.data);
       setNews(response.data.data);
     } catch (err) {
       console.log(err);

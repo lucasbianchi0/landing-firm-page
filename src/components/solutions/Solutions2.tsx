@@ -92,7 +92,7 @@ const Solutions2 = () => {
                 </h3>
                 <p className="text-[#425466]">{item.description}</p>
                 <p className="text-specialist text-sm text-blue-500 ]">
-                  Hablar con un especialista +
+                  Hablar con especialista
                 </p>
               </div>
             </div>

@@ -11,6 +11,7 @@ import Header4 from "@/components/Header4";
 import Solutions from "@/components/solutions/Solutions";
 import Steps4 from "@/components/steps/Steps4";
 import Solutions2 from "@/components/solutions/Solutions2";
+import Steps5 from "@/components/steps/Steps5";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <Banner />
       <Integrations />
       <Industries2 />
-      {/* <News2 /> */}
+      <News2 />
       <Faqs3 />
       <Footer />
     </main>

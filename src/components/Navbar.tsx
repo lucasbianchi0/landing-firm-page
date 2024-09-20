@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-4 border border-white bg-white bg-opacity-10 backdrop-blur-lg">
+    <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-4 bg-white bg-opacity-10 backdrop-blur-lg">
       {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
       <figure
         className="   "

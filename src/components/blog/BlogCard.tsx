@@ -30,9 +30,9 @@ const BlogCard = ({
       </figure>
 
       <div className="p-4 sm:p-6">
-        <h3 className="text-lg font-medium text-gray-900">{title}</h3>
+        <h3 className="text-lg font-medium text-gray-900 clamp-2">{title}</h3>
 
-        <p className="mt-2 text-gray-500 line-clamp-3 text-sm/relaxed">
+        <p className="mt-2 text-gray-500 line-clamp-3 text-sm/relaxed clamp-3">
           {descriptionPreview}
         </p>
 

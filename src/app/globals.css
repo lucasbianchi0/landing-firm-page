@@ -216,6 +216,28 @@ body {
   }
 }
 
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5; /* Ajusta el espacio entre líneas si lo necesitas */
+  max-height: 3em; /* 2 líneas de altura basadas en el line-height */
+  height: 3em; /* Para asegurar que siempre ocupe el espacio de 2 líneas */
+}
+
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5; /* Ajusta el espacio entre líneas si lo necesitas */
+  max-height: 4.5em; /* 3 líneas de altura basadas en el line-height */
+  height: 4.5em; /* Para asegurar que siempre ocupe el espacio de 3 líneas */
+}
+
 .fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
