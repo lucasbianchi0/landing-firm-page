@@ -19,9 +19,9 @@ const IntegrationItem = ({ image, style, delay }: IIntegration) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5, delay }}
-      className={`flex justify-center !shadow-lg items-center rounded-xl border border-gray-100 p-4 focus:outline-none ${style} `}
+      className={`flex bg-white justify-center !shadow-lg items-center rounded-xl border border-gray-100 p-4 focus:outline-none ${style} `}
     >
-      <figure className="bg-white relative w-full h-[100px] flex justify-center items-center">
+      <figure className=" relative w-full h-[100px] flex justify-center items-center">
         <Image src={image} fill alt="" className="object-contain" />
       </figure>
     </motion.article>

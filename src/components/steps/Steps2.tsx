@@ -28,7 +28,7 @@ const Steps2 = () => {
   }, [images.length]);
 
   return (
-    <section className="bg-[#FFFFFF] sectionStyle overflow-hidden">
+    <section className=" sectionStyle overflow-hidden">
       <div className="container">
         <div className="md:hidden mb-8 ">
           <TextContent

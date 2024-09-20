@@ -15,7 +15,7 @@ import Steps5 from "@/components/steps/Steps5";
 
 export default function Home() {
   return (
-    <main className="relative h-full">
+    <main className="relative h-full bg-[#F9F9F9]">
       <Header4 />
       <Solutions />
       {/* <Solutions2 /> */}
@@ -23,7 +23,7 @@ export default function Home() {
       <Steps2 />
       {/* <Steps4 /> */}
       <Benefits4 />
-      <Banner />
+      {/* <Banner /> */}
       <Integrations />
       <Industries2 />
       <News2 />

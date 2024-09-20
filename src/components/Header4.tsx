@@ -34,11 +34,11 @@ const Header4 = () => {
   }, []);
 
   return (
-    <section className="relative w-full py-6 md:pb-12 min-h-[70vh] md:min-h-[90vh] ">
+    <section className="relative w-full py-6 md:pb-12 min-h-[70vh] md:min-h-[90vh] !bg-none">
       <Navbar />
       <div className="h-full">
-        <div className="flex flex-col h-full">
-          <div className="container flex flex-col h-full">
+        <div className="flex flex-col h-full z-[5]">
+          <div className="container flex flex-col h-full z-[5]">
             <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative ">
               <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-bold leading-none">
                 <span>Firma Biométrica</span>
@@ -52,19 +52,19 @@ const Header4 = () => {
                 doloremque.
               </p>
             </article>
-            <div className="montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative ">
+            <div className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative ">
               <Metric content="1500 firmas" target={1500} />
               <Metric content="200 clientes contentos" target={200} />
               <Metric content="Más de 10 años de experiencia" target={10} />
             </div>
           </div>
-          <div className="relative ">
+          <div className="relative z-[5] ">
             <CompanyList />
           </div>
         </div>
       </div>
       {/* IMAGEN FONDO DE PANTALLA */}
-      <div className="z-[-5]">
+      <div className="z-[1]">
         <Image
           alt=""
           src={backgroundImages[currentImageIndex]}
@@ -72,7 +72,7 @@ const Header4 = () => {
           sizes="100vw"
           loading="eager"
           style={{
-            zIndex: -5,
+            zIndex: 1,
 
             objectFit: "cover",
             backgroundAttachment: "fixed",
@@ -81,7 +81,7 @@ const Header4 = () => {
         />
         <div
           className="absolute inset-0 bg-[#2A5189]/50"
-          style={{ zIndex: -4 }}
+          style={{ zIndex: 2 }}
         />
       </div>
     </section>

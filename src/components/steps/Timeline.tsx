@@ -34,7 +34,7 @@ const Timeline = ({
         pb-7  w-full h-[160px] md:h-[100px]`}
     >
       <div className=" ms-6">
-        <div className="absolute px-2 py-3 bg-[#FFFFFF]  w-18 h-218 -start-8">
+        <div className="absolute px-2 py-3 bg-[#F9F9F9] w-18 h-18 -start-8">
           <div
             className={`${
               isHighlighted

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost"], // Agrega aquí el dominio del que estás cargando las imágenes
+    domains: ["localhost", "firm-strapi-app.onrender.com"],
   },
 };
 

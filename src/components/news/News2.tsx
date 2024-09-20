@@ -44,7 +44,7 @@ const News2 = () => {
       <div className="hidden gap-16 py-10 mx-auto md:grid md:grid-cols-3 ">
         {news.map((article) => {
           const imageUrl = `${process.env.NEXT_PUBLIC_RENDER_API_URL}${article.attributes.Image.data[0]?.attributes.url}`;
-
+          console.log(imageUrl);
           return (
             <BlogCard
               key={article.id}

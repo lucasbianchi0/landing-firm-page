@@ -32,7 +32,7 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="relative bg-[#FEFEFE] z-10 w-full sectionStyle ">
+    <section className="relative z-10 w-full sectionStyle ">
       <div className="container flex flex-col gap-5 md:flex-row md:justify-between md:gap-10">
         {/* <div className="flex flex-col items-start md:w-[40%] space-y-4 md:items-start">
           <p className="text-left md:text-left subtitle">Especialistas</p>

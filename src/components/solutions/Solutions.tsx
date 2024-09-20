@@ -5,7 +5,7 @@ import TollOutlinedIcon from "@mui/icons-material/TollOutlined";
 
 const Solutions = () => {
   return (
-    <section className="container sectionStyle">
+    <section className="container sectionStyle ">
       <div className="w-full lg:w-full">
         <TextContent
           title={"Soluciones de firma digital"}
@@ -34,25 +34,26 @@ const Solutions = () => {
         ].map((item, index) => (
           <article
             key={index}
-            className="border-2 border-white relative flex  gap-y-2 sm:flex-row w-full   overflow-hidden transition-all duration-300 ease-in-out transform  lg:border-zinc-100 shadow-xl rounded-2xl group hover:scale-105 hover:filter hover:border-2 lg:hover:border-blue-700/20 lg:hover:shadow-2xl lg:hover:shadow-blue-700/40"
+            className="border-4 border-white relative flex gap-y-2 md:gap-2 sm:flex-row w-full overflow-hidden transition-all duration-300 ease-in-out transform  lg:border-zinc-100 shadow-xl rounded-2xl group lg:hover:scale-105 lg:hover:filter lg:hover:border-4 lg:hover:border-blue-700/20 lg:hover:shadow-2xl lg:hover:shadow-blue-700/40"
           >
-            <div className="p-3 md:px-3 pb-8 relative flex flex-col  w-[65%] gap-3 lg:translate-y-16 transition-all duration-300 ease-in-out transform overflow-hidden lg:group-hover:translate-y-0 ">
-              <h3 className="text-[#243657] montserrat text-2xl lg:text-3xl font-semibold text-pretty">
+            <div className="p-3 md:px-3 pb-8 md:py-14 relative flex flex-col w-[60%]  gap-3 transition-all duration-300 ease-in-out transform overflow-hidden lg:group-hover:-translate-y-5 ">
+              <h3 className=" text-[#243657]  montserrat text-2xl lg:text-3xl font-semibold text-pretty">
                 {item.title}
               </h3>
               <p className="text-[#425466] text-sm md:text-base">
                 {item.description}
               </p>
-              <p className="hidden md:block lg:mt-4 text-sm md:text-base text-blue-500 text-specialist  ">
+              {/* <p className="hidden md:block lg:mt-4 text-sm md:text-base text-blue-500 text-specialist translate-y-5 group-hover:translate-y-0  ">
                 Hablar con especialista
-              </p>
-              <span className="md:hidden text-center py-2 bg-[#376BB6] rounded-2xl lg:mt-4 text-xs text-white text-specialist ">
+              </p> */}
+
+              <span className=" z-[10] mt-2 lg:mt-0 lg:absolute lg:bottom-0 text-center lg:w-[80%] py-1 bg-[#376BB6] rounded-2xl text-xs md:text-base transform transition-all duration-200 ease-in-out  lg:translate-y-20 lg:group-hover:-translate-y-2 text-white text-specialist ">
                 Hablar con especialista
               </span>
             </div>
 
             <div className="relative flex-1 flex items-end ">
-              <figure className="absolute bottom-0 right-0 transition-all duration-300 ease-in-out translate-x-3 h-[80%] w-full rotate-12 lg:group-hover:rotate-0 lg:group-hover:-translate-y-0">
+              <figure className="absolute bottom-0 right-0 transition-all duration-300 ease-in-out translate-x-3 md:translate-y-8  h-[80%] w-full rotate-12 lg:group-hover:rotate-0 lg:group-hover:-translate-y-0">
                 <Image
                   src={item.image}
                   alt={item.alt}
