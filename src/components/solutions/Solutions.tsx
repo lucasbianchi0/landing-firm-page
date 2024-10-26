@@ -9,7 +9,7 @@ const Solutions = () => {
       <div className="w-full lg:w-full">
         <TextContent
           title={"Soluciones de firma digital"}
-          subtitle={"Technology"}
+          subtitle={"Para ti"}
           icon={TollOutlinedIcon}
           position="center"
         />
@@ -47,7 +47,7 @@ const Solutions = () => {
                 Hablar con especialista
               </p> */}
 
-              <span className=" z-[10] mt-2 lg:mt-0 lg:absolute lg:bottom-0 text-center lg:w-[80%] py-1 bg-[#376BB6] rounded-2xl text-xs md:text-base transform transition-all duration-200 ease-in-out  lg:translate-y-20 lg:group-hover:-translate-y-2 text-white text-specialist ">
+              <span className=" z-[10] mt-2 lg:mt-0 lg:absolute lg:bottom-0 text-center lg:w-[80%] py-1.5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full text-xs md:text-base transform transition-all duration-200 ease-in-out  lg:translate-y-20 lg:group-hover:-translate-y-2 text-white text-specialist lg:hover:scale-105 lg:hover:bg-[#25497a]">
                 Hablar con especialista
               </span>
             </div>

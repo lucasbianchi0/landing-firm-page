@@ -9,7 +9,7 @@ const Solutions2 = () => {
       <div className="w-full md:w-full">
         <TextContent
           title={"Soluciones de firma digital"}
-          subtitle={"Technology"}
+          subtitle={"Nuestras soluciones"}
           icon={TollOutlinedIcon}
           position="center"
         />

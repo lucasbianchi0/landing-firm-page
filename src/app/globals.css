@@ -238,6 +238,22 @@ body {
   height: 4.5em; /* Para asegurar que siempre ocupe el espacio de 3 líneas */
 }
 
+.clamp-2-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clamp-3-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
@@ -308,4 +324,54 @@ body {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8),
     /* Efecto de brillo ligero alrededor del texto */ -1px -1px 2px
       rgba(0, 0, 0, 0.5); /* Efecto de profundidad para crear el relieve */
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #4c96ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Color del fondo */
+  border-top: 8px solid #3498db; /* Color de la parte superior */
+  border-radius: 50%;
+  width: 50px; /* Ancho del spinner */
+  height: 50px; /* Alto del spinner */
+  animation: spin 2s linear infinite; /* Animación del spinner */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shadow-effect {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    to right,
+    #0e74ff,
+    #396fbd
+  ); /* Gradiente que deseas */
+  -webkit-background-clip: text; /* Para recortar el fondo al texto */
+  -webkit-text-fill-color: transparent; /* Hacer que el color del texto sea transparente */
 }

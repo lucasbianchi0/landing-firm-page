@@ -62,7 +62,7 @@ const Benefits4 = () => {
 
   return (
     <section className="relative w-full sectionStyle md:!py-10">
-      <div className="container flex flex-col-reverse items-start md:h-[900px] gap-20 md:flex-row md:justify-between">
+      <div className="container flex flex-col-reverse items-start md:h-[900px] gap-10 md:gap-20 md:flex-row md:justify-between">
         <div className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
           {benefits.map((benefit, index) => (
             <BenefitItem
@@ -80,11 +80,13 @@ const Benefits4 = () => {
               description={
                 "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas. "
               }
-              subtitle={"Technology"}
+              subtitle={"Ventajas clave"}
               icon={VerifiedOutlinedIcon}
               position="left"
             />
-            <p className="text-[#006BFC] mt-5">+ Hablar con especialista</p>
+            <div className="mt-[24px] md:mt-[30px]">
+              <span className=" text-[#006BFC]">Hablar con especialista</span>{" "}
+            </div>
           </article>
         </div>
       </div>

@@ -35,7 +35,7 @@ const Header4 = () => {
 
   return (
     <section className="relative w-full py-6 md:pb-12 min-h-[70vh] md:min-h-[90vh] !bg-none">
-      <Navbar />
+      <Navbar version={"light"} />
       <div className="h-full">
         <div className="flex flex-col h-full z-[5]">
           <div className="container flex flex-col h-full z-[5]">

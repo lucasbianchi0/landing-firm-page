@@ -19,12 +19,15 @@ const Steps2 = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3000 milliseconds (3 seconds)
+  const onChangeImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
-    return () => clearInterval(intervalId);
+  useEffect(() => {
+    // const intervalId = setInterval(() => {
+    //   setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    // }, 3000); // Change image every 3000 milliseconds (3 seconds)
+    // return () => clearInterval(intervalId);
   }, [images.length]);
 
   return (
@@ -49,7 +52,11 @@ const Steps2 = () => {
               />
             </div>
             {/* Pass currentImageIndex as a prop to TimelineList */}
-            <TimelineList highlightedIndex={currentImageIndex} />
+            {/* <TimelineList highlightedIndex={currentImageIndex} /> */}
+            <TimelineList
+              onChangeImage={onChangeImage}
+              highlightedIndex={currentImageIndex}
+            />
           </div>
 
           <div className="relative md:flex-1 md:mt-0" ref={ref}>

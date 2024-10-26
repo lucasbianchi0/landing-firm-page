@@ -5,6 +5,7 @@ import DomainVerificationRoundedIcon from "@mui/icons-material/DomainVerificatio
 import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRenameOutlineRounded";
 import FileOpenRoundedIcon from "@mui/icons-material/FileOpenRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
+import TimelineDark from "./TimelineDark";
 
 // interface ITimelineListProps {
 //   highlightedIndex: number;
@@ -16,7 +17,7 @@ interface ITimelineListProps {
 }
 
 // const TimelineList = ({ highlightedIndex }: ITimelineListProps) => {
-const TimelineList = ({
+const TimelineListDark = ({
   onChangeImage,
   highlightedIndex,
 }: ITimelineListProps) => {
@@ -60,10 +61,10 @@ const TimelineList = ({
   ];
 
   return (
-    <article className="w-full mt-10">
+    <article className="w-full mt-10 space-y-5">
       {dataTest.map((step, index) => (
         <div key={index} onClick={() => onChangeImage(index)}>
-          <Timeline
+          <TimelineDark
             icon={step.icon}
             title={step.title}
             description={step.description}
@@ -75,4 +76,4 @@ const TimelineList = ({
   );
 };
 
-export default TimelineList;
+export default TimelineListDark;

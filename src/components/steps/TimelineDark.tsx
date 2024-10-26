@@ -15,7 +15,7 @@ interface IDescriptionPart {
   highlight?: boolean;
 }
 
-const Timeline = ({
+const TimelineDark = ({
   icon: Icon,
   title,
   description,
@@ -29,28 +29,28 @@ const Timeline = ({
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className={`ml-5 relative border-l-[5px] last:border-transparent
+      className={`ml-5 relative border-l-[5px] last:border-transparent 
         ${isHighlighted ? "border-l-[#006BFC]" : "border-l-[#EBEBEB]"}
-        pb-7 w-full h-[160px] md:h-[100px]`}
+         w-full `}
     >
       <div className=" ms-6">
-        <div className="absolute px-2 py-3 bg-[#F9F9F9] w-18 h-18 -start-8">
+        <div className="absolute px-2 pt-1 bg-[#25262B] w-8 h-8 -start-8">
           <div
             className={`${
               isHighlighted
-                ? "bg-[#FFFFFF] !bg-[#0E74FF]  text-white timeline-blue-shadow border border-blue-700/20"
+                ? "bg-[#FFFFFF] !bg-[#0E74FF] text-white timeline-blue-shadow border border-blue-700/20"
                 : "!text-[#0E74FF] text-[#396FBD] bg-[#FEFEFE] timeline-black-shadow timeline-inner-shadow "
-            } flex items-center justify-center  drop-shadow-xl  w-12 h-12 rounded-xl `}
+            } flex items-center justify-center  drop-shadow-xl  w-8 h-8 rounded-xl `}
           >
-            <Icon className="w-8 h-8 " />
+            <Icon className="w-5 h-5 " />
           </div>
         </div>
-        <div className="pt-2 pl-8">
+        <div className=" pl-3 cursor-pointer">
           <h3
             className={`flex items-center mb-1 text-lg font-bold ${
               isHighlighted
                 ? "!text-[#0E74FF] text-[#396FBD] text-shadow-blue"
-                : "text-[#172B4D]   "
+                : "text-white"
             } `}
           >
             {title}
@@ -62,7 +62,7 @@ const Timeline = ({
             {description.map((part, index) => (
               <span
                 key={index}
-                className={`text-base md:leading-relaxed text-[#59677E] `}
+                className={` md:leading-relaxed text-[#59677E] `}
                 // ${part.highlight && "!text-[#2A5189]"}
 
                 // style={{ color: part.highlight ? "red" : "inherit" }}
@@ -77,4 +77,4 @@ const Timeline = ({
   );
 };
 
-export default Timeline;
+export default TimelineDark;

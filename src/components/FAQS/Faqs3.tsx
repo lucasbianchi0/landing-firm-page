@@ -47,7 +47,7 @@ const Faqs3 = () => {
       <div className="flex flex-col space-y-2 ">
         <TextContent
           title={"Preguntas frecuentes "}
-          subtitle="Especialistas"
+          subtitle="Resuelve dudas"
           icon={QuestionAnswerOutlinedIcon}
           position={"center"}
         />
@@ -94,7 +94,7 @@ const QA = ({ summary, description, delay, icon: Icon }: IqaProps) => {
       className="space-y-1 md:space-y-3"
     >
       <div className="flex gap-2">
-        <Icon className=" text-[1.5rem] text-[#006BFC] " />
+        <Icon className="pt-1 text-[1.5rem] text-[#006BFC] " />
         <div>
           <h4 className="text-xl font-semibold text-[#2A5189]">{summary}</h4>
           <p className="pt-3 text-zinc-500 md:leading-relaxed">{description}</p>

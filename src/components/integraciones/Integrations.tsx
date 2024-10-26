@@ -66,7 +66,7 @@ const Integrations = () => {
             description={
               "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones"
             }
-            subtitle={"Technology"}
+            subtitle={"Sin límites"}
             icon={TollOutlinedIcon}
             position="left"
           />
