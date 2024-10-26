@@ -11,8 +11,30 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const Note = ({ params }: { params: { estatico: number } }) => {
-  const [post, setPost] = useState(null);
+export interface User {
+  userImage: string;
+  name: string;
+}
+
+export interface Post {
+  id: number;
+  date: string;
+  title: string;
+  description: string;
+  user: User;
+  tags: string[];
+  image: string;
+  content: string;
+}
+
+export interface NoteProps {
+  params: {
+    estatico: number;
+  };
+}
+
+const Note = ({ params }: NoteProps) => {
+  const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(true);
 
   const getNoticiaById = (id: number) => {
@@ -40,17 +62,7 @@ const Note = ({ params }: { params: { estatico: number } }) => {
       <div className="pt-10 container flex flex-col gap-8 md:!w-[70%] mx-auto pb-[150px] ">
         <div className="flex flex-col gap-2 mt-5">
           <p className=" text-sm text-[#8E8E8E] uppercase">{post?.date}</p>
-          <h2
-            className="text-start text-[44px] text flex flex-col md:text-[48px] text-[#172B4D] montserrat font-semibold gap-2 leading-tight "
-            // style={{
-            //   lineHeight: "1.2",
-            //   whiteSpace: "pre-line",
-            //   background:
-            //     "repeating-linear-gradient(to top, #000000 0, #4C96FF 1.2em)",
-            //   WebkitBackgroundClip: "text",
-            //   WebkitTextFillColor: "transparent",
-            // }}
-          >
+          <h2 className="text-start text-[44px] flex flex-col md:text-[48px] text-[#172B4D] montserrat font-semibold gap-2 leading-tight ">
             {post?.title}
           </h2>
 
@@ -59,7 +71,7 @@ const Note = ({ params }: { params: { estatico: number } }) => {
           <div className="flex gap-4 items-center mt-1">
             <figure className="relative h-[36px] w-[36px] rounded-full ">
               <Image
-                src={post?.user.userImage}
+                src={post?.user.userImage as string}
                 alt=""
                 fill
                 className="rounded-full object-cover"
@@ -80,22 +92,21 @@ const Note = ({ params }: { params: { estatico: number } }) => {
           </div>
         </div>
 
-        {/* Spinner de carga */}
         {loading ? (
           <div className="flex justify-center items-center h-40">
             <div className="loader"></div>
           </div>
         ) : (
           <>
-            {/* Foto */}
             <figure className="relative h-[400px] w-full">
-              <Image src={post.image} alt="" fill className="object-cover" />
+              {post && (
+                <Image src={post.image} alt="" fill className="object-cover" />
+              )}{" "}
             </figure>
 
             <div>
               <p className="text-pretty leading-relaxed text-lg">
                 {post?.content}
-                {/* Aquí debes incluir el contenido real */}
               </p>
             </div>
           </>
