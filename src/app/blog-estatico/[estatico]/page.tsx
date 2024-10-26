@@ -69,8 +69,11 @@ const Note = ({ params }: { params: { estatico: number } }) => {
           </div>
 
           <div className="w-full flex flex-wrap gap-3 mt-6 mb-3">
-            {post?.tags.map((tag) => (
-              <span className="uppercase shadow-lg whitespace-nowrap rounded-full bg-[#60A1FE] px-6 py-1.5 text-xs text-white">
+            {post?.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="uppercase shadow-lg whitespace-nowrap rounded-full bg-[#60A1FE] px-6 py-1.5 text-xs text-white"
+              >
                 {tag}
               </span>
             ))}
