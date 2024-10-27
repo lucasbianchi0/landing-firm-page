@@ -61,7 +61,7 @@ const TimelineListDark = ({
   ];
 
   return (
-    <article className="w-full mt-10 space-y-5">
+    <article className="w-full mt-10 space-y-10 md:space-y-5">
       {dataTest.map((step, index) => (
         <div key={index} onClick={() => onChangeImage(index)}>
           <TimelineDark
