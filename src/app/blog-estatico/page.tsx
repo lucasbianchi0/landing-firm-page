@@ -15,7 +15,7 @@ import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
 
 const Blog = () => {
   const [news, setNews] = useState<Article[]>([]);
-  const [loading, setLoading] = useState(true); // Estado de carga
+  const [loading, setLoading] = useState(true);
 
   // const fetchData = async () => {
   //   try {
