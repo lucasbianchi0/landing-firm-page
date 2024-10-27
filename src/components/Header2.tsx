@@ -11,7 +11,7 @@ const Header2 = () => {
   ];
   return (
     <section className="relative w-full min-h-[70vh] md:min-h-[95vh] py-6 overflow-hidden pb-[90px] md:pb-[170px] z-0">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container h-full">
         <div className="flex flex-col h-full lg:flex-row lg:justify-between">
           <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative z-10 ">

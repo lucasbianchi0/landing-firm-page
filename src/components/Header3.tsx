@@ -13,7 +13,7 @@ const Header3 = () => {
   ];
   return (
     <section className="relative w-full min-h-[70vh] md:min-h-[95vh] py-6 overflow-hidden z-0">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="h-full ">
         <div className="flex flex-col h-full ">
           <div className="container flex flex-col h-full">
