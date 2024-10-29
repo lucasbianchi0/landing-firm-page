@@ -4,12 +4,13 @@ import React from "react";
 import BenefitsIndustry from "./BenefitsIndustry";
 import Footer from "@/components/Footer";
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 
 const IndustryPage = () => {
   return (
     <div className="bg-[#F9F9F9]">
       <Navbar version="light" />
-      <section className="container flex flex-col md:flex-row justify-start w-full gap-1 md:gap-10 mt-4 md:mt-10">
+      <section className="container flex flex-col lg:flex-row justify-start w-full gap-y-8 md:gap-10 mt-4 md:mt-10">
         <div className="container flex flex-col items-start md:justify-center md:flex-1 gap-4 md:mx-auto py-4 md:py-0">
           <div className="flex gap-3 items-center">
             <span className="w-auto p-2 bg-blue-200 text-blue-400 rounded-md border-2 border-white">
@@ -28,31 +29,35 @@ const IndustryPage = () => {
                 />
               </svg>
             </span>
-            <p className="subtitle">Especialistas</p>
+            <p className="subtitle">Fintech</p>
           </div>
-          <h2 className="text-start text-[44px] flex flex-col md:text-[56px] title gap-2">
-            <span
-              style={{
-                background: "linear-gradient(to top, #000000, #4C96FF)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Fintech
-            </span>
-            <span className="text-[#172B4D] w-full">
-              Lorem, ipsum dolor sit amet consectetur
-            </span>
+          <h2
+            className="text-start text-[44px] flex flex-col md:text-[56px] title gap-2"
+            style={{
+              lineHeight: "1.2",
+              whiteSpace: "pre-line",
+              background:
+                "repeating-linear-gradient(to top, #000000 0, #4C96FF 1.2em)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Firma Biométrica para Fintech Segura y Rápida
           </h2>
-          <p className="pt-2 md:pt-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Dignissimos sed sequi ex assumenda omnis hic quis quam quo culpa
-            rerum! Voluptatem tempora id beatae assumenda tempore obcaecati eos
-            aspernatur natus minus, non, exercitationem, voluptatum hic.
+          <p className="pt-2">
+            Simplifica la autenticación y asegura transacciones en segundos con
+            nuestra solución de firma biométrica, diseñada para el sector
+            Fintech. Protege a tus usuarios y agiliza procesos sin comprometer
+            la seguridad.
           </p>
+          <button className="text-white bg-gradient-to-r from-blue-600 to-blue-800 py-3 px-5 rounded-full flex gap-1 items-center ">
+            Hablar con especialista
+            <PersonAddAltIcon className="h-4 w-4" />
+          </button>
         </div>
-        <figure className="relative h-[250px] md:h-[500px] container md:flex-1 lg:max-w-[80%]">
+        <figure className="relative  h-[250px] md:h-[500px] container md:flex-1 lg:max-w-[80%] ">
           <Image
+            className="rounded-[40px]"
             src="/fintech.webp"
             alt=""
             fill
@@ -71,9 +76,3 @@ const IndustryPage = () => {
 };
 
 export default IndustryPage;
-
-// titulo
-// descripcion
-// imagenHero
-// y una lista de objetos de 3 beneficios que debe contener un titulo y una descripcion
-// imagenBeneficio
