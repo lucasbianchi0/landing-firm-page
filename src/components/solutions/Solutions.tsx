@@ -34,13 +34,13 @@ const Solutions = () => {
         ].map((item, index) => (
           <article
             key={index}
-            className=" bg-gray-50 flex-1 border-4 h-full border-white !border-[#e0e6eb] relative flex flex-col-reverse lg:grid grid-cols-12  gap-y-2 md:gap-2 sm:flex-row w-full overflow-hidden transition-all duration-300 ease-in-out transform  lg:border-zinc-100 shadow-xl rounded-2xl group lg:hover:scale-105 lg:hover:filter lg:hover:border-4 lg:hover:border-blue-700/20 lg:hover:shadow-2xl lg:hover:shadow-blue-700/40"
+            className=" bg-gray-50  !bg-[#F6F9FC] flex-1 border-4 h-full border-white !border-[#e0e6eb] relative flex flex-col-reverse lg:grid grid-cols-12  gap-y-2 md:gap-2 sm:flex-row w-full overflow-hidden transition-all duration-300 ease-in-out transform  lg:border-zinc-100 shadow-xl rounded-2xl group lg:hover:scale-105 lg:hover:filter lg:hover:border-4 lg:hover:border-blue-700/20 lg:hover:shadow-2xl lg:hover:shadow-blue-700/40"
           >
             {/* <div className="relative h-full flex-1 flex items-end px-5 pt-5  "> */}
 
             {/* </div> */}
-            <div className="flex-1 p-3 md:pl-7 py-7 relative flex flex-col w-full lg:col-span-7 gap-y-4  gap-3 transition-all duration-300 ease-in-out transform overflow-hidden lg:group-hover:-translate-y-3 ">
-              <h3 className=" text-[#243657]  montserrat text-xl lg:text-3xl font-medium text-pretty">
+            <div className="flex-1  p-3 md:pl-7 py-7 relative flex flex-col w-full lg:col-span-7 gap-y-4  gap-3 transition-all duration-300 ease-in-out transform overflow-hidden lg:group-hover:-translate-y-3 ">
+              <h3 className=" text-[#243657]  montserrat text-xl lg:text-3xl font-semibold text-pretty">
                 {item.title}
               </h3>
               <p className="text-[#425466] text-lg lg:text-base">
@@ -54,7 +54,7 @@ const Solutions = () => {
                 </span>
               </p>
             </div>
-            <figure className="mx-5 mt-5 relative aspect-[16/9] h-full w-auto transition-all duration-300 ease-in-out lg:aspect-none  lg:translate-x-3 lg:translate-y-8 lg:h-[80%] lg:mt-auto lg:col-span-5 lg:rotate-6 lg:group-hover:rotate-0 lg:group-hover:-translate-y-0">
+            <figure className="mx-5 mt-5 relative aspect-[16/9] h-full w-auto transition-all duration-300 ease-in-out lg:aspect-none  lg:translate-x-3 lg:translate-y-8 lg:h-[85%] lg:mt-auto lg:col-span-5 lg:group-hover:rotate-0 lg:group-hover:-translate-y-0">
               <Image
                 src={item.image}
                 alt={item.alt}
@@ -65,7 +65,7 @@ const Solutions = () => {
               />
             </figure>
 
-            <div className="hidden lg:flex z-[-2] absolute gradient bottom-0 right-0 transform translate-x-[5px] h-[50%] w-[45%] blur-[5rem] "></div>
+            {/* <div className="hidden lg:flex z-[-2] absolute gradient bottom-0 right-0 transform translate-x-[5px] h-[50%] w-[45%] blur-[5rem] "></div> */}
           </article>
         ))}
       </div>
