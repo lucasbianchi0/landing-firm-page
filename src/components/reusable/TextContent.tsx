@@ -79,14 +79,14 @@ const TextContent = ({
       <h2
         // className={`text-[44px] md:text-[56px] title !text-[#396FBD]
         // className={`text-[44px] md:text-5xl title !text-gray-800
-        className={`text-[44px] md:text-5xl  
+        className={`text-[44px] md:text-5xl  font-medium
 
 
           ${
             color === "white"
               ? // ? "!bg-gradient-to-r !from-[#FFFFFF] !to-[#2C2C2C]"
                 "text-white"
-              : "text-black"
+              : "text-[#0A2540]"
           }
         `}
       >
