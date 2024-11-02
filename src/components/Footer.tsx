@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -6,9 +8,11 @@ const Footer = () => {
       <div className="max-w-screen-xl px-4  mx-auto sm:px-6 lg:px-8  ">
         <div className="md:flex md:justify-between ">
           <div>
-            <div className="flex justify-center text-2xl font-medium text-white sm:justify-start">
-              Accedra
-            </div>
+            <Link href="/">
+              <figure className="   ">
+                <Image src="/LOGO.png" height={80} width={100} alt="logo" />
+              </figure>
+            </Link>
 
             <p className="mt-6 max-w-md text-center leading-relaxed text-[#62A2FF] sm:max-w-xs sm:text-left">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
@@ -175,7 +179,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-10 md:mt-0  inline-block align-top w-[50%] text-left md:w-auto md:text-center  text-[#62A2FF]">
-            <p className="text-lg font-medium ">Contact Us</p>
+            <p className="text-lg font-medium ">Contacto</p>
 
             <ul className="mt-8 space-y-4 text-sm">
               <li>
@@ -198,7 +202,7 @@ const Footer = () => {
                     />
                   </svg>
 
-                  <span className="flex-1 ">john@doe.com</span>
+                  <span className="flex-1 ">info@accedra.com.ar</span>
                 </a>
               </li>
 
@@ -222,7 +226,9 @@ const Footer = () => {
                     />
                   </svg>
 
-                  <span className="flex-1 text-[#62A2FF]">0123456789</span>
+                  <span className="flex-1 text-[#62A2FF]">
+                    (+54 11) 5365-9887
+                  </span>
                 </a>
               </li>
 
@@ -248,7 +254,7 @@ const Footer = () => {
                 </svg>
 
                 <address className="-mt-0.5 flex-1 not-italic text-[#62A2FF]">
-                  213 Lane, London, United Kingdom
+                  Irala 1950, 2 piso CABA
                 </address>
               </li>
             </ul>

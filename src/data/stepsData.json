@@ -1,19 +1,23 @@
 [
     {
-      "title": "Preparar el Documento y el Dispositivo",
-      "description": "Abre el documento que quieres firmar. Conecta y ajusta la tableta Wacom."
+      "title": "Iniciar sesión",
+      "description": "Inicie sesión con usuario y contraseña"
     },
     {
-      "title": "Configurar el Software de Firma",
-      "description": "Abre el software de firma ESignAnywhere."
+      "title": "Elija el documento",
+      "description": "Elija el documento a firmar y prepare el workflow de los firmantes"
     },
     {
-      "title": "Firmar el Documento",
-      "description": "Firma con el lápiz de la tableta Wacom."
+      "title": "Configurar el documento",
+      "description": "Prepare el documento en el diseñador, ajuste la posición de firma y campos de formulario."
     },
     {
-      "title": "Finalizar y Enviar",
-      "description": "Verifica la claridad y ubicación de la firma. Guarda y envía el documento firmado electrónicamente a las partes pertinentes."
+      "title": "Notificaciones y enviar",
+      "description": "Configure las notificaciones automáticas y envíe el documento a los destinatarios"
+    },
+    {
+      "title": "Firmar y finalizar",
+      "description": "Una vez recibido el correo electrónico, firme el documento"
     }
     
   ]

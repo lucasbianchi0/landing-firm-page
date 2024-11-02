@@ -12,10 +12,11 @@ const StepsDark = () => {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const images = [
-    "/AccedraProceso.jpg",
-    "/AccedraProceso02.jpg",
-    "/AccedraProceso03.jpg",
-    "/AccedraProceso04.jpg",
+    "/pasos/iniciar.png",
+    "/pasos/crear2.png",
+    "/pasos/datos.png",
+    "/pasos/firmar.png",
+    "/pasos/firmar2.png",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -44,9 +45,9 @@ const StepsDark = () => {
               color={"white"}
             />
           </div>
-          <div className="flex flex-col-reverse gap-2 md:gap-10 md:grid md:grid-cols-2 md:justify-between justify-center ">
-            <div className="w-full md:w-full">
-              <div className="hidden md:flex">
+          <div className="flex flex-col-reverse gap-2 lg:gap-10 lg:grid lg:grid-cols-2 lg:justify-between justify-center ">
+            <div className="w-full lg:w-full">
+              <div className="hidden lg:flex">
                 <TextContent
                   title={"Como funciona"}
                   subtitle="Es simple"
@@ -63,7 +64,28 @@ const StepsDark = () => {
               />
             </div>
 
-            <div className="relative md:flex-1 md:mt-0 lg:!my-auto" ref={ref}>
+            <div
+              className="relative flex-1 sm:w-[70%] mx-auto h-full lg:mt-0 lg:!my-auto"
+              ref={ref}
+            >
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: isInView ? 1 : 0,
+                  x: isInView ? 0 : 100,
+                }}
+                transition={{ duration: 0.5 }}
+                className="drop-shadow-lg overflow-hidden w-auto relative h-[300px] sm:h-[400px] lg:h-full sm:w-auto border-[14px] rounded-[12px] lg:rounded-[24px] !border-gray-600"
+              >
+                <Image
+                  src={images[currentImageIndex]}
+                  alt={`Descripción ${currentImageIndex + 1}`}
+                  className="w-full h-auto"
+                  fill
+                />
+              </motion.div>
+            </div>
+            {/* <div className="relative md:flex-1 md:mt-0 lg:!my-auto" ref={ref}>
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 animate={{
@@ -80,7 +102,7 @@ const StepsDark = () => {
                   fill
                 />
               </motion.div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

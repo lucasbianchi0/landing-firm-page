@@ -27,7 +27,7 @@ export default function Home() {
       {/* <Banner /> */}
       <Integrations />
       <Industries2 />
-      <News3 />
+      {/* <News3 /> */}
       <Faqs3 />
       <Footer />
     </main>

@@ -49,8 +49,8 @@ const TextContent = ({
           {subtitle}
         </p>
       </div>
-
-      <h2
+      {/* primera oopcion */}
+      {/* <h2
         style={{
           lineHeight: "1.2",
           whiteSpace: "pre-line",
@@ -71,6 +71,22 @@ const TextContent = ({
               ? // ? "!bg-gradient-to-r !from-[#FFFFFF] !to-[#2C2C2C]"
                 "!bg-gradient-to-r !from-[#FFFFFF] !to-[#FFFFFF]"
               : ""
+          }
+        `}
+      >
+        {title}
+      </h2> */}
+      <h2
+        // className={`text-[44px] md:text-[56px] title !text-[#396FBD]
+        // className={`text-[44px] md:text-5xl title !text-gray-800
+        className={`text-[44px] md:text-5xl  
+
+
+          ${
+            color === "white"
+              ? // ? "!bg-gradient-to-r !from-[#FFFFFF] !to-[#2C2C2C]"
+                "text-white"
+              : "text-black"
           }
         `}
       >

@@ -24,38 +24,41 @@ const TimelineListDark = ({
   const dataTest = [
     {
       icon: FileOpenRoundedIcon,
-      title: "Prepara el documento y el dispositivo",
-      description: [
-        { text: "Abre el documento que quieres firmar. Conecta y ajusta " },
-        { text: "la tableta Wacom", highlight: true },
-        { text: "." },
-      ],
+      title: "Iniciar sesión",
+      description: [{ text: "Inicie sesión con usuario y contraseña" }],
     },
     {
       icon: SettingsRoundedIcon,
-      title: "Configurar el software de firma",
+      title: "Elija el documento",
       description: [
-        { text: "Abre el software " },
-        { text: "ESignAnywhere", highlight: true },
-        { text: "." },
+        {
+          text: "Elija el documento a firmar y prepare el workflow de los firmantes",
+        },
       ],
     },
     {
       icon: DriveFileRenameOutlineRoundedIcon,
-      title: "Firmar el documento",
+      title: "Configurar el documento",
       description: [
-        { text: "Firma con " },
-        { text: "el lápiz de la tableta Wacom", highlight: true },
-        { text: "." },
+        {
+          text: "Prepare el documento en el diseñador, ajuste la posición de firma y campos de formulario.",
+        },
       ],
     },
     {
       icon: DomainVerificationRoundedIcon,
-      title: "Finalizar y Enviar",
+      title: "Notificaciones y enviar",
       description: [
-        { text: "Guarda y envía " },
-        { text: "el documento firmado electrónicamente", highlight: true },
-        { text: "." },
+        {
+          text: "Configure las notificaciones automáticas y envíe el documento a los destinatarios ",
+        },
+      ],
+    },
+    {
+      icon: DomainVerificationRoundedIcon,
+      title: "Firmar y finalizar",
+      description: [
+        { text: "Una vez recibido el correo electrónico, firme el documento" },
       ],
     },
   ];

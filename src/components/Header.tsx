@@ -63,7 +63,7 @@ const Header = () => {
 
         {/* <div className="w-full md:w-[80%] mx-auto grid  grid-cols-3  gap-4 mt-16 relative z-20"> */}
         <div className="montserrat w-full md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3  gap-4 mt-16 relative z-20">
-          <Metric content="1500 firmas" target={1500} />
+          <Metric content="1500 firmas" target={242000} />
           <Metric content="200 clientes contentos" target={200} />
           <Metric content="Más de 10 años de experiencia" target={10} />
         </div>

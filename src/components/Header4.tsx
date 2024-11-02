@@ -53,8 +53,8 @@ const Header4 = () => {
               </p>
             </article>
             <div className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative ">
-              <Metric content="1500 firmas" target={1500} />
-              <Metric content="200 clientes contentos" target={200} />
+              <Metric content="1500 firmas" target={242000} />
+              <Metric content="200 clientes contentos" target={50} />
               <Metric content="Más de 10 años de experiencia" target={10} />
             </div>
           </div>
