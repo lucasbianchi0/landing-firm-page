@@ -40,7 +40,7 @@ const Header4 = () => {
         <div className="flex flex-col h-full z-[5]">
           <div className="container flex flex-col h-full z-[5]">
             <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative ">
-              <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-bold leading-none">
+              <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-semibold leading-none">
                 <span>Firma Biométrica</span>
                 <br />
                 <span className="title-shadow">Segura y Eficiente</span>

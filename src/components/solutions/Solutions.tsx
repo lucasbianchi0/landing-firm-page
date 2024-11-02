@@ -39,7 +39,7 @@ const Solutions = () => {
             {/* <div className="relative h-full flex-1 flex items-end px-5 pt-5  "> */}
 
             {/* </div> */}
-            <div className="flex-1 p-3 md:px-3 pb-8 lg:py-14 relative flex flex-col w-full lg:col-span-7  gap-3 transition-all duration-300 ease-in-out transform overflow-hidden lg:group-hover:-translate-y-5 ">
+            <div className="flex-1 p-3 md:px-3 py-5 relative flex flex-col w-full lg:col-span-7  gap-3 transition-all duration-300 ease-in-out transform overflow-hidden lg:group-hover:-translate-y-3 ">
               <h3 className=" text-[#243657]  montserrat text-2xl lg:text-3xl font-semibold text-pretty">
                 {item.title}
               </h3>
