@@ -1,8 +1,15 @@
 "use client";
 import Image from "next/image";
-import { InlineWidget, PopupButton, PopupWidget } from "react-calendly";
+import { PopupButton } from "react-calendly";
+import { useEffect, useState } from "react";
 
 export default function BookACall() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <div className="sectionStyle mb-[70px] container">
       <div className="w-full md:max-w-[85%] mx-auto overflow-hidden text-white rounded-2xl drop-shadow-xl bg-gradient-to-r from-blue-600 to-blue-800">
@@ -15,13 +22,15 @@ export default function BookACall() {
               Descubre cómo podemos ayudarte en una llamada personalizada de 30
               minutos. Resuelve tus dudas y conoce nuestras soluciones.
             </p>
-            <button className="self-start px-4 py-2 font-semibold text-blue-600 transition-colors duration-200 bg-white rounded-md hover:bg-blue-100 hover:text-blue-700">
+            {/* Botón solo se renderiza en el cliente */}
+            {isMounted && (
               <PopupButton
                 url="https://calendly.com/lucas-bianchi"
                 rootElement={document.body}
                 text="Agendar llamada de 30 minutos"
-              />{" "}
-            </button>
+                className="self-start px-4 py-2 font-semibold text-blue-600 transition-colors duration-200 bg-white rounded-md hover:bg-blue-100 hover:text-blue-700"
+              />
+            )}
           </div>
           <figure className="relative w-64 h-64 overflow-hidden border-4 border-white rounded-full">
             <Image
