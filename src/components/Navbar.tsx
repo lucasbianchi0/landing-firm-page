@@ -42,7 +42,7 @@ const Navbar = ({ version }: INavbarProps) => {
 
       <Link href="/">
         <figure
-          className="   "
+          className=""
           // style={{
           //   background: "linear-gradient(to top, #000000, #4C96FF)",
           //   WebkitBackgroundClip: "text",
@@ -64,14 +64,14 @@ const Navbar = ({ version }: INavbarProps) => {
       >
         <li>Servicios</li>
         <li>Industrias</li>
-        <li className="semibold flex gap-1 items-center ">
+        <li className="flex items-center gap-1 semibold ">
           BLOG
           <AnnouncementOutlinedIcon className="h-4 w-4 text-[hsl(215,76%,73%)] subtitle-icon-shadow" />
         </li>
 
-        <li className="bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center ">
+        <li className="bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">
           Hablar con especialista
-          <PersonAddAltIcon className="h-4 w-4" />
+          <PersonAddAltIcon className="w-4 h-4" />
         </li>
       </ul>
 

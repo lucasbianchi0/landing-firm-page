@@ -14,6 +14,7 @@ import Steps5 from "@/components/steps/Steps5";
 import News3 from "@/components/news/News3";
 import StepsDark from "@/components/steps/StepsDark";
 import StepsNewVersion from "@/components/steps/StepsNewVersion";
+import BookACall from "@/components/reusable/BookACall";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <Industries2 />
       {/* <News3 /> */}
       <Faqs3 />
+      <BookACall />
       <Footer />
     </main>
   );

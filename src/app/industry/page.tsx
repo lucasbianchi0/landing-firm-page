@@ -5,15 +5,16 @@ import BenefitsIndustry from "./BenefitsIndustry";
 import Footer from "@/components/Footer";
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
+import BookACall from "@/components/reusable/BookACall";
 
 const IndustryPage = () => {
   return (
-    <div className="bg-[#F9F9F9]">
-      <Navbar version="light" />
-      <section className="container flex flex-col lg:flex-row justify-start w-full gap-y-8 md:gap-10 mt-4 md:mt-10">
-        <div className="container flex flex-col items-start md:justify-center md:flex-1 gap-4 md:mx-auto py-4 md:py-0">
-          <div className="flex gap-3 items-center">
-            <span className="w-auto p-2 bg-blue-200 text-blue-400 rounded-md border-2 border-white">
+    <div className="bg-[#F9F9F9] pt-6">
+      <Navbar version={"blue"} />
+      <section className="container flex flex-col justify-start w-full mt-4 lg:flex-row gap-y-8 md:gap-10 md:mt-10">
+        <div className="container flex flex-col items-start gap-4 py-4 md:justify-center md:flex-1 md:mx-auto md:py-0">
+          <div className="flex items-center gap-3">
+            <span className="w-auto p-2 text-blue-400 bg-blue-200 border-2 border-white rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -50,9 +51,9 @@ const IndustryPage = () => {
             Fintech. Protege a tus usuarios y agiliza procesos sin comprometer
             la seguridad.
           </p>
-          <button className="text-white bg-gradient-to-r from-blue-600 to-blue-800 py-3 px-5 rounded-full flex gap-1 items-center ">
+          <button className="flex items-center gap-1 px-5 py-3 text-white rounded-full bg-gradient-to-r from-blue-600 to-blue-800 ">
             Hablar con especialista
-            <PersonAddAltIcon className="h-4 w-4" />
+            <PersonAddAltIcon className="w-4 h-4" />
           </button>
         </div>
         <figure className="relative  h-[250px] md:h-[500px] container md:flex-1 lg:max-w-[80%] ">
@@ -67,9 +68,11 @@ const IndustryPage = () => {
       </section>
 
       {/* seccion 2 */}
-      <div className="py-[100px] md:pt-0 w-full">
+      <div className="w-full sectionStyle">
         <BenefitsIndustry />
       </div>
+      <BookACall />
+
       <Footer />
     </div>
   );

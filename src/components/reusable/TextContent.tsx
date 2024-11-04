@@ -4,8 +4,8 @@ import React from "react";
 interface IContentProps {
   title: string;
   description?: string;
-  subtitle: string;
-  icon: React.ComponentType<SvgIconProps>;
+  subtitle?: string;
+  icon?: React.ComponentType<SvgIconProps>;
   position: string;
   color?: string;
 }
@@ -41,13 +41,17 @@ const TextContent = ({
             : ""
         } gap-3 md:justify-start`}
       >
-        <Icon
-          style={{ fontSize: "1.8rem" }}
-          className="text-[#006BFC] bg-transparent !text-[hsl(215,76%,73%)] text-[#396FBD] subtitle-icon-shadow bg-white "
-        />
-        <p className="!text-[hsl(215,76%,73%)] font-bold text-[#396FBD]">
-          {subtitle}
-        </p>
+        {Icon && (
+          <Icon
+            style={{ fontSize: "1.8rem" }}
+            className="text-[#006BFC] bg-transparent !text-[hsl(215,76%,73%)] text-[#396FBD] subtitle-icon-shadow bg-white "
+          />
+        )}
+        {subtitle && (
+          <p className="!text-[hsl(215,76%,73%)] font-bold text-[#396FBD]">
+            {subtitle}
+          </p>
+        )}
       </div>
 
       <h2
