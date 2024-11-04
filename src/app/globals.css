@@ -190,15 +190,13 @@ body {
     @apply border-s-gray-[#006BFC];
   }
 
-  /* .sectionStyle {
-    @apply pt-10 md:pt-16 mt-[-100px] rounded-t-[30px] w-full;
-  } */
   .sectionStyle {
-    @apply w-full py-10 md:py-24;
+    @apply w-full mt-16 md:mt-24;
   }
-  /* .sectionStyleTranslate {
-    @apply pt-10 md:pt-16 -translate-y-[100px] rounded-t-[30px] w-full;
-  } */
+
+  .sectionStylePadding {
+    @apply w-full py-16 md:py-24;
+  }
 
   .bottomSection {
     @apply pb-[170px] md:pb-[200px];

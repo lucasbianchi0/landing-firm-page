@@ -6,6 +6,7 @@ import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRena
 import FileOpenRoundedIcon from "@mui/icons-material/FileOpenRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import TimelineDark from "./TimelineDark";
+import Timeline2 from "./Timeline2";
 
 // interface ITimelineListProps {
 //   highlightedIndex: number;
@@ -64,10 +65,10 @@ const TimelineListDark = ({
   ];
 
   return (
-    <article className="w-full mt-10 space-y-10 md:space-y-5">
+    <article className="lg:mx-4 mb-8 w-full space-y-5 ">
       {dataTest.map((step, index) => (
         <div key={index} onClick={() => onChangeImage(index)}>
-          <TimelineDark
+          <Timeline2
             icon={step.icon}
             title={step.title}
             description={step.description}

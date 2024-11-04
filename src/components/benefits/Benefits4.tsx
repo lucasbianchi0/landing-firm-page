@@ -120,14 +120,12 @@ const BenefitItem = ({ icon: Icon, title, description }: benefitProps) => {
     >
       <Icon
         style={{ fontSize: "2.8rem" }}
-        className="!text-[#006BFC] text-[#396FBD]"
+        className="!text-blue-500 text-[#006BFC] text-[#396FBD]"
       />
       <h3 className="py-0 text-lg font-semibold text-black md:text-lg">
         {title}
       </h3>
       <p className="text-base  text-pretty text-zinc-400  md:text-base !text-[#59677E]">
-        {/* <p className="text-base  text-pretty text-zinc-400 !text-[#425466] #59677E"> */}
-
         {description}
       </p>
     </motion.article>

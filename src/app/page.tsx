@@ -13,6 +13,7 @@ import Solutions2 from "@/components/solutions/Solutions2";
 import Steps5 from "@/components/steps/Steps5";
 import News3 from "@/components/news/News3";
 import StepsDark from "@/components/steps/StepsDark";
+import StepsNewVersion from "@/components/steps/StepsNewVersion";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
       <Header4 />
       <Solutions />
       {/* <Solutions2 /> */}
-
-      <StepsDark />
+      <StepsNewVersion />
+      {/* <StepsDark /> */}
       {/* <Steps4 /> */}
       <Benefits4 />
       {/* <Banner /> */}

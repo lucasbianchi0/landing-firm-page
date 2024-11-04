@@ -4,19 +4,19 @@ import Company from "./company/Company";
 
 const CompanyList = () => {
   const companyLogos = [
-    "/logos/accentureLOGO.png",
-    "/logos/accentureLOGO.png",
-    "/logos/fordlogo.png",
-    "/logos/fordlogo.png",
-    "/logos/bcoprovinciaLOGO.png",
-    "/logos/vwn.png",
-    "/logos/macro.png",
-    "/logos/chubut.png",
-    "/logos/bancocredicoopLOGO.png",
-    "/logos/andreani.png",
-    "/logos/aon.png",
-    "/logos/bcoprovinciaLOGO.png",
-    "/logos/bcoprovinciaLOGO.png",
+    "/companias/accentureLOGO.png",
+    "/companias/accentureLOGO.png",
+    "/companias/fordlogo.png",
+    "/companias/fordlogo.png",
+    "/companias/bcoprovinciaLOGO.png",
+    "/companias/vwn.png",
+    "/companias/macro.png",
+    "/companias/chubut.png",
+    "/companias/bancocredicoopLOGO.png",
+    "/companias/andreani.png",
+    "/companias/aon.png",
+    "/companias/bcoprovinciaLOGO.png",
+    "/companias/bcoprovinciaLOGO.png",
   ];
   return (
     <div className="mt-12 stock-ticker">

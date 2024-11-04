@@ -49,39 +49,9 @@ const TextContent = ({
           {subtitle}
         </p>
       </div>
-      {/* primera oopcion */}
-      {/* <h2
-        style={{
-          lineHeight: "1.2",
-          whiteSpace: "pre-line",
-          background:
-            "repeating-linear-gradient(to top, #000000 0, #4C96FF 1.2em)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-        // className={`text-[44px] md:text-[56px] title !text-[#396FBD]
-        // className={`text-[44px] md:text-5xl title !text-gray-800
-        className={`text-[44px] md:text-5xl title 
 
-
-          ${position === "left" ? "bg-gradient-to-r" : "bg-gradient-to-l"} 
-          from-[#11203A] to-[#4C96FF] bg-clip-text text-transparent 
-          ${
-            color === "white"
-              ? // ? "!bg-gradient-to-r !from-[#FFFFFF] !to-[#2C2C2C]"
-                "!bg-gradient-to-r !from-[#FFFFFF] !to-[#FFFFFF]"
-              : ""
-          }
-        `}
-      >
-        {title}
-      </h2> */}
       <h2
-        // className={`text-[44px] md:text-[56px] title !text-[#396FBD]
-        // className={`text-[44px] md:text-5xl title !text-gray-800
-        className={`text-[44px] md:text-5xl  font-medium
-
-
+        className={`text-4xl md:text-5xl font-medium
           ${
             color === "white"
               ? // ? "!bg-gradient-to-r !from-[#FFFFFF] !to-[#2C2C2C]"

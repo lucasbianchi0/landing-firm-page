@@ -76,7 +76,7 @@ const Industries2 = () => {
   ];
 
   return (
-    <section className="relative z-50 bg-[#1D293B] overflow-hidden sectionStyle">
+    <section className="relative z-50 bg-[#1D293B] overflow-hidden sectionStyle sectionStylePadding">
       <div className="absolute inset-0 bg-black/60 " style={{ zIndex: -5 }} />
       <video
         className="hidden md:block absolute top-0 left-0 object-cover w-full h-full -z-10"
@@ -92,7 +92,6 @@ const Industries2 = () => {
         <source src="/background1.mp4" type="video/mp4" />
         Tu navegador no soporta el elemento de video.
       </video>
-      {/* <div className=" absolute gradient bottom-0 right-40 h-[450px] rounded-full w-[400px] blur-[7rem] z-1"></div> */}
 
       <div className="container flex flex-col-reverse gap-5 md:gap-10 md:flex-row md:justify-between">
         <div className="flex-1 ">
@@ -119,14 +118,6 @@ const Industries2 = () => {
             position="left"
             color={"white"}
           />
-          {/* <div className="pt-2">
-            <Button
-              backgroundColor={"#2A5189"}
-              textColor={"white"}
-              content={"Hablar con especialista"}
-              borderColor="#2A5189"
-            />
-          </div> */}
         </div>
       </div>
     </section>

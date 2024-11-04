@@ -43,7 +43,7 @@ const Faqs3 = () => {
   ];
 
   return (
-    <div className="container sectionStyle !min-h-0 !pt-0">
+    <div className="container sectionStyle mb-14 md:mb-32 !min-h-0 !pt-0">
       <div className="flex flex-col space-y-2 ">
         <TextContent
           title={"Preguntas frecuentes "}
@@ -54,19 +54,6 @@ const Faqs3 = () => {
       </div>
       <div className="grid grid-cols-1 mt-6 md:mt-14 space-y-7 md:gap-20 md:space-y-0 md:grid-cols-2 md:gap-y-16">
         {faqs.map((fq, index) => (
-          // <motion.article
-          //   ref={ref}
-          //   initial={{ opacity: 0, y: 15 }}
-          //   animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
-          //   transition={{ duration: 0.5, delay: 0.5 }}
-          //   className="space-y-1 md:space-y-3"
-          //   key={index}
-          // >
-          //   <h4 className="text-xl font-semibold text-[#2A5189]">
-          //     {fq.summary}
-          //   </h4>
-          //   <p className="text-zinc-500 md:leading-relaxed">{fq.description}</p>
-          // </motion.article>
           <QA
             key={index}
             summary={fq.summary}
@@ -93,8 +80,8 @@ const QA = ({ summary, description, delay, icon: Icon }: IqaProps) => {
       transition={{ duration: 0.5, delay: delay }}
       className="space-y-1 md:space-y-3"
     >
-      <div className="flex gap-2">
-        <Icon className="pt-1 text-[1.5rem] text-[#006BFC] " />
+      <div className="flex flex-col lg:flex-row gap-2">
+        <Icon className="pt-1 text-[2.625rem] lg:text-[1.5rem] text-[#006BFC] " />
         <div>
           <h4 className="text-xl font-semibold text-[#2A5189]">{summary}</h4>
           <p className="pt-3 text-zinc-500 md:leading-relaxed">{description}</p>
