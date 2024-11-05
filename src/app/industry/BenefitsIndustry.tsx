@@ -49,7 +49,7 @@ const BenefitsIndustry = () => {
     <section className="container w-full mb-[150px] md:mb-[100px]">
       <TextContent title={"Lo hacemos simple"} subtitle="" position={"left"} />
 
-      <div className="grid grid-cols-1 gap-10 mt-20 ">
+      <div className="grid grid-cols-1 gap-10 mt-14 ">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 gap-y-6">
           {industryItems.map((industry, index) => (
             <IndustryBenefitItem

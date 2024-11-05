@@ -48,8 +48,8 @@ const Blog = () => {
                 fill
                 className="object-cover rounded-xl"
               />
-              <div className="bg-gradient-to-r from-blue-600 to-blue-800 absolute top-4 left-4 rounded-full shadow-lg">
-                <p className="py-3 px-5 font-bold text-white flex gap-1 items-center italic shadow-effect hover:text-blue-300">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-800 absolute top-2 left-2 md:top-4 md:left-4 rounded-full shadow-lg">
+                <p className="py-1.5 px-3 md:py-3 md:px-5 font-bold text-sm md:text-base text-white flex gap-1 items-center italic shadow-effect hover:text-blue-300">
                   New
                   <ErrorOutlineIcon className="shadow-effect shadow-lg transform transition-transform duration-200 hover:scale-110 hover:text-blue-300" />
                 </p>
@@ -92,8 +92,8 @@ const Blog = () => {
           </div>
         )}
 
-        <h2 className="font-semibold text-xl mt-10 sm:mt-20 sm:text-[34px] montserrat">
-          Otros articulos
+        <h2 className="font-semibold text-xl mt-5 sm:mt-10 sm:text-[34px] montserrat">
+          Otros artículos
         </h2>
 
         {/* {loading ? (
@@ -120,13 +120,17 @@ const Blog = () => {
         </div>
 
         {/* mobile */}
-        <div className=" mt-6 flex flex-col gap-y-4 sm:hidden">
+        <div className=" mt-6 flex flex-col gap-y-4 sm:hidden pb-10">
           {noticias
             .slice(0, -1)
             .reverse()
             .map((article, index) => (
-              <Link key={index} href={`/blog-estatico/${article.id}`}>
-                <div className="flex gap-5 w-full border-b-2 border-b-zinc-300 pb-4">
+              <Link
+                className="border-b-2 border-b-zinc-300 last:border-none"
+                key={index}
+                href={`/blog-estatico/${article.id}`}
+              >
+                <div className="flex gap-5 w-full   pb-4">
                   <figure className="relative aspect-[16/9] w-[40%] ">
                     <Image
                       className="rounded-lg"

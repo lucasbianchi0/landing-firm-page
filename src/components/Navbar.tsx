@@ -8,9 +8,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 interface INavbarProps {
   version: string;
+  background?: string;
 }
 
-const Navbar = ({ version }: INavbarProps) => {
+const Navbar = ({ version, background }: INavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,11 +32,11 @@ const Navbar = ({ version }: INavbarProps) => {
 
   return (
     <nav
-      className={`z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 
+      className={`z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 bg-white
         ${
           version === "light"
-            ? "bg-white bg-opacity-10 backdrop-blur-lg"
-            : "bg-[#E8EFF8] drop-shadow-lg shadow-[#2a528980] border border-white"
+            ? " bg-opacity-10 backdrop-blur-lg"
+            : " drop-shadow-lg shadow-[#2a528980] border border-white"
         }   `}
     >
       {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
@@ -93,7 +94,7 @@ const Navbar = ({ version }: INavbarProps) => {
       {/* Botón para abrir/cerrar el menú */}
       <div onClick={toggleMenu} className="cursor-pointer md:hidden">
         <MenuIcon
-          className={`${version === "light" ? "text-white" : "bg-[#60A1FE]"}`}
+          className={`${version === "light" ? "text-white" : "text-blue-400"}`}
         />
       </div>
 

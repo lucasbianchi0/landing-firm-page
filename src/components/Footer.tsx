@@ -14,7 +14,7 @@ const Footer = () => {
               </figure>
             </Link>
 
-            <p className="mt-6 max-w-md text-center leading-relaxed text-[#62A2FF] sm:max-w-xs sm:text-left">
+            <p className="mt-6 max-w-md text-center leading-relaxed text-[#2562E9] sm:max-w-xs sm:text-left">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
               consequuntur amet culpa cum itaque neque.
             </p>
@@ -25,7 +25,7 @@ const Footer = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-[#62A2FF] transition hover:text-teal-700/75"
+                  className="text-[#2562E9] transition hover:text-teal-700/75"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg
@@ -48,7 +48,7 @@ const Footer = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-[#62A2FF] transition hover:text-teal-700/75"
+                  className="text-[#2562E9] transition hover:text-teal-700/75"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -71,7 +71,7 @@ const Footer = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-[#62A2FF] transition hover:text-teal-700/75"
+                  className="text-[#2562E9] transition hover:text-teal-700/75"
                 >
                   <span className="sr-only">Twitter</span>
                   <svg
@@ -90,7 +90,7 @@ const Footer = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-[#62A2FF] transition hover:text-teal-700/75"
+                  className="text-[#2562E9] transition hover:text-teal-700/75"
                 >
                   <span className="sr-only">GitHub</span>
                   <svg
@@ -113,7 +113,7 @@ const Footer = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-[#62A2FF] transition hover:text-teal-700/75"
+                  className="text-[#2562E9] transition hover:text-teal-700/75"
                 >
                   <span className="sr-only">Dribbble</span>
                   <svg
@@ -134,12 +134,12 @@ const Footer = () => {
           </div>
 
           <div className="mt-10 md:mt-0 inline-block w-[50%] align-top text-left  md:w-auto md:text-center ">
-            <p className="text-lg font-medium text-[#62A2FF]">Our Services</p>
+            <p className="text-lg font-medium text-[#2562E9]">Our Services</p>
 
             <ul className="mt-8 space-y-4 text-sm">
               <li>
                 <a
-                  className="text-[#62A2FF] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition hover:text-gray-700/75"
                   href="#"
                 >
                   Web Development
@@ -148,7 +148,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  className="text-[#62A2FF] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition hover:text-gray-700/75"
                   href="#"
                 >
                   {" "}
@@ -158,7 +158,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  className="text-[#62A2FF] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition hover:text-gray-700/75"
                   href="#"
                 >
                   {" "}
@@ -168,7 +168,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  className="text-[#62A2FF] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition hover:text-gray-700/75"
                   href="#"
                 >
                   {" "}
@@ -178,7 +178,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="mt-10 md:mt-0  inline-block align-top w-[50%] text-left md:w-auto md:text-center  text-[#62A2FF]">
+          <div className="mt-10 md:mt-0  inline-block align-top w-[50%] text-left md:w-auto md:text-center  text-[#2562E9]">
             <p className="text-lg font-medium ">Contacto</p>
 
             <ul className="mt-8 space-y-4 text-sm">
@@ -213,7 +213,7 @@ const Footer = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-5 shrink-0 text-[#62A2FF]"
+                    className="size-5 shrink-0 text-[#2562E9]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -226,7 +226,7 @@ const Footer = () => {
                     />
                   </svg>
 
-                  <span className="flex-1 text-[#62A2FF]">
+                  <span className="flex-1 text-[#2562E9]">
                     (+54 11) 5365-9887
                   </span>
                 </a>
@@ -235,7 +235,7 @@ const Footer = () => {
               <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-5 shrink-0 text-[#62A2FF]"
+                  className="size-5 shrink-0 text-[#2562E9]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -253,7 +253,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <address className="-mt-0.5 flex-1 not-italic text-[#62A2FF]">
+                <address className="-mt-0.5 flex-1 not-italic text-[#2562E9]">
                   Irala 1950, 2 piso CABA
                 </address>
               </li>
