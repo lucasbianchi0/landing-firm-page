@@ -64,7 +64,7 @@ const Benefits4 = () => {
   // const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="relative w-full sectionStyle md:!py-10 overflow-hidden">
+    <section className="relative w-full sectionStyle md:!py-10 ">
       <div className="container flex flex-col-reverse items-start md:h-[900px] gap-10 md:gap-20 md:flex-row md:justify-between">
         <div className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
           {benefits.map((benefit, index) => (

@@ -67,7 +67,7 @@ const TimelineListDark = ({
   return (
     <article className="px-1 mb-8 w-full space-y-5 z-10 ">
       {dataTest.map((step, index) => (
-        <div className="md:hover:scale-105" key={index} onClick={() => onChangeImage(index)}>
+        <div className="md:hover:scale-105 transition-all duration-200" key={index} onClick={() => onChangeImage(index)}>
           <Timeline2
             icon={step.icon}
             title={step.title}

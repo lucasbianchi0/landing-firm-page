@@ -9,7 +9,6 @@ interface IndustryBenefitsProps {
 
 const IndustryBenefits = ({ selectedIndustry }: IndustryBenefitsProps) => {
     if (!selectedIndustry) return null;
-
     return (
         <div className="industry-benefits">
             <ul className="text-white space-y-5">
