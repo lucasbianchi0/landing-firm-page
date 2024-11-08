@@ -21,7 +21,7 @@ export default function BookACall() {
             Descubre cómo podemos ayudarte en una llamada personalizada de 30
             minutos. Resuelve tus dudas y conoce nuestras soluciones.
             </p>
-          {/* Botón solo se renderiza en el cliente */}
+
           <div className="relative">
 
             {isMounted && (
