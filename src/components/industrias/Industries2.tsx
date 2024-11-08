@@ -19,14 +19,16 @@ import {
 
 import IndustryItem from './IndustryItem';
 import IndustryBenefits from './IndustryBenefits';
+import { SvgIconProps } from '@mui/material';
 
 interface Industry {
   title: string;
-  icon: React.ElementType;
+  icon: React.ComponentType<SvgIconProps>;
   color: string;
   hoverClass: string;
   beneficios: string[];
 }
+
 
 const Industries2 = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<Industry | null>({

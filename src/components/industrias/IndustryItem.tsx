@@ -11,6 +11,7 @@ type IndustryItemProps = {
   onClick?: () => void;
 };
 
+
 const IndustryItem = ({
   title,
   icon: Icon,
