@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 type IndustryItemProps = {
   title: string;
-  icon?: React.ComponentType<SvgIconProps>;
+  icon: React.ComponentType<SvgIconProps>;
   color?: string;
   delay: number;
   onClick?: () => void;
