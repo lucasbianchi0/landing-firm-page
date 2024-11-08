@@ -61,13 +61,12 @@ const Solutions = () => {
                 </Link>
               </div>
             </div>
-            <figure className="drop-shadow-2xl h-[300px] bg-red-500 w-auto  mt-5 relative aspect-[16/9]   lg:mx-0 transition-all duration-300 ease-in-out lg:aspect-none  lg:translate-x-3 lg:translate-y-8 lg:h-[85%] lg:w-auto lg:mt-auto lg:col-span-5 lg:group-hover:-translate-y-0">
+            <figure className="w-full drop-shadow-2xl h-[18.75rem] mx-auto mt-5 relative aspect-[16/9] mx-auto lg:mx-0 transition-all duration-300 ease-in-out lg:aspect-none lg:translate-x-3 lg:translate-y-8 lg:h-[85%] lg:w-auto lg:mt-auto lg:col-span-5 lg:group-hover:-translate-y-0">
               <Image
                 src={item.image}
                 alt={item.alt}
-                className="filter:shadow-xl object-top lg:object-left w-full  p-3 md:p-0 h-full object-contain"
+                className="filter:shadow-xl w-full md:object-left mx-auto md:mx-0  p-3 md:p-0 h-full object-contain"
                 fill
-                sizes="100vh"
               />
             </figure>
           </article>
