@@ -19,6 +19,7 @@ import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
 import FeedbackOutlinedIcon from "@mui/icons-material/FeedbackOutlined";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+
 const Benefits4 = () => {
   const benefits = [
     {
@@ -86,12 +87,10 @@ const Benefits4 = () => {
               icon={VerifiedOutlinedIcon}
               position="left"
             />
-            <p className="mt-5 ">
-              <span className=" z-[10] mt-10  text-center lg:w-[80%] py-2 px-5  bg-gradient-to-r from-blue-600 to-blue-800 rounded-full text-base transform transition-all duration-200 ease-in-out  text-white text-specialist lg:hover:scale-105 lg:hover:bg-[#25497a]">
-                Más información
+            <button className="mt-5 block self-start shine-button cursor-pointer z-[10] mt-10  px-5 py-2.5   bg-gradient-to-r from-blue-600 to-blue-800 rounded-full text-base transform transition-all duration-200 ease-in-out  text-white text-specialist lg:hover:scale-105 lg:hover:bg-[#25497a]">
+              Más información
                 <ChevronRightIcon />
-              </span>
-            </p>
+            </button>
           </article>
         </div>
       </div>

@@ -33,10 +33,9 @@ const Navbar = ({ version, background }: INavbarProps) => {
   return (
     <nav
       className={`z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 bg-white
-        ${
-          version === "light"
-            ? " bg-opacity-10 backdrop-blur-lg"
-            : " drop-shadow-lg shadow-[#2a528980] border border-white"
+        ${version === "light"
+          ? " bg-opacity-10 backdrop-blur-lg"
+          : " drop-shadow-lg shadow-[#2a528980] border border-white"
         }   `}
     >
       {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
@@ -44,11 +43,11 @@ const Navbar = ({ version, background }: INavbarProps) => {
       <Link href="/">
         <figure
           className=""
-          // style={{
-          //   background: "linear-gradient(to top, #000000, #4C96FF)",
-          //   WebkitBackgroundClip: "text",
-          //   WebkitTextFillColor: "transparent",
-          // }}
+        // style={{
+        //   background: "linear-gradient(to top, #000000, #4C96FF)",
+        //   WebkitBackgroundClip: "text",
+        //   WebkitTextFillColor: "transparent",
+        // }}
         >
           {version === "light" ? (
             <Image src="/LOGO.png" height={80} width={100} alt="logo" />
@@ -59,9 +58,8 @@ const Navbar = ({ version, background }: INavbarProps) => {
       </Link>
 
       <ul
-        className={`hidden gap-8 font-light ${
-          version === "light" ? "text-white" : "text-[#172B4D]"
-        } md:flex items-center`}
+        className={`hidden gap-8 font-light ${version === "light" ? "text-white" : "text-[#172B4D]"
+          } md:flex items-center`}
       >
         <li>Servicios</li>
         <li>Industrias</li>
@@ -70,26 +68,15 @@ const Navbar = ({ version, background }: INavbarProps) => {
           <AnnouncementOutlinedIcon className="h-4 w-4 text-[hsl(215,76%,73%)] subtitle-icon-shadow" />
         </li>
 
-        <li className="bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">
+        <button className="shine-button overflow-hidden relative bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">
           Hablar con especialista
           <PersonAddAltIcon className="w-4 h-4" />
-        </li>
+          <p className="shine-button"></p>
+
+        </button>
       </ul>
 
-      {/* <div className="hidden gap-3 md:flex">
-        <Button
-          backgroundColor={"transparent"}
-          textColor={"#2A5189"}
-          content={"Contacto"}
-          borderColor="#2A5189"
-        />
-        <Button
-          backgroundColor={"#2A5189"}
-          textColor={"white"}
-          content={"Contacto"}
-          borderColor="#2A5189"
-        />
-      </div> */}
+
 
       {/* Botón para abrir/cerrar el menú */}
       <div onClick={toggleMenu} className="cursor-pointer md:hidden">

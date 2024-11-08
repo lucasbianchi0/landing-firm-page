@@ -21,7 +21,7 @@ const IntegrationItem = ({ image, style, delay }: IIntegration) => {
       transition={{ duration: 0.5, delay }}
       className={`flex bg-white justify-center !shadow-lg items-center rounded-xl border border-gray-100 p-4 focus:outline-none ${style} `}
     >
-      <figure className=" relative w-full h-[100px] flex justify-center items-center">
+      <figure className="tresd-card  relative w-full h-[100px] flex justify-center items-center">
         <Image src={image} fill alt="" className="object-contain" />
       </figure>
     </motion.article>

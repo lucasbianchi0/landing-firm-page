@@ -12,7 +12,8 @@ const StepsDark = () => {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const images = [
-    "/pasos/iniciar.png",
+    // "/pasos/iniciar.png",
+    "/pasos/05.png",
     "/pasos/crear2.png",
     "/pasos/datos.png",
     "/pasos/firmar.png",
@@ -75,7 +76,7 @@ const StepsDark = () => {
                   x: isInView ? 0 : 100,
                 }}
                 transition={{ duration: 0.5 }}
-                className="drop-shadow-lg overflow-hidden w-auto relative h-[300px] sm:h-[400px] lg:h-full sm:w-auto border-[14px] rounded-[12px] lg:rounded-[24px] !border-gray-600"
+                className="drop-shadow-lg overflow-hidden w-auto relative h-[300px] sm:h-[400px] lg:h-full sm:w-auto"
               >
                 <Image
                   src={images[currentImageIndex]}

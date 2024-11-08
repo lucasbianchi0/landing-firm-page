@@ -55,7 +55,7 @@ const Header4 = () => {
             <div className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative ">
               <Metric content="firmas procesadas" target={242000} />
               <Metric content="clientes contentos" target={50} />
-              <Metric content="de experiencia" target={10} />
+              <Metric content="años de experiencia" target={10} />
             </div>
           </div>
           <div className="relative z-[5] ">

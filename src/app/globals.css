@@ -23,6 +23,25 @@ body {
   background-color: transparent;
 } */
 
+.pulse-animation{
+  height: 30px;
+  width: 30px;
+  border-radius: 90%;
+  background-color: white;
+  animation: 1.5s pulse infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+
+  100% {
+    box-shadow: 0 0 0 14px #69ffa800;
+  }
+}
+
+
 .subtitle-icon-shadow {
   filter: drop-shadow(0px 0px 4px #85b0ee);
   background-color: transparent;
@@ -200,6 +219,10 @@ body {
 
   .bottomSection {
     @apply pb-[170px] md:pb-[200px];
+  }
+
+  .blue-hover{
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 inline-block text-transparent bg-clip-text;
   }
 }
 
@@ -380,4 +403,153 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.shine-button {
+  position: relative;
+  display: inline-flex;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.shine-button:hover {
+  transform: scale(1.05);
+}
+
+.shine-button .icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.shine-button:hover .icon {
+  transform: translate(4px);
+}
+
+.shine-button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.shine-button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+  60% {
+    left: 100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.card {
+  border-radius: 20px;
+  position: relative;
+  border: 2px solid ;
+
+  border-color: transparent;
+  /* transition: 0.5s ease-out; */
+  /* overflow: visible; */
+ }
+
+ .card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+
+.card:hover {
+  border: 2px solid ;
+
+  border-color: #008bf8;
+
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+
+ .bg-container{
+
+  --color: #3B82F6;
+  background: linear-gradient(95deg, var(--color) 25%, transparent 25%) -50px 0,
+        linear-gradient(-15deg, var(--color) 25%, transparent 25%) -50px 0,
+        linear-gradient(25deg, transparent 75%, var(--color) 75%) -50px 0,
+        linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0,
+        linear-gradient(-15deg, transparent 75%, var(--color) 75%) -50px 0;
+  background-color: #60a5fa;
+  background-size: 40px 40px;
+
+ }
+
+ /* 3d */
+
+ /* From Uiverse.io by Cornerstone-04 */ 
+.cards {
+  perspective: 500px;
+}
+
+.tresd-card {
+
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .5s;
+}
+
+.tresd-card:hover {
+  transform: translateZ(10px) rotateX(20deg) rotateY(20deg);
+}
+
+
+
+
+/* btn book a call */
+
+.btn-book-a-call {
+  width: 150px;
+  height: 60px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+.btn-book-a-call:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.5em;
 }

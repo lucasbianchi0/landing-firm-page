@@ -7,7 +7,7 @@ import FileOpenRoundedIcon from "@mui/icons-material/FileOpenRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import TimelineDark from "./TimelineDark";
 import Timeline2 from "./Timeline2";
-
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 // interface ITimelineListProps {
 //   highlightedIndex: number;
 // }
@@ -47,7 +47,7 @@ const TimelineListDark = ({
       ],
     },
     {
-      icon: DomainVerificationRoundedIcon,
+      icon: ForwardToInboxIcon,
       title: "Notificaciones y enviar",
       description: [
         {
@@ -65,7 +65,7 @@ const TimelineListDark = ({
   ];
 
   return (
-    <article className="lg:mx-4 mb-8 w-full space-y-5 ">
+    <article className="px-1 mb-8 w-full space-y-5 z-10 ">
       {dataTest.map((step, index) => (
         <div key={index} onClick={() => onChangeImage(index)}>
           <Timeline2

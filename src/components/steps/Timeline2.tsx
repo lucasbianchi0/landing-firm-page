@@ -29,10 +29,10 @@ const Timeline2 = ({
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className={`relative border p-3 border-zinc-200 rounded-2xl shadow-xl flex w-full ${
+      className={`relative border p-3 border-zinc-200 rounded-2xl shadow-lg flex w-full z-50 ${
         isHighlighted
           ? "bg-gradient-to-r from-blue-600 to-blue-800"
-          : "bg-white lg:hover:border-blue-700/20 md:hover:shadow-xl md:hover:shadow-blue-700/20"
+          : "bg-white lg:hover:border-blue-700/20 md:hover:shadow-lg md:hover:shadow-blue-700/20"
       }`}
     >
       <div

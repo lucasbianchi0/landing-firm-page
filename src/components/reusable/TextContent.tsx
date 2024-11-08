@@ -8,6 +8,7 @@ interface IContentProps {
   icon?: React.ComponentType<SvgIconProps>;
   position: string;
   color?: string;
+  industrySection?: boolean;
 }
 
 const TextContent = ({
@@ -17,29 +18,28 @@ const TextContent = ({
   icon: Icon,
   position,
   color,
+  industrySection
 }: IContentProps) => {
   return (
     <div
-      className={`flex flex-col ${
-        position === "left"
-          ? "md:justify-start"
-          : position === "right"
+      className={`flex flex-col ${position === "left"
+        ? "md:justify-start"
+        : position === "right"
           ? "md:justify-end md:text-right"
           : position === "center"
-          ? "md:justify-center md:text-center"
-          : ""
-      } `}
+            ? "md:justify-center md:text-center"
+            : ""
+        } `}
     >
       <div
-        className={`subtitle flex items-center ${
-          position === "left"
-            ? ""
-            : position === "right"
+        className={`subtitle flex items-center ${position === "left"
+          ? ""
+          : position === "right"
             ? "md:flex-row-reverse"
             : position === "center"
-            ? "md:justify-center"
-            : ""
-        } gap-3 md:justify-start`}
+              ? "md:justify-center"
+              : ""
+          } gap-3 md:justify-start`}
       >
         {Icon && (
           <Icon
@@ -54,27 +54,32 @@ const TextContent = ({
         )}
       </div>
 
-      <h2
-        className={`text-4xl md:text-5xl font-medium
-          ${
-            color === "white"
-              ? // ? "!bg-gradient-to-r !from-[#FFFFFF] !to-[#2C2C2C]"
-                "text-white"
-              : "text-[#0A2540]"
+      {industrySection ?
+        <h2 className="text-4xl md:text-5xl font-medium text-white flex flex-col w-full">
+          Especialistas en <span className="font-bold  w-full bg-gradient-to-r from-blue-600 to-blue-800 inline-block text-transparent bg-clip-text">{title}</span>
+        </h2>
+        :
+        <h2 className={`text-4xl md:text-5xl font-medium
+            ${color === "white"
+            ?
+            "text-white"
+            : "text-[#0A2540]"
           }
         `}
-      >
-        {title}
-      </h2>
+        >
+          {title}
+        </h2>
+      }
+
+
 
       <div
-        className={`text-description ${
-          color === "white" ? "!text-white" : ""
-        } ${!description ? "hidden" : ""}`}
+        className={`text-description ${color === "white" ? "!text-white" : ""
+          } ${!description ? "hidden" : ""}`}
       >
         <span>{description}</span>
       </div>
-    </div>
+    </div >
   );
 };
 
