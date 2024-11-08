@@ -72,12 +72,14 @@ const Navbar = ({ version, background }: INavbarProps) => {
           <AnnouncementOutlinedIcon className="h-4 w-4 text-[hsl(215,76%,73%)] subtitle-icon-shadow" />
           </li>
 
-          <button className="shine-button overflow-hidden relative bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">
-            Hablar con especialista
+          <Link href="#book-a-call" >
+            <button className="shine-button overflow-hidden relative bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">
+              Hablar con especialista
           <PersonAddAltIcon className="w-4 h-4" />
-            <p className="shine-button"></p>
+              <p className="shine-button"></p>
 
-          </button>
+            </button>
+          </Link>
         </ul>
 
 

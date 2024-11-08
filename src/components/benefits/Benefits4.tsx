@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { AiFillAmazonCircle } from "react-icons/ai";
+import Link from "next/link";
 
 import { motion, useInView } from "framer-motion";
 import Benefits from "@/components/Benefits";
@@ -87,10 +88,12 @@ const Benefits4 = () => {
               icon={VerifiedOutlinedIcon}
               position="left"
             />
-            <button className="mt-5 block self-start shine-button cursor-pointer z-[10] mt-10  px-5 py-2.5   bg-gradient-to-r from-blue-600 to-blue-800 rounded-full text-base transform transition-all duration-200 ease-in-out  text-white text-specialist lg:hover:scale-105 lg:hover:bg-[#25497a]">
-              Más información
+            <Link href="#book-a-call">
+              <button className="mt-5 block self-start shine-button cursor-pointer z-[10] mt-10  px-5 py-2.5   bg-gradient-to-r from-blue-600 to-blue-800 rounded-full text-base transform transition-all duration-200 ease-in-out  text-white text-specialist lg:hover:scale-105 lg:hover:bg-[#25497a]">
+                Más información
                 <ChevronRightIcon />
-            </button>
+              </button>
+            </Link>
           </article>
         </div>
       </div>

@@ -15,10 +15,15 @@ import News3 from "@/components/news/News3";
 import StepsDark from "@/components/steps/StepsDark";
 import StepsNewVersion from "@/components/steps/StepsNewVersion";
 import BookACall from "@/components/reusable/BookACall";
+import ButtonWsp from "@/components/ButtonWsp";
 
 export default function Home() {
   return (
     <main className="relative h-full bg-[#F9F9F9]">
+      <div className='absolute z-[999]'>
+        <ButtonWsp />
+
+      </div>
       <Header4 />
       <Solutions />
       {/* <Solutions2 /> */}

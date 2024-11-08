@@ -11,7 +11,7 @@ export default function BookACall() {
   }, []);
 
   return (
-    <div className=" sectionStyle mb-[70px] container ">
+    <div id="book-a-call" className=" sectionStyle mb-[70px] container ">
       <div className="relative w-full md:h-[370px] md:max-w-[80%] flex flex-col items-center justify-between  px-6 pt-6 md:py-0 md:px-14  lg:flex-row mx-auto overflow-hidden text-white rounded-2xl drop-shadow-xl bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="overflow-hidden flex flex-col space-y-4 lg:max-w-[60%]">
           <h2 className="text-2xl md:text-4xl font-bold">
