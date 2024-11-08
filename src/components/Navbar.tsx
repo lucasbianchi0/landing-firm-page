@@ -6,6 +6,8 @@ import Link from "next/link";
 import AnnouncementOutlinedIcon from "@mui/icons-material/AnnouncementOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
+import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
+import { motion } from 'framer-motion';
 interface INavbarProps {
   version: string;
   background?: string;
@@ -13,6 +15,7 @@ interface INavbarProps {
 
 const Navbar = ({ version, background }: INavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuItems = ["Servicios", "Sobre Accedra", "Partners", "Soluciones"];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,91 +34,105 @@ const Navbar = ({ version, background }: INavbarProps) => {
   }, [isMenuOpen]);
 
   return (
-    <nav
-      className={`z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 bg-white
+    <div>
+
+      <nav
+        className={`z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-3 bg-white
         ${version === "light"
-          ? " bg-opacity-10 backdrop-blur-lg"
-          : " drop-shadow-lg shadow-[#2a528980] border border-white"
-        }   `}
-    >
-      {/* <nav className="z-50 relative h-full flex justify-between items-center rounded-full max-w-[95%] mx-auto px-5 py-5"> */}
-
-      <Link href="/">
-        <figure
-          className=""
-        // style={{
-        //   background: "linear-gradient(to top, #000000, #4C96FF)",
-        //   WebkitBackgroundClip: "text",
-        //   WebkitTextFillColor: "transparent",
-        // }}
-        >
-          {version === "light" ? (
-            <Image src="/LOGO.png" height={80} width={100} alt="logo" />
-          ) : (
-            <Image src="/LOGOBLUE.png" height={80} width={100} alt="logo" />
-          )}
-        </figure>
-      </Link>
-
-      <ul
-        className={`hidden gap-8 font-light ${version === "light" ? "text-white" : "text-[#172B4D]"
-          } md:flex items-center`}
+            ? " bg-opacity-10 backdrop-blur-lg"
+            : " drop-shadow-lg shadow-[#2a528980] border border-white"
+          }   `}
       >
-        <li>Servicios</li>
-        <li>Industrias</li>
-        <li className="flex items-center gap-1 semibold ">
-          BLOG
+
+        <Link href="/">
+          <figure
+            className=""
+          // style={{
+          //   background: "linear-gradient(to top, #000000, #4C96FF)",
+          //   WebkitBackgroundClip: "text",
+          //   WebkitTextFillColor: "transparent",
+          // }}
+          >
+            {version === "light" ? (
+              <Image src="/LOGO.png" height={80} width={100} alt="logo" />
+            ) : (
+              <Image src="/LOGOBLUE.png" height={80} width={100} alt="logo" />
+            )}
+          </figure>
+        </Link>
+
+        <ul
+          className={`hidden gap-8 font-light ${version === "light" ? "text-white" : "text-[#172B4D]"
+            } md:flex items-center`}
+        >
+          <li>Servicios</li>
+          <li>Industrias</li>
+          <li className="flex items-center gap-1 semibold ">
+            BLOG
           <AnnouncementOutlinedIcon className="h-4 w-4 text-[hsl(215,76%,73%)] subtitle-icon-shadow" />
-        </li>
+          </li>
 
-        <button className="shine-button overflow-hidden relative bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">
-          Hablar con especialista
+          <button className="shine-button overflow-hidden relative bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">
+            Hablar con especialista
           <PersonAddAltIcon className="w-4 h-4" />
-          <p className="shine-button"></p>
+            <p className="shine-button"></p>
 
-        </button>
-      </ul>
+          </button>
+        </ul>
 
 
 
-      {/* Botón para abrir/cerrar el menú */}
-      <div onClick={toggleMenu} className="cursor-pointer md:hidden">
-        <MenuIcon
-          className={`${version === "light" ? "text-white" : "text-blue-400"}`}
-        />
-      </div>
+        {/* Botón para abrir/cerrar el menú */}
+        <div onClick={toggleMenu} className="cursor-pointer md:hidden">
+          <MenuIcon
+            className={`${version === "light" ? "text-white" : "text-blue-400"}`}
+          />
+        </div>
 
-      {/* Menú en pantalla completa */}
+
+      </nav>
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-blue-400 z-999">
-          <ul className="flex flex-col items-center justify-center gap-4 font-light">
-            <li>Servicios</li>
-            <li>Sobre Accedra</li>
-            <li>Partners</li>
-            <li>Soluciones</li>
-            <div onClick={toggleMenu} className="cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width={24}
-                height={24}
-                color={"#2a5189"}
-                fill={"none"}
+        <div className="z-[999] p-6 fixed inset-0 flex flex-col  w-full h-screen bg-blue-900">
+          <div className="flex items-center justify-between gap-10">
+            <figure>
+              <Image src="/LOGO.png" height={80} width={100} alt="logo" />
+            </figure>
+            <ClearRoundedIcon onClick={toggleMenu} className="text-white text-2xl" />
+          </div>
+
+
+          <ul className="mt-20 flex flex-col text-xl items-center justify-center gap-4 font-light text-white">
+            {menuItems.map((item, index) => (
+              <motion.li
+                key={item}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+                variants={staggeredVariants}
+                className="cursor-pointer"
               >
-                <path
-                  d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+                {item}
+              </motion.li>
+            ))}
           </ul>
         </div>
       )}
-    </nav>
+    </div>
+
   );
 };
 
 export default Navbar;
+
+const staggeredVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};

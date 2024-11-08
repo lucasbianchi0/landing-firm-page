@@ -5,7 +5,7 @@ import TollOutlinedIcon from "@mui/icons-material/TollOutlined";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 const Solutions = () => {
   return (
-    <section className="container sectionStyle ">
+    <section className="container sectionStyle overflow-hidden">
       <div className="w-full lg:w-full">
         <TextContent
           title={"Soluciones"}
@@ -17,7 +17,7 @@ const Solutions = () => {
       <div className="gap-10 space-y-8 lg:space-y-0 mt-12 lg:grid lg:grid-cols-2 h-full ">
         {[
           {
-            title: "Firma remota (a distancia)",
+            title: "Firma remota || (a distancia)",
             description:
               "Con nuestras soluciones de firma vas a poder firmar desde cualquier dispositivo, cualquier navegador, sin tener que descargarte ninguna aplicación. Con nuestra SUITE de firma electrónica digital vas a poder firmar cualquier documento, remitos, recibos de sueldo, contratos, formularios, desde la comodidad de tu casa",
 
@@ -25,7 +25,7 @@ const Solutions = () => {
             alt: "Descripción 1",
           },
           {
-            title: "Firma presencial (puntos de venta)",
+            title: "Firma presencial || (puntos de venta)",
             description:
               "Con nuestras soluciones de firma biométrica digital, vas a poder firmar a través de dispositivos de firma (PAD) como si firmaras en Papel y Birome. El proceso más natural de firma con validez jurídica y análisis forense de la firma.",
             image: "/soluciones/Wacom.png",
@@ -38,8 +38,14 @@ const Solutions = () => {
           >
             <div className="flex-1 p-3 md:pl-7 py-7 relative flex flex-col w-full lg:col-span-7 gap-y-4  gap-3 transition-all duration-300 ease-in-out transform overflow-hidden lg:group-hover:-translate-y-3 ">
               <h3 className="text-[#243657] montserrat text-xl lg:text-3xl font-semibold text-pretty">
-                {item.title}
+                {item.title.split("||").map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < item.title.split("||").length - 1 && <br />}
+                  </React.Fragment>
+                ))}
               </h3>
+
               <p className="text-[#425466] text-lg lg:text-base">
                 {item.description}
               </p>

@@ -33,7 +33,7 @@ const StepsNewVersion = () => {
   }, [images.length]);
 
   return (
-    <section className="sectionStyle">
+    <section className="sectionStyle overflow-hidden">
       <div className="w-full container md:rounded-2xl ">
         <div className="mb-8">
           <TextContent

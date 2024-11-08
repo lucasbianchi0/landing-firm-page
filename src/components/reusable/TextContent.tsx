@@ -56,7 +56,7 @@ const TextContent = ({
 
       {industrySection ?
         <h2 className="text-4xl md:text-5xl font-medium text-white flex flex-col w-full">
-          Especialistas en <span className="font-bold  w-full bg-gradient-to-r from-blue-600 to-blue-800 inline-block text-transparent bg-clip-text">{title}</span>
+          Especialistas en <span className="custom-gradient-text font-bold  w-full bg-gradient-to-r from-blue-600 to-blue-800 inline-block text-transparent bg-clip-text">{title}</span>
         </h2>
         :
         <h2 className={`text-4xl md:text-5xl font-medium
