@@ -1,6 +1,6 @@
 
 
-interface Industry {
+export interface Industry {
   title: string;
   icon: React.ComponentType<SvgIconProps>;  
   color: string;
