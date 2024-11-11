@@ -16,11 +16,11 @@ export default function BookACall() {
         <div className="overflow-hidden flex flex-col space-y-4 lg:max-w-[60%]">
           <h2 className="text-2xl md:text-4xl font-bold">
             Agenda tu consulta gratuita con un especialista
-            </h2>
+          </h2>
           <p className=" md:text-lg">
             Descubre cómo podemos ayudarte en una llamada personalizada de 30
             minutos. Resuelve tus dudas y conoce nuestras soluciones.
-            </p>
+          </p>
 
           <div className="relative">
 

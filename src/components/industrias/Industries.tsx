@@ -1,131 +1,94 @@
-// import React from "react";
-// import IndustryItem from "./IndustryItem";
-// import Button from "../Button";
-// import { IoMdCard } from "react-icons/io";
-// import { BsTruck } from "react-icons/bs";
-// import { CiBank, CiShop } from "react-icons/ci";
-// import { TbSchool, TbWorld } from "react-icons/tb";
-// import { MdOutlineLocalHospital, MdOutlineSecurity } from "react-icons/md";
-// import { GoCreditCard } from "react-icons/go";
+'use client';
+import React, { useState } from 'react';
+import TextContent from '../reusable/TextContent';
+import {
+  LocalShippingRounded,
+  InventoryOutlined,
+} from '@mui/icons-material';
 
-// const Industries = () => {
-//   const industries = [
-//     {
-//       title: "Logística",
-//       icon: BsTruck,
-//       color: "#A3C6FF",
-//       hoverClass: "industry-item-hover-blue-soft",
-//     },
-//     {
-//       title: "Retail",
-//       icon: CiShop,
-//       color: "#FFD1A3",
-//       hoverClass: "industry-item-hover-orange-soft",
-//     },
-//     {
-//       title: "Educación",
-//       icon: TbSchool,
-//       color: "#A3FFD1",
-//       hoverClass: "industry-item-hover-green-soft",
-//     },
-//     {
-//       title: "Automotriz",
-//       icon: BsTruck,
-//       color: "#FFC6A3",
-//       hoverClass: "industry-item-hover-pink-soft",
-//     },
-//     {
-//       title: "Farmacéutica",
-//       icon: MdOutlineLocalHospital,
-//       color: "#D1A3FF",
-//       hoverClass: "industry-item-hover-purple-soft",
-//     },
-//     {
-//       title: "Banca",
-//       icon: CiBank,
-//       color: "#FFD1D1",
-//       hoverClass: "industry-item-hover-pale-pink",
-//     },
-//     {
-//       title: "Fintech",
-//       icon: GoCreditCard,
-//       color: "#A3D1FF",
-//       hoverClass: "industry-item-hover-light-blue",
-//     },
-//     {
-//       title: "Seguros",
-//       icon: MdOutlineSecurity,
-//       color: "#FFE6A3",
-//       hoverClass: "industry-item-hover-yellow-soft",
-//     },
-//     {
-//       title: "Medicina",
-//       icon: MdOutlineLocalHospital,
-//       color: "#FFA3A3",
-//       hoverClass: "industry-item-hover-red-soft",
-//     },
-//     {
-//       title: "Telecomunicaciones",
-//       icon: TbWorld,
-//       color: "#A3FFE6",
-//       hoverClass: "industry-item-hover-teal",
-//     },
-//   ];
+import IndustryItem from './IndustryItem';
+import IndustryBenefits from './IndustryBenefits';
+import { SvgIconProps } from '@mui/material';
+import { industrias } from '@/data/industrias';
 
-//   return (
-//     <section className="relative z-50 pt-16 bg-white sectionStyle bottomSection">
-//       <div className="container gap-2 md:flex md:justify-between">
-//         <div className="flex-1 space-y-4 ">
-//           <p className="text-left subtitle">Especialistas</p>
-//           <h2 className="text-[42px] md:text-[60px] title">
-//             <span className="text-[#172B4D]">Especialistas</span>
+interface Industry {
+  title: string;
+  icon: React.ComponentType<SvgIconProps>;
+  color: string;
+  hoverClass: string;
+  beneficios: string[];
+}
 
-//             <br />
-//             <span className="text-[#172B4D]">en estas</span>
-//             <br />
-//             <span
-//               style={{
-//                 background: "linear-gradient(to top, #000000, #4C96FF)",
-//                 WebkitBackgroundClip: "text",
-//                 WebkitTextFillColor: "transparent",
-//               }}
-//             >
-//               industrias
-//             </span>
-//           </h2>
 
-//           <p className="text-xl text-left mt-15 ">
-//             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-//             veniam sed doloremque minus dolore aliquid temporibus quaerat, quam
-//             perspiciatis porro itaque eveniet hic natus magnam.
-//           </p>
-//           <div className="pt-2">
-//             <Button
-//               backgroundColor={"#2A5189"}
-//               textColor={"white"}
-//               content={"Hablar con especialista"}
-//               borderColor="#2A5189"
-//             />
-//           </div>
-//         </div>
-//         <div className="grid flex-1 grid-cols-2 gap-6 mt-10 md:mt-0 md:grid-cols-3 md:p-10">
-//           {industries.map((industry, index) => (
-//             <div
-//               key={index}
-//               className="flex items-center h-full p-4 transition border border-gray-100 shadow-md rounded-xl hover:shadow-xl hover:border-blue-700/20 hover:shadow-blue-700/20"
-//               // className={`h-full flex items-center rounded-xl border border-gray-100 p-4 shadow-md transition  ${industry.hoverClass}`}
-//             >
-//               <IndustryItem
-//                 title={industry.title}
-//                 icon={industry.icon}
-//                 color={industry.color}
-//               />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+const Industries = () => {
+  const [selectedIndustry, setSelectedIndustry] = useState<Industry | null>({
+    title: "Logística",
+    icon: LocalShippingRounded,
+    color: "#A3C6FF",
+    hoverClass: "industry-item-hover-blue-soft",
+    beneficios: [
+      "Identifica a los transportistas y personal logístico sin demoras, mejorando la eficiencia operativa.",
+      "Asegura la entrega correcta al destinatario gracias a la identificación biométrica en tiempo real.",
+      "Minimiza el riesgo de fraude en la cadena de suministro al utilizar datos biométricos para verificar la identidad.",
+    ],
+  });
 
-// export default Industries;
+  const handleIndustryClick = (industry: Industry) => {
+    setSelectedIndustry(industry);
+  };
+
+  return (
+    <section className="relative z-50 bg-[#1D293B] lg:min-h-[90vh] overflow-hidden sectionStyle sectionStylePadding">
+      <div className="absolute inset-0 bg-black/60" style={{ zIndex: -5 }} />
+      <video
+        className="hidden md:block absolute top-0 left-0 object-cover w-full h-full -z-10"
+        autoPlay
+        loop
+        muted
+        preload="auto"
+        style={{
+          animation: 'slowVideo 60s linear infinite',
+          WebkitAnimation: 'slowVideo 60s linear infinite',
+        }}
+      >
+        <source src="/background1.mp4" type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
+      <div className="container">
+
+        <div className="flex flex-col-reverse gap-5 md:gap-10 md:grid grid-cols-2 md:justify-between">
+          <div className="grid grid-cols-2 gap-4 mt-10 md:mt-0 md:grid-cols-3 h-full">
+            {industrias.map((industry, index) => (
+              <IndustryItem
+                key={index}
+                title={industry.title}
+                icon={industry.icon}
+                color={industry.color}
+                delay={index * 0.2}
+                onClick={() => handleIndustryClick(industry)}
+              />
+            ))}
+          </div>
+          <div className="z-10 flex flex-col w-full space-y-4 md:items-end">
+            <div className="z-10 flex flex-col w-full md:w-full space-y-4  mb-8">
+              <TextContent
+                title={`${selectedIndustry?.title} `}
+                subtitle="Nuestra experiencia"
+                icon={InventoryOutlined}
+                position="left"
+                color="white"
+                industrySection={true}
+              />
+            </div>
+            {selectedIndustry && (
+
+              <IndustryBenefits selectedIndustry={selectedIndustry} />
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Industries;

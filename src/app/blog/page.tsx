@@ -1,8 +1,7 @@
 "use client";
 import { getBlogData } from "@/api/blog";
 import BlogCard from "@/components/blog/BlogCard";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/reusable/Footer";
 import { Article } from "@/types/news";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";

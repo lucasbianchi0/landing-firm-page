@@ -1,58 +1,66 @@
-// import React from "react";
-// import Accordion from "./Accordion";
+"use client";
+import React from "react";
+import TextContent from "../reusable/TextContent";
+import { useInView, motion } from "framer-motion";
+import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined";
+import { SvgIconProps } from "@mui/material";
+import { faqs } from "@/data/faqs";
 
-// const Faqs = () => {
-//   const faqs = [
-//     {
-//       summary: "¿Qué es la transformación digital?",
-//       description:
-//         "La transformación digital implica la integración de tecnología digital en todas las áreas de una empresa, cambiando fundamentalmente cómo operas y brindas valor a los clientes.",
-//     },
-//     {
-//       summary: "¿Cómo se valida la autenticidad de los documentos?",
-//       description:
-//         "La validación de documentos se realiza a través de procesos jurídicos que aseguran el cumplimiento de todas las normativas legales aplicables.",
-//     },
-//     {
-//       summary: "¿Qué es la accesibilidad digital?",
-//       description:
-//         "La accesibilidad digital se refiere a la capacidad de un sistema para ser usado por cualquier persona, independientemente de sus capacidades técnicas o físicas.",
-//     },
-//     {
-//       summary: "¿Qué es la integridad documental?",
-//       description:
-//         "La integridad documental asegura que un documento no ha sido alterado desde su creación, manteniendo su autenticidad y confiabilidad.",
-//     },
-//   ];
+interface IqaProps {
+  summary: string;
+  description: string;
+  delay: number;
+  icon: React.ComponentType<SvgIconProps>;
+}
 
-//   return (
-//     <section className="relative bg-white z-10 min-h-[100vh] h-full bottomSection sectionStyle overflow-hidden">
-//       <div className="container">
-//         <p className="text-center subtitle">Alguna duda?</p>
-//         <h2
-//           className="text-center text-[48px] title"
-//           style={{
-//             background: "linear-gradient(to top, #000000, #4C96FF)",
-//             WebkitBackgroundClip: "text",
-//             WebkitTextFillColor: "transparent",
-//           }}
-//         >
-//           Preguntas frequentes
-//         </h2>
+const Faqs = () => {
 
-//         <div className="py-10 w-full md:w-[60%] mx-auto space-y-6">
-//           {faqs.map((faq, index) => (
-//             <Accordion
-//               key={index}
-//               summary={faq.summary}
-//               description={faq.description}
-//             />
-//           ))}{" "}
-//         </div>
-//       </div>
-//       <div className="absolute gradient top-1/2 right-1/3 transform translate-x-[500px] -translate-y-1/2 h-[400px] w-[500px] blur-[20rem] z-10"></div>
-//     </section>
-//   );
-// };
 
-// export default Faqs;
+  return (
+    <div className="container sectionStyle mb-14 md:mb-32 !min-h-0 !pt-0">
+      <div className="flex flex-col space-y-2 ">
+        <TextContent
+          title={"Preguntas frecuentes "}
+          subtitle="Resuelve dudas"
+          icon={QuestionAnswerOutlinedIcon}
+          position={"center"}
+        />
+      </div>
+      <div className="grid grid-cols-1 mt-6 md:mt-14 space-y-7 md:gap-20 md:space-y-0 md:grid-cols-2 md:gap-y-16">
+        {faqs.map((fq, index) => (
+          <QA
+            key={index}
+            summary={fq.summary}
+            description={fq.description}
+            delay={index * 0.2}
+            icon={fq.icon}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Faqs;
+
+const QA = ({ summary, description, delay, icon: Icon }: IqaProps) => {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  return (
+    <motion.article
+      ref={ref}
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 15 }}
+      transition={{ duration: 0.5, delay: delay }}
+      className="space-y-1 md:space-y-3"
+    >
+      <div className="flex flex-col lg:flex-row gap-2">
+        <Icon className="pt-1 text-[2.625rem] lg:text-[1.5rem] text-[#006BFC] " />
+        <div>
+          <h4 className="text-xl font-semibold text-[#2A5189]">{summary}</h4>
+          <p className="pt-3 text-zinc-500 md:leading-relaxed">{description}</p>
+        </div>
+      </div>
+    </motion.article>
+  );
+};

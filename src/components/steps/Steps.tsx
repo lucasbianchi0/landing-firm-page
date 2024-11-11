@@ -1,120 +1,85 @@
-// "use client";
+"use client";
+import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
+import TextContent from "../reusable/TextContent";
+import StairsOutlinedIcon from "@mui/icons-material/StairsOutlined";
+import { motion, useInView, color } from "framer-motion";
+import StepsList from "./StepsList";
 
-// import React, { useEffect, useState } from "react";
-// import StepCard from "./StepCard";
-// import DomainVerificationTwoToneIcon from "@mui/icons-material/DomainVerificationTwoTone";
-// import DriveFileRenameOutlineTwoToneIcon from "@mui/icons-material/DriveFileRenameOutlineTwoTone";
-// import FileOpenTwoToneIcon from "@mui/icons-material/FileOpenTwoTone";
-// import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone";
-// import Button from "../Button";
+const Steps = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-// const Steps = () => {
-//   const stepData = [
-//     {
-//       title: "Preparar el Documento y el Dispositivo",
-//       description:
-//         "Abre el documento que quieres firmar. Conecta y ajusta la tableta Wacom.",
-//       // animationData: animationData1,
-//       icon: FileOpenTwoToneIcon,
-//     },
-//     {
-//       title: "Configurar el Software de Firma",
-//       description: "Abre el software de firma ESignAnywhere.",
-//       // animationData: animationData2,
-//       icon: SettingsTwoToneIcon,
-//     },
-//     {
-//       title: "Firmar el Documento",
-//       description: "Firma con el lápiz de la tableta Wacom.",
-//       // animationData: animationData3,
-//       icon: DriveFileRenameOutlineTwoToneIcon,
-//     },
-//     {
-//       title: "Finalizar y Enviar",
-//       description:
-//         "Guarda y envía el documento firmado electrónicamente a las partes pertinentes.",
-//       // animationData: animationData4,
-//       icon: DomainVerificationTwoToneIcon,
-//     },
-//   ];
+  const images = [
+    "/pasos/001.png",
+    "/pasos/002.png",
+    "/pasos/003.png",
+    "/pasos/004.png",
+    "/pasos/005.png",
+  ];
 
-//   const [currentStep, setCurrentStep] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentStep((prevStep) => (prevStep + 1) % stepData.length);
-//     }, 6000);
+  const onChangeImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
-//     return () => clearInterval(interval);
-//   }, [stepData.length]);
+  useEffect(() => {
+    // const intervalId = setInterval(() => {
+    //   setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    // }, 3000); // Change image every 3000 milliseconds (3 seconds)
+    // return () => clearInterval(intervalId);
+  }, [images.length]);
 
-//   return (
-//     <section className="relative bg-[#F5F6F7] !bg-[#EBF3FF] z-10 w-full min-h-[100vh] sectionStyle bottomSection md:pb-0">
-//       <div className="container">
-//         <p className="text-center subtitle">Como funciona</p>
-//         <h2
-//           className="text-center text-[48px] title"
-//           style={{
-//             background: "linear-gradient(to top, #000000, #4C96FF)",
-//             WebkitBackgroundClip: "text",
-//             WebkitTextFillColor: "transparent",
-//           }}
-//         >
-//           Con Accedra es simple
-//         </h2>
+  return (
+    <section className="sectionStyle overflow-hidden">
+      <div className="w-full container md:rounded-2xl ">
+        <div className="mb-8">
+          <TextContent
+            title={"Como funciona"}
+            subtitle="Especialistas"
+            icon={StairsOutlinedIcon}
+            position={"left"}
+          />
+        </div>
+        <div className=" overflow-visible flex flex-col-reverse gap-y-8 lg:gap-10 lg:grid lg:grid-cols-12  justify-center lg:justify-between lg:items-start ">
+          <div className=" w-full lg:w-full lg:col-span-5 z-10">
+            <StepsList
+              onChangeImage={onChangeImage}
+              highlightedIndex={currentImageIndex}
+            />
+          </div>
 
-//         <div className="justify-center h-full mx-auto mt-10 space-y-3 md:space-y-0 md:flex md:items-stretch">
-//           {stepData.map((card, index) => (
-//             <StepCard
-//               key={index}
-//               title={card.title}
-//               description={card.description}
-//               icon={card.icon}
-//             />
-//           ))}
-//         </div>
 
-//         <div className="flex flex-col items-center w-full gap-2 pt-10 md:flex-row md:justify-center">
-//           <div className="">
-//             <Button
-//               backgroundColor={"transparent"}
-//               textColor={"#2A5189"}
-//               content={"Ver video"}
-//               borderColor="#2A5189"
-//             />
-//           </div>
-//           <div className="">
-//             <Button
-//               backgroundColor={"#2A5189"}
-//               textColor={"white"}
-//               content={"Hablar con especialista"}
-//               borderColor="#2A5189"
-//             />
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+          <div
+            className="relative w-full lg:h-full lg:mt-0 lg:!my-auto col-span-7 z-50 overflow-visible"
+            ref={ref}
+          >
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                opacity: isInView ? 1 : 0,
+                x: isInView ? 0 : 100,
+              }}
+              transition={{ duration: 0.5 }}
+              className="flex h-[18.75rem] w-auto relative sm:h-[40.625rem] lg:w-auto lg:mx-auto bg-transparent z-50 "
+            >
+              <Image
+                style={{
+                  filter: "drop-shadow(0px 0.3125rem 0.9375rem rgba(0, 0, 0, 0.35))"
+                }}
+                src={images[currentImageIndex]}
+                alt={`Descripción ${currentImageIndex + 1}`}
+                className="w-auto h-full mx-auto bg-transparent"
+                width={500}
+                height={800}
+              />
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-// export default Steps;
-
-// // {stepData.map((card, index) => (
-// //   // <div
-// //   //   key={index}
-// //   //   className=" flex items-center justify-center mx-auto md:justify-normal md:flex-1  md:max-w-[%]"
-// //   // >
-// //     <StepCard
-// //     key={index}
-// //       title={card.title}
-// //       description={card.description}
-// //       // animationData={card.animationData}
-// //       icon={card.icon}
-// //     />
-// //     {/* {index < stepData.length - 1 && (
-// //       <div
-// //         className={`md:gradient-line md:step-${currentStep}`}
-// //       ></div>
-// //     )}
-// //   </div> */}
-// // ))}
+export default Steps;

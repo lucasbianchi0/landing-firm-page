@@ -1,8 +1,7 @@
 "use client";
 import { getPostById } from "@/api/blog";
 import BlogCard from "@/components/blog/BlogCard";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/reusable/Footer";
 import News2 from "@/components/news/News2";
 import NewsCard from "@/components/news/NewsCard";
 import { noticias } from "@/data/noticias";
@@ -10,6 +9,7 @@ import { Article } from "@/types/news";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Navbar from "@/components/reusable/Navbar";
 
 export interface User {
   userImage: string;

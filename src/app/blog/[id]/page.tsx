@@ -1,8 +1,7 @@
 "use client";
 import { getPostById } from "@/api/blog";
 import BlogCard from "@/components/blog/BlogCard";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/reusable/Footer";
 import NewsCard from "@/components/news/NewsCard";
 import { Article } from "@/types/news";
 import Image from "next/image";

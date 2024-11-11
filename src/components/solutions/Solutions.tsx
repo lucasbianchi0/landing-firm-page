@@ -4,6 +4,7 @@ import TextContent from "../reusable/TextContent";
 import TollOutlinedIcon from "@mui/icons-material/TollOutlined";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Link from "next/link";
+import { soluciones } from "@/data/soluciones";
 const Solutions = () => {
   return (
     <section className="container sectionStyle ">
@@ -17,23 +18,7 @@ const Solutions = () => {
       </div>
       <div className="gap-10 space-y-8 lg:space-y-0 mt-12 lg:grid lg:grid-cols-2 h-full ">
 
-        {[
-          {
-            title: "Firma remota || (a distancia)",
-            description:
-              "Con nuestras soluciones de firma vas a poder firmar desde cualquier dispositivo, cualquier navegador, sin tener que descargarte ninguna aplicación. Con nuestra SUITE de firma electrónica digital vas a poder firmar cualquier documento, remitos, recibos de sueldo, contratos, formularios, desde la comodidad de tu casa",
-
-            image: "/soluciones/page2.jpg",
-            alt: "Descripción 1",
-          },
-          {
-            title: "Firma presencial || (puntos de venta)",
-            description:
-              "Con nuestras soluciones de firma biométrica digital, vas a poder firmar a través de dispositivos de firma (PAD) como si firmaras en Papel y Birome. El proceso más natural de firma con validez jurídica y análisis forense de la firma.",
-            image: "/soluciones/Wacom.png",
-            alt: "Descripción 2",
-          },
-        ].map((item, index) => (
+        {soluciones.map((item, index) => (
           <article
             key={index}
             className="bg-[#F6F9FC] flex-1 border-2 h-full border-zinc-200 relative flex flex-col-reverse sm:flex-row lg:grid grid-cols-12  md:gap-7 w-full overflow-hidden transition-all duration-300 ease-in-out transform  lg:border-zinc-200 shadow-md md:shadow-xl rounded-lg md:rounded-2xl group lg:hover:scale-105 lg:hover:filter lg:hover:border-2 lg:hover:border-blue-700/20 lg:hover:shadow-2xl lg:hover:shadow-blue-700/40"

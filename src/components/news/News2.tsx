@@ -6,7 +6,6 @@ import { Article, ArticlesResponse } from "@/types/news";
 import TextContent from "../reusable/TextContent";
 import StairsOutlinedIcon from "@mui/icons-material/StairsOutlined";
 import { getBlogData } from "@/api/blog";
-import Navbar from "../Navbar";
 
 const News2 = () => {
   const [news, setNews] = useState<Article[]>([]);

@@ -1,8 +1,7 @@
 "use client";
 import { getBlogData } from "@/api/blog";
 import BlogCard from "@/components/blog/BlogCard";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/reusable/Footer";
 import { noticias } from "@/data/noticias";
 import { Article } from "@/types/news";
 import Link from "next/link";
@@ -12,6 +11,7 @@ import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
+import Navbar from "@/components/reusable/Navbar";
 
 const Blog = () => {
   const [news, setNews] = useState<Article[]>([]);

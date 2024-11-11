@@ -1,10 +1,22 @@
-export const industrias = [
+import { Industry } from "@/types";
+import {
+  AccountBalanceRounded,
+  PaymentRounded,
+  HealthAndSafetyRounded,
+  WifiRounded,
+  LocalShippingRounded,
+  EditRounded,
+  DirectionsCarFilledRounded,
+  MedicalServicesRounded,
+  StoreRounded,
+} from "@mui/icons-material";
+
+export const industrias: Industry[] = [
   {
-    titulo: "Logística",
-    descripcion:
-      "La firma biométrica en la logística agiliza los procesos de entrega, autenticando a los conductores y receptores de manera segura y eficiente.",
-    imagenHero: "/images/logistica-hero.jpg",
-    beneficioImagen: "/images/logistica-beneficios.jpg",
+    title: "Logística",
+    icon: LocalShippingRounded,
+    color: "#A3C6FF",
+    hoverClass: "industry-item-hover-blue-soft",
     beneficios: [
       "Identifica a los transportistas y personal logístico sin demoras, mejorando la eficiencia operativa.",
       "Asegura la entrega correcta al destinatario gracias a la identificación biométrica en tiempo real.",
@@ -12,11 +24,10 @@ export const industrias = [
     ],
   },
   {
-    titulo: "Retail",
-    descripcion:
-      "La firma biométrica en el retail mejora la experiencia del cliente, permitiendo autenticaciones seguras y rápidas en las compras en línea y físicas.",
-    imagenHero: "/images/retail-hero.jpg",
-    beneficioImagen: "/images/retail-beneficios.jpg",
+    title: "Retail",
+    icon: StoreRounded,
+    color: "#FFD1A3",
+    hoverClass: "industry-item-hover-orange-soft",
     beneficios: [
       "Ofrece a los clientes una autenticación sin contraseñas, evitando fraudes y mejorando la seguridad en el pago.",
       "Facilita el acceso de los clientes a sus cuentas y procesos de pago de manera rápida y segura.",
@@ -24,11 +35,10 @@ export const industrias = [
     ],
   },
   {
-    titulo: "Educación",
-    descripcion:
-      "En el sector educativo, la firma biométrica garantiza la autenticación precisa de estudiantes y personal, mejorando la seguridad y gestión.",
-    imagenHero: "/images/educacion-hero.jpg",
-    beneficioImagen: "/images/educacion-beneficios.jpg",
+    title: "Educación",
+    icon: EditRounded,
+    color: "#A3FFD1",
+    hoverClass: "industry-item-hover-green-soft",
     beneficios: [
       "Garantiza el acceso seguro a instalaciones educativas, limitando el ingreso a personal y estudiantes autorizados.",
       "Simplifica el seguimiento de asistencia de estudiantes y personal con identificación biométrica.",
@@ -36,11 +46,10 @@ export const industrias = [
     ],
   },
   {
-    titulo: "Automotriz",
-    descripcion:
-      "La firma biométrica en la industria automotriz mejora la seguridad en los procesos de fabricación y ventas, proporcionando autenticación segura en todas las etapas.",
-    imagenHero: "/images/automotriz-hero.jpg",
-    beneficioImagen: "/images/automotriz-beneficios.jpg",
+    title: "Automotriz",
+    icon: DirectionsCarFilledRounded,
+    color: "#FFC6A3",
+    hoverClass: "industry-item-hover-pink-soft",
     beneficios: [
       "Limita el acceso a áreas restringidas en plantas de fabricación y oficinas mediante autenticación biométrica.",
       "Protege las transacciones de ventas de vehículos con autenticación biométrica para evitar fraudes.",
@@ -48,11 +57,10 @@ export const industrias = [
     ],
   },
   {
-    titulo: "Farmacéutica",
-    descripcion:
-      "La firma biométrica proporciona seguridad y control en la investigación y fabricación farmacéutica, asegurando que los datos y el personal estén protegidos.",
-    imagenHero: "/images/farmaceutica-hero.jpg",
-    beneficioImagen: "/images/farmaceutica-beneficios.jpg",
+    title: "Farmacéutica",
+    icon: MedicalServicesRounded,
+    color: "#D1A3FF",
+    hoverClass: "industry-item-hover-purple-soft",
     beneficios: [
       "Asegura que solo el personal autorizado pueda acceder a áreas críticas de investigación y fabricación.",
       "Garantiza que los datos confidenciales de investigación y desarrollo estén protegidos mediante autenticación biométrica.",
@@ -60,11 +68,10 @@ export const industrias = [
     ],
   },
   {
-    titulo: "Banca",
-    descripcion:
-      "La firma biométrica en el sector bancario asegura transacciones y procesos financieros, garantizando la autenticación de clientes y empleados.",
-    imagenHero: "/images/banca-hero.jpg",
-    beneficioImagen: "/images/banca-beneficios.jpg",
+    title: "Banca",
+    icon: AccountBalanceRounded,
+    color: "#FFD1D1",
+    hoverClass: "industry-item-hover-pale-pink",
     beneficios: [
       "Facilita la identificación rápida y segura de los clientes durante transacciones bancarias.",
       "Reduce el riesgo de fraude financiero mediante la identificación biométrica de clientes y empleados.",
@@ -72,11 +79,10 @@ export const industrias = [
     ],
   },
   {
-    titulo: "Fintech",
-    descripcion:
-      "En el sector fintech, la firma biométrica impulsa la seguridad y confianza en las transacciones digitales y la gestión financiera.",
-    imagenHero: "/images/fintech-hero.jpg",
-    beneficioImagen: "/images/fintech-beneficios.jpg",
+    title: "Fintech",
+    icon: PaymentRounded,
+    color: "#A3D1FF",
+    hoverClass: "industry-item-hover-light-blue",
     beneficios: [
       "Elimina la necesidad de contraseñas, permitiendo un acceso seguro y conveniente a plataformas financieras.",
       "Protege las transacciones digitales y cuentas financieras mediante autenticación biométrica avanzada.",
@@ -84,23 +90,22 @@ export const industrias = [
     ],
   },
   {
-    titulo: "Seguros",
-    descripcion:
-      "La firma biométrica en el sector asegurador mejora la autenticación de clientes y la gestión de pólizas, reduciendo el fraude y aumentando la seguridad.",
-    imagenHero: "/images/seguros-hero.jpg",
-    beneficioImagen: "/images/seguros-beneficios.jpg",
+    title: "Seguros",
+    icon: HealthAndSafetyRounded,
+    color: "#FFE6A3",
+    hoverClass: "industry-item-hover-yellow-soft",
     beneficios: [
       "Asegura que los clientes puedan firmar documentos y gestionar sus pólizas de forma segura.",
       "Minimiza los casos de fraude mediante la validación biométrica en la firma de contratos y reclamaciones.",
       "Facilita la gestión digital de pólizas y documentos aseguradores con autenticación biométrica segura.",
     ],
   },
+
   {
-    titulo: "Telecomunicaciones",
-    descripcion:
-      "La firma biométrica en telecomunicaciones protege la identidad de los usuarios y permite el acceso seguro a servicios y datos.",
-    imagenHero: "/images/telecoms-hero.jpg",
-    beneficioImagen: "/images/telecoms-beneficios.jpg",
+    title: "Telecoms",
+    icon: WifiRounded,
+    color: "#A3FFE6",
+    hoverClass: "industry-item-hover-teal",
     beneficios: [
       "Garantiza que solo los usuarios autorizados puedan acceder a servicios de telecomunicaciones protegidos.",
       "Asegura que los datos personales y de clientes estén protegidos mediante autenticación biométrica.",
