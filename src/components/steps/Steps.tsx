@@ -25,10 +25,6 @@ const Steps = () => {
   };
 
   useEffect(() => {
-    // const intervalId = setInterval(() => {
-    //   setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    // }, 3000); // Change image every 3000 milliseconds (3 seconds)
-    // return () => clearInterval(intervalId);
   }, [images.length]);
 
   return (
@@ -62,7 +58,7 @@ const Steps = () => {
                 x: isInView ? 0 : 100,
               }}
               transition={{ duration: 0.5 }}
-              className="flex h-[18.75rem] w-auto relative sm:h-[40.625rem] lg:w-auto lg:mx-auto bg-transparent z-50 "
+              className="flex h-[18.75rem] w-auto relative sm:h-[40.625rem] lg:w-auto lg:mx-auto bg-transparent z-50"
             >
               <Image
                 style={{
@@ -70,7 +66,7 @@ const Steps = () => {
                 }}
                 src={images[currentImageIndex]}
                 alt={`Descripción ${currentImageIndex + 1}`}
-                className="w-auto h-full mx-auto bg-transparent"
+                className="w-auto h-full mx-auto bg-transparent p-5"
                 width={500}
                 height={800}
               />
