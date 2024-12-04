@@ -46,7 +46,6 @@ const Steps = () => {
             />
           </div>
 
-
           <div
             className="relative w-full lg:h-full lg:mt-0 lg:!my-auto col-span-7 z-50 overflow-visible"
             ref={ref}
@@ -61,12 +60,9 @@ const Steps = () => {
               className="flex h-[18.75rem] w-auto relative sm:h-[40.625rem] lg:w-auto lg:mx-auto bg-transparent z-50"
             >
               <Image
-                style={{
-                  filter: "drop-shadow(0px 0.3125rem 0.9375rem rgba(0, 0, 0, 0.35))"
-                }}
                 src={images[currentImageIndex]}
                 alt={`Descripción ${currentImageIndex + 1}`}
-                className="w-auto h-full mx-auto bg-transparent p-5"
+                className="w-auto h-full mx-auto bg-transparent"
                 width={500}
                 height={800}
               />
