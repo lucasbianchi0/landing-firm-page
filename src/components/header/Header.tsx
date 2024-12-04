@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import { motion } from "framer-motion"; // Importar motion
 import Image from "next/image";
 import Navbar from "../reusable/Navbar";
 import Metric from "./Metric";
@@ -9,7 +9,6 @@ import { header } from "@/data/1-header";
 import { metricas } from "@/data/2-metricas";
 
 const Header = () => {
-
   const backgroundImages = [
     "/portada/FONDO01.jpg",
     "/portada/FONDO03.jpg",
@@ -25,7 +24,7 @@ const Header = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Cambia cada 5 segundos
+    }, 3000); // Cambia cada 3 segundos
 
     return () => clearInterval(interval);
   }, []);
@@ -36,7 +35,13 @@ const Header = () => {
       <div className="h-full">
         <div className="flex flex-col h-full z-[5]">
           <div className="container flex flex-col h-full z-[5]">
-            <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative ">
+            {/* Animación para la primera línea */}
+            <motion.article
+              className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-semibold leading-none">
                 <span>{header[0].primeraLinea}</span>
                 <br />
@@ -45,14 +50,20 @@ const Header = () => {
               <p className="md:text-lg">
                 {header[0].descripcion}
               </p>
-            </article>
-            <div className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative ">
+            </motion.article>
+            {/* Animación para las métricas */}
+            <motion.div
+              className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+            >
               <Metric content={metricas[0].metrica} target={metricas[0].target} />
               <Metric content={metricas[1].metrica} target={metricas[1].target} />
               <Metric content={metricas[2].metrica} target={metricas[2].target} />
-            </div>
+            </motion.div>
           </div>
-          <div className="relative z-[5] ">
+          <div className="relative z-[5]">
             <CompanyList />
           </div>
         </div>
@@ -68,7 +79,6 @@ const Header = () => {
           loading="eager"
           style={{
             zIndex: 1,
-
             objectFit: "cover",
             backgroundAttachment: "fixed",
             backgroundPosition: "center",
