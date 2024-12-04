@@ -11,7 +11,7 @@ const CompanyList = () => {
     "/companias/bcoMacro1.png",
     "/companias/bcoChubut1.png",
     "/companias/bcoCreedicop1.png",
-    "/companias/segurosAON1.png",
+    "/companias/segurosAON.png",
     "/companias/andreani.png",
     "/companias/ford1.png",
     "/companias/bcoProvincia1.png",
@@ -19,7 +19,7 @@ const CompanyList = () => {
     "/companias/bcoMacro1.png",
     "/companias/bcoChubut1.png",
     "/companias/bcoCreedicop1.png",
-    "/companias/segurosAON1.png",
+    "/companias/segurosAON.png",
   ];
   return (
     <div className="mt-12 stock-ticker">
