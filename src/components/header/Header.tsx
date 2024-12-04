@@ -38,7 +38,7 @@ const Header = () => {
             {/* Animación para la primera línea */}
             <motion.article
               className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative"
-              initial={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
