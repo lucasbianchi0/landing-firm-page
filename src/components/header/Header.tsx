@@ -40,7 +40,7 @@ const Header = () => {
               className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.8 }}
             >
               <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-semibold leading-none">
                 <span>{header[0].primeraLinea}</span>
@@ -56,7 +56,7 @@ const Header = () => {
               className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.4 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
             >
               <Metric content={metricas[0].metrica} target={metricas[0].target} />
               <Metric content={metricas[1].metrica} target={metricas[1].target} />
