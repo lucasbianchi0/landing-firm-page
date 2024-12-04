@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { PopupButton } from "react-calendly";
 import { useEffect, useState } from "react";
+import { textoBannerCalendly, urlDeCalendly } from "@/data/9-Calendly";
 
 export default function BookACall() {
   const [isMounted, setIsMounted] = useState(false);
@@ -15,20 +16,17 @@ export default function BookACall() {
       <div className="relative w-full md:h-[370px] md:max-w-[80%] flex flex-col items-center justify-between  px-6 pt-6 md:py-0 md:px-14  lg:flex-row mx-auto overflow-hidden text-white rounded-2xl drop-shadow-xl bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="overflow-hidden flex flex-col space-y-4 lg:max-w-[60%]">
           <h2 className="text-2xl md:text-4xl font-bold">
-            Agenda tu consulta gratuita con un especialista
-          </h2>
+            {textoBannerCalendly[0].titulo}</h2>
           <p className=" md:text-lg">
-            Descubre cómo podemos ayudarte en una llamada personalizada de 30
-            minutos. Resuelve tus dudas y conoce nuestras soluciones.
+            {textoBannerCalendly[0].descripcion}
           </p>
-
           <div className="relative">
 
             {isMounted && (
               <PopupButton
-                url="https://calendly.com/lucas-bianchi"
+                url={urlDeCalendly}
                 rootElement={document.body}
-                text="Agendar llamada de 30 minutos"
+                text={textoBannerCalendly[0].boton}
                 className=" self-start px-4 py-2 font-semibold text-blue-600 transition-colors duration-200 bg-white rounded-md hover:bg-blue-100 hover:text-blue-700"
               />
             )}

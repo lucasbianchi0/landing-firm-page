@@ -4,7 +4,7 @@ import TextContent from "../reusable/TextContent";
 import { useInView, motion } from "framer-motion";
 import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined";
 import { SvgIconProps } from "@mui/material";
-import { faqs } from "@/data/faqs";
+import { faqs } from "@/data/8-faqs";
 
 interface IqaProps {
   summary: string;

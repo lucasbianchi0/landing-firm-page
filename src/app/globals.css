@@ -321,6 +321,7 @@ html {
 }
 
 .shine-button {
+  overflow: hidden;
   position: relative;
   display: inline-flex;
   transition: all 0.3s ease-in-out;

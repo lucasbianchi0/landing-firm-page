@@ -9,7 +9,7 @@ interface IIntegration {
   delay?: number;
 }
 
-const IntegrationItem = ({ image, style, delay }: IIntegration) => {
+const IntegrationItem = ({ image, style = "", delay }: IIntegration) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -19,9 +19,9 @@ const IntegrationItem = ({ image, style, delay }: IIntegration) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5, delay }}
-      className={`flex bg-white justify-center !shadow-lg items-center rounded-xl border border-gray-100 p-4 focus:outline-none ${style} `}
+      className={`flex bg-white justify-center !shadow-lg items-center rounded-xl border border-gray-100 p-4 focus:outline-none ${style}`}
     >
-      <figure className="tresd-card  relative w-full h-[100px] flex justify-center items-center">
+      <figure className="tresd-card relative w-full h-[100px] flex justify-center items-center">
         <Image src={image} fill alt="" className="object-contain" />
       </figure>
     </motion.article>

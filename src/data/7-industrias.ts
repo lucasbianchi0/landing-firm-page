@@ -11,6 +11,12 @@ import {
   StoreRounded,
 } from "@mui/icons-material";
 
+export const textoIndustrias = [
+  {
+    subtituloSuperior: "Nuestra experiencia",
+  },
+];
+
 export const industrias: Industry[] = [
   {
     title: "Logística",

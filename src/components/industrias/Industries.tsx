@@ -9,7 +9,7 @@ import {
 import IndustryItem from './IndustryItem';
 import IndustryBenefits from './IndustryBenefits';
 import { SvgIconProps } from '@mui/material';
-import { industrias } from '@/data/industrias';
+import { industrias, textoIndustrias } from '@/data/7-industrias';
 
 interface Industry {
   title: string;
@@ -56,7 +56,7 @@ const Industries = () => {
       </video>
       <div className="container">
 
-        <div className="flex flex-col-reverse gap-5 md:gap-10 md:grid grid-cols-2 md:justify-between">
+        <div className="flex flex-col-reverse gap-5 md:gap-20 md:grid grid-cols-2 md:justify-between">
           <div className="grid grid-cols-2 gap-4 mt-10 md:mt-0 md:grid-cols-3 h-full">
             {industrias.map((industry, index) => (
               <IndustryItem
@@ -73,7 +73,7 @@ const Industries = () => {
             <div className="z-10 flex flex-col w-full md:w-full space-y-4  mb-8">
               <TextContent
                 title={`${selectedIndustry?.title} `}
-                subtitle="Nuestra experiencia"
+                subtitle={textoIndustrias[0].subtituloSuperior}
                 icon={InventoryOutlined}
                 position="left"
                 color="white"

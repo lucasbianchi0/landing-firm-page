@@ -5,6 +5,8 @@ import Image from "next/image";
 import Navbar from "../reusable/Navbar";
 import Metric from "./Metric";
 import CompanyList from "./CompanyList";
+import { header } from "@/data/1-header";
+import { metricas } from "@/data/2-metricas";
 
 const Header = () => {
 
@@ -36,21 +38,18 @@ const Header = () => {
           <div className="container flex flex-col h-full z-[5]">
             <article className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative ">
               <h2 className="montserrat text-[56px] text-[#ECECEC] md:text-[60px] font-semibold leading-none">
-                <span>Firma Biométrica</span>
+                <span>{header[0].primeraLinea}</span>
                 <br />
-                <span className="title-shadow">Segura y Eficiente</span>
+                <span className="title-shadow">{header[0].segundaLinea}</span>
               </h2>
               <p className="md:text-lg">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Debitis rem libero id quod repudiandae nemo nam. Perferendis
-                quibusdam ducimus, natus laboriosam libero recusandae culpa
-                doloremque.
+                {header[0].descripcion}
               </p>
             </article>
             <div className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative ">
-              <Metric content="firmas procesadas" target={242000} />
-              <Metric content="clientes contentos" target={50} />
-              <Metric content="años de experiencia" target={10} />
+              <Metric content={metricas[0].metrica} target={metricas[0].target} />
+              <Metric content={metricas[1].metrica} target={metricas[1].target} />
+              <Metric content={metricas[2].metrica} target={metricas[2].target} />
             </div>
           </div>
           <div className="relative z-[5] ">

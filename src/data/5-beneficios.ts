@@ -5,6 +5,15 @@ import DocumentScannerRoundedIcon from "@mui/icons-material/DocumentScannerRound
 import IntegrationInstructionsRoundedIcon from "@mui/icons-material/IntegrationInstructionsRounded";
 import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 
+export const textoBeneficios = [
+  {
+    subtituloSuperior: "Ventajas clave",
+    tituto: "Beneficios",
+    descripcion:
+      "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas.",
+  },
+];
+
 export const beneficios = [
   {
     title: "Transformación Digital",

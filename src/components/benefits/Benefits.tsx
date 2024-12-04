@@ -1,20 +1,40 @@
 "use client";
-import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import { SvgIconProps } from "@mui/material";
 import TextContent from "../reusable/TextContent";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { beneficios } from "@/data/beneficios";
+import { beneficios, textoBeneficios } from "@/data/5-beneficios";
 
 const Benefits = () => {
+  const col1Ref = useRef<HTMLDivElement | null>(null);
+  const [col1Height, setCol1Height] = useState<number>(0);
 
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+    const lgBreakpoint = 1024;
+    if (screenWidth > lgBreakpoint && col1Ref.current) {
+      setCol1Height(col1Ref.current.offsetHeight);
+    } else {
+      setCol1Height(0);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
-    <section className="relative w-full sectionStyle md:!py-10 ">
-      <div className="container flex flex-col-reverse items-start md:h-[900px] gap-10 md:gap-20 md:flex-row md:justify-between">
-        <div className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
+    <section className="relative w-full sectionStyle">
+      <div className="container flex flex-col-reverse items-start gap-10 md:gap-20 lg:flex-row lg:justify-between">
+        <div ref={col1Ref}
+          className="relative z-10 grid flex-1 grid-cols-1 gap-8 md:grid-cols-2">
           {beneficios.map((benefit, index) => (
             <BenefitItem
               key={index}
@@ -24,14 +44,12 @@ const Benefits = () => {
             />
           ))}
         </div>
-        <div className="relative h-full w-full md:w-[40%] ">
-          <article className="md:sticky md:top-16 md:left-0 md:w-full ">
+        <div className="relative h-full w-full lg:w-[40%]" style={{ height: col1Height || 'auto', }}>
+          <article className=" md:sticky md:top-16 md:left-0 md:w-full ">
             <TextContent
-              title={"Beneficios"}
-              description={
-                "La firma biométrica ofrece una serie de beneficios clave que la han convertido en una opción cada vez más popular en sectores como la banca, seguros, medicina y telecomunicaciones. Uno de los principales beneficios es la seguridad: al utilizar características biométricas únicas. "
-              }
-              subtitle={"Ventajas clave"}
+              title={textoBeneficios[0].tituto}
+              description={textoBeneficios[0].descripcion}
+              subtitle={textoBeneficios[0].subtituloSuperior}
               icon={VerifiedOutlinedIcon}
               position="left"
             />

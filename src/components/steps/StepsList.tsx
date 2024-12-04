@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 import StepItem from "./StepItem";
-import { pasos } from "@/data/pasos";
+import { pasos } from "@/data/4-pasos";
 
 interface ITimelineListProps {
   onChangeImage: (index: number) => void;
