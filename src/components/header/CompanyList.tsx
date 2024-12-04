@@ -10,7 +10,7 @@ const CompanyList = () => {
     "/companias/volkswagen1.png",
     "/companias/bcoMacro1.png",
     "/companias/bcoChubut1.png",
-    "/companias/bcoCredicop1.png",
+    "/companias/bcoCreedicop1.png",
     "/companias/segurosAON1.png",
     "/companias/andreani.png",
     "/companias/ford1.png",
@@ -18,7 +18,7 @@ const CompanyList = () => {
     "/companias/volkswagen1.png",
     "/companias/bcoMacro1.png",
     "/companias/bcoChubut1.png",
-    "/companias/bcoCredicop1.png",
+    "/companias/bcoCreedicop1.png",
     "/companias/segurosAON1.png",
   ];
   return (
