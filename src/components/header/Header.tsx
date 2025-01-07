@@ -10,7 +10,7 @@ import { metricas } from "@/data/2-metricas";
 
 const Header = () => {
   const backgroundImages = [
-    "/portada/FONDO06.jpg",
+    "/portada/FONDO01.jpg",
     "/portada/PRIMERFONDO.jpg",
     "/portada/FONDO02.jpg",
     "/portada/FONDO03.jpg",
