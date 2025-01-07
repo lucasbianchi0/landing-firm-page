@@ -31,7 +31,7 @@ const Metric = ({ content, target }: IMetric) => {
   }, [target]);
 
   return (
-    <article className="bg-[#F1F4F7] !bg-[#F7FAFD] p-3 rounded-2xl shadow-md border-2 border-white">
+    <article className="bg-[#F7FAFD] p-3 rounded-2xl shadow-md border-2 border-white">
       <h3 className="text-4xl md:text-3xl font-semibold mb-2 text-[#2A5189]">
         +{count.toLocaleString()}
       </h3>

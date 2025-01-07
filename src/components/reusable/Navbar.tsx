@@ -59,8 +59,8 @@ const Navbar = ({ version, background }: INavbarProps) => {
           className={`hidden gap-8 font-light ${version === "light" ? "text-white" : "text-[#172B4D]"
             } md:flex items-center`}
         >
-          <li>Servicios</li>
-          <li>Industrias</li>
+          <li className="subrayado lg:cursor-pointer">Servicios</li>
+          <li className="subrayado lg:cursor-pointer">Industrias</li>
 
           <Link href="#book-a-call" >
             <button className="shine-button overflow-hidden relative bg-gradient-to-r from-blue-600 to-blue-800 py-2 px-3.5 rounded-full flex gap-1 items-center text-white">

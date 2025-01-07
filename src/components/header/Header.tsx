@@ -30,14 +30,14 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="relative w-full py-6 md:pb-12 min-h-[70vh] md:min-h-[90vh] !bg-none">
+    <section className="relative w-full py-6 md:pb-12 min-h-[70vh] md:min-h-[90vh] bg-none">
       <Navbar version={"light"} />
       <div className="h-full">
         <div className="flex flex-col h-full z-[5]">
           <div className="container flex flex-col h-full z-[5]">
             {/* Animación para la primera línea */}
             <motion.article
-              className="text-white w-full lg:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative"
+              className="text-white w-full lg:w-[80%] xl:w-[50%] flex flex-col gap-3 md:gap-6 pt-8 md:pt-16 relative"
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -53,7 +53,7 @@ const Header = () => {
             </motion.article>
             {/* Animación para las métricas */}
             <motion.div
-              className="z-[5] montserrat w-full md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative"
+              className="z-[5] montserrat w-full md:w-[90%]  lg:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 relative"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}

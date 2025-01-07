@@ -25,9 +25,9 @@ const Footer = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-[#2562E9] transition hover:text-teal-700/75"
+                  className="text-[#2562E9] transition lg:hover:text-white"
                 >
-                  <span className="sr-only">Facebook</span>
+                  <span className="sr-only lg:hover:text-white">Facebook</span>
                   <svg
                     className="size-6"
                     fill="currentColor"
@@ -48,9 +48,9 @@ const Footer = () => {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-[#2562E9] transition hover:text-teal-700/75"
+                  className="text-[#2562E9] transition lg:hover:text-white"
                 >
-                  <span className="sr-only">Instagram</span>
+                  <span className="sr-only lg:hover:text-white">Instagram</span>
                   <svg
                     className="size-6"
                     fill="currentColor"
@@ -74,7 +74,7 @@ const Footer = () => {
             <ul className="mt-8 space-y-4 text-sm">
               <li>
                 <a
-                  className="text-[#2562E9] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition lg:hover:text-white"
                   href="#"
                 >
                   Web Development
@@ -83,7 +83,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  className="text-[#2562E9] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition lg:hover:text-white"
                   href="#"
                 >
                   {" "}
@@ -93,7 +93,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  className="text-[#2562E9] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition lg:hover:text-white"
                   href="#"
                 >
                   {" "}
@@ -103,7 +103,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  className="text-[#2562E9] transition hover:text-gray-700/75"
+                  className="text-[#2562E9] transition lg:hover:text-white"
                   href="#"
                 >
                   {" "}
@@ -113,11 +113,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="mt-10 md:mt-0  inline-block align-top w-[50%] text-left md:w-auto md:text-center  text-[#2562E9]">
-            <p className="text-lg font-medium ">Contacto</p>
+          <div className="mt-10 md:mt-0  inline-block align-top w-[50%] text-left md:w-auto md:text-center text-[#2562E9]">
+            <p className="text-lg font-medium">Contacto</p>
 
             <ul className="mt-8 space-y-4 text-sm">
-              <li>
+              <li className="lg:hover:text-white">
                 <a
                   className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                   href="#"
@@ -137,18 +137,18 @@ const Footer = () => {
                     />
                   </svg>
 
-                  <span className="flex-1 ">info@accedra.com.ar</span>
+                  <span className="flex-1">info@accedra.com.ar</span>
                 </a>
               </li>
 
-              <li>
+              <li className="lg:hover:text-white">
                 <a
-                  className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                  className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end lg:hover:text-white"
                   href="#"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="size-5 shrink-0 text-[#2562E9]"
+                    className="size-5 shrink-0 "
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -161,16 +161,16 @@ const Footer = () => {
                     />
                   </svg>
 
-                  <span className="flex-1 text-[#2562E9]">
+                  <span className="flex-1 ">
                     (+54 11) 5365-9887
                   </span>
                 </a>
               </li>
 
-              <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
+              <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end lg:hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="size-5 shrink-0 text-[#2562E9]"
+                  className="size-5 shrink-0 lg:hover:text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -188,7 +188,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <address className="-mt-0.5 flex-1 not-italic text-[#2562E9]">
+                <address className="-mt-0.5 flex-1 not-italic">
                   Irala 1950, 2 piso CABA
                 </address>
               </li>

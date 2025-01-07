@@ -1,5 +1,5 @@
 // MODIFICAR POR LA URL CORRECTA
-export const urlDeCalendly = "https://calendly.com/lucas-bianchi";
+export const urlDeCalendly = "https://calendly.com/martinarjona-accedra/30min";
 
 export const textoBannerCalendly = [
   {

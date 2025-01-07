@@ -37,6 +37,24 @@ html {
   background-color: transparent;
 }
 
+.subrayado {
+  display: table;
+}
+
+.subrayado::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: center;
+  transition: transform 0.35s;
+}
+
+.subrayado:hover::after {
+  transform: scale(1, 1);
+}
+
 .timeline-blue-shadow {
   box-shadow: 0 5px 22px rgba(0, 105, 255, 0.5);
 }
@@ -618,4 +636,93 @@ button.wh-ap-btn::before {
     margin-right: 14px;
     margin-bottom: 14px;
   }
+}
+
+/* global shine  */
+
+/* From Uiverse.io by neerajbaniwal */
+.btn-shine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinning 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+@-moz-keyframes shinning {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shinning {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shinning {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shinning {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+/* button  book a call*/
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-bac {
+  font-weight: 500;
+  color: rgb(68, 68, 68);
+  background-color: #2ee59d;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }

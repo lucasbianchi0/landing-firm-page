@@ -44,11 +44,11 @@ const TextContent = ({
         {Icon && (
           <Icon
             style={{ fontSize: "1.8rem" }}
-            className="text-[#006BFC] bg-transparent !text-[hsl(215,76%,73%)] text-[#396FBD] subtitle-icon-shadow bg-white "
+            className="bg-transparent !text-[hsl(215,76%,73%)] subtitle-icon-shadow bg-white "
           />
         )}
         {subtitle && (
-          <p className="!text-[hsl(215,76%,73%)] font-bold text-[#396FBD]">
+          <p className="!text-[hsl(215,76%,73%)] font-bold">
             {subtitle}
           </p>
         )}
